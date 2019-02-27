@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
  const NavBar = ({ currentUser, logout }) => {
@@ -19,7 +19,7 @@ import { Link, Route } from 'react-router-dom';
     );
 
   return (
-    <nav className="banner">
+    <nav className="banner-nav">
       {display}
     </nav>
   )

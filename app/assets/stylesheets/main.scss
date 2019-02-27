@@ -1,18 +1,26 @@
 .splash {
-  font-family: 'Nunito Sana', sans-serif;
+  background: image_url("background.jpg");
+  background-size: cover;
+  background-position-y: -30px;
 }
 
-.main {
-  background: image_url("background.jpg");
-  /* background: #767676; */
-  background-size: cover;
-  background-position-y: -50px;
+.splash-box {
+  font-family: 'Nunito Sana', sans-serif;
   height: 100vh;
 }
 
 .banner {
-  height: 150px;
-  background: rgba(42, 255, 255, 0.5);
+  height: 200px;
+  background: rgba(94, 109, 109, 0.1);
+}
+
+.banner-nav {
+  background: cyan;
+}
+
+.banner h1 {
+  font-size: 50px;
+  font-weight: 700;
 }
 
 .fo {
