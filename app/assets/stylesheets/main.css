@@ -1,17 +1,18 @@
-body {
-  /* font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; */
+.splash {
   font-family: 'Nunito Sana', sans-serif;
 }
 
 .main {
-  background: url(../img/e4914d86-8b68-4360-b0bc-7588c1b14ad3.jpg);
+  background: url(../images/e4914d86-8b68-4360-b0bc-7588c1b14ad3.jpg);
+  /* background: #767676; */
   background-size: cover;
   background-position-y: -50px;
-  height: 500px;
+  height: 100vh;
 }
 
 .banner {
   height: 150px;
+  background: rgba(42, 255, 255, 0.5);
 }
 
 .fo {
