@@ -16,20 +16,20 @@ export default class SessionForm extends React.Component {
     return (
       <div className="modal">
         <form className="session-form">
-          <h1>Welcome! Please {this.props.formType}.</h1>
+          <h1>Sign up</h1>
           <div className="session-input">
-            <input type="text" id="form-username" value="username" onChange={this.updateUsername}/>
+            <input type="text" id="form-username" value="username" onChange={this.updateUsername} />
           </div>
           <div className="session-input">
-            <input type="text" id="form-username" value="password" onChange={this.updatePassword}/>
+            <input type="text" id="form-username" value="password" onChange={this.updatePassword} />
           </div>
           <div className="submit">
-            <button>{this.props.formType}</button>
+            <button>Sign Up</button>
           </div>
         </form>
 
         <div className="session-alt">
-          
+
         </div>
       </div>
     )

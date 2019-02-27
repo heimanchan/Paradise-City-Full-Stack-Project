@@ -6,7 +6,7 @@ export default ({ currentUser, logout }) => {
     <div>
       {/* {user profile pic} */}
       {/* click pic => drop down => logout */}
-      <h2>Welcome, {currentUser.username}</h2>
+      <h2>Welcome, {currentUser.first_name}</h2>
     </div>
   ) : (
       <div>
