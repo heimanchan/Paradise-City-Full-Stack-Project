@@ -7,7 +7,7 @@ body {
   background: url(../img/e4914d86-8b68-4360-b0bc-7588c1b14ad3.jpg);
   background-size: cover;
   background-position-y: -50px;
-  height: 500px;
+  height: 100vh;
 }
 
 .banner {
