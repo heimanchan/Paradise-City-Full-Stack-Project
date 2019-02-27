@@ -1,11 +1,15 @@
 import React from 'react';
 import NavBarContainer from './nav_bar/nav_bar_container'
-
+import { AuthRoute } from '../util/route_util'
+import LoginFormContainer from './session_form/login_form_container';
+import SignupFormContainer from './session_form/sign_up_form_container';
 
 const App = () => (
   <header>
     <h1>Take me down to the Paradise City</h1>
     <NavBarContainer />
+    <AuthRoute path="/login" component={LoginFormContainer} />
+    <AuthRoute path="/signup" component={SignupFormContainer} />
   </header>
 )
 

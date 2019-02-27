@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
   handleChange(field) {
@@ -24,6 +25,12 @@ class SessionForm extends React.Component {
       .then(() => this.props.history.push("/"));
   }
 
+  handleGuestLogin(e) {
+    e.preventDefault();
+    this.setState({ username: "guest", password: "password" })
+    setInterval
+  }
+
   render() {
     if (this.props.formType === 'Sign Up') {
       return (
@@ -34,16 +41,17 @@ class SessionForm extends React.Component {
               <input placeholder='Username' type="text" className="form-input" value={this.state.username} onChange={this.handleChange("username")} />
             </div>
             <div className="session-input">
-              <input placeholder='First Name' type="text" className="form-input" value={this.state.first_name} onChange={this.handleChange("password")} />
+              <input placeholder='First Name' type="text" className="form-input" value={this.state.first_name} onChange={this.handleChange("first_name")} />
             </div>
             <div className="session-input">
-              <input placeholder='Last Name' type="text" className="form-input" value={this.state.last_name} onChange={this.handleChange("first_name")} />
+              <input placeholder='Last Name' type="text" className="form-input" value={this.state.last_name} onChange={this.handleChange("last_name")} />
             </div>
             <div className="session-input">
-              <input placeholder='Password' type="text" className="form-input" value={this.state.password} onChange={this.handleChange("last_name")} />
+              <input placeholder='Password' type="text" className="form-input" value={this.state.password} onChange={this.handleChange("password")} />
             </div>
             <div className="submit">
               <button>Sign Up</button>
+              <button onClick={this.handleGuestLogin}>Demo User</button>
             </div>
           </form>
 
@@ -65,6 +73,7 @@ class SessionForm extends React.Component {
             </div>
             <div className="submit">
               <button>Log In</button>
+              <button onClick={this.handleGuestLogin}>Demo User</button>
             </div>
           </form>
 

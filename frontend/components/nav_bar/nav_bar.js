@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
-import { AuthRoute } from '../../util/route_util'
-import LoginFormContainer from '../session_form/login_form_container';
-import SignupFormContainer from '../session_form/sign_up_form_container';
+
 
  const NavBar = ({ currentUser, logout }) => {
   const display = currentUser ? (
@@ -17,8 +15,6 @@ import SignupFormContainer from '../session_form/sign_up_form_container';
         <Link to="/signup">Sign up</Link>
         <Link to="/login">Log in</Link>
         <h3>Test</h3>
-        <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
       </div>
     );
 
