@@ -1,27 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-export default class SessionForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: "", password: "" };
+    this.state = { username: "", password: "", first_name: "", last_name: ""};
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.action(this.state)
+  
+
+  handleChange(field) {
+    return (e) => {
+      this.setState({ [field]: e.target.value });
+    };
   }
+
+  
   render() {
-
     return (
       <div className="modal">
-        <form className="session-form">
-          <h1>Sign up</h1>
+        <form className="session-form" onSubmit={this.handleSubmit}>
+          <h1>Sign Up Now!</h1>
           <div className="session-input">
-            <input type="text" id="form-username" value="username" onChange={this.updateUsername} />
+            <input type="text" className="form-input" value="guest" onChange={this.handleChange("username")} />
           </div>
           <div className="session-input">
-            <input type="text" id="form-username" value="password" onChange={this.updatePassword} />
+            <input type="text" className="form-input" value="Guest" onChange={this.handleChange("password")} />
+          </div>
+          <div className="session-input">
+            <input type="text" className="form-input" value="Johnson" onChange={this.handleChange("first_name")} />
+          </div>
+          <div className="session-input">
+            <input type="text" className="form-input" value="password" onChange={this.handleChange("last_name")} />
           </div>
           <div className="submit">
             <button>Sign Up</button>
@@ -29,10 +43,11 @@ export default class SessionForm extends React.Component {
         </form>
 
         <div className="session-alt">
-
+          <p>Already have an Airbnb account? </p> <Link to="/login">Log in</Link>
         </div>
       </div>
     )
   }
-
 }
+
+export default withRouter(SignupForm);

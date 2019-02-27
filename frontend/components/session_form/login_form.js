@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-export default class LoginForm extends React.Component {
+class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { username: "", password: "" };
@@ -25,19 +26,20 @@ export default class LoginForm extends React.Component {
     this.props.processForm(user)
       .then(() => this.props.history.push("/"));
   }
+  
   render() {
     return (
       <div className="modal">
-        <form className="session-form">
-          <h1>Welcome! Please Sign In.</h1>
+        <form className="session-form" onSubmit={this.handleSubmit}>
+          <h1>Welcome! Please Log In.</h1>
           <div className="session-input">
-            <input type="text" id="form-username" value="username" onChange={this.updateUsername} />
+            <input type="text" class="form-input" value="username" onChange={this.updateUsername} />
           </div>
           <div className="session-input">
-            <input type="text" id="form-username" value="password" onChange={this.updatePassword} />
+            <input type="text" class="form-input" value="password" onChange={this.updatePassword} />
           </div>
           <div className="submit">
-            <button>Sign Up</button>
+            <button>Log In</button>
           </div>
         </form>
 
@@ -48,3 +50,5 @@ export default class LoginForm extends React.Component {
     )
   }
 }
+
+export default (LoginForm);

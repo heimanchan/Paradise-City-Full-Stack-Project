@@ -7,15 +7,27 @@ import Root from './components/root'
 import * as SessionActions from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
-
   // Testing
   window.signup = SessionActions.signup;
   window.login = SessionActions.login;
   window.logout = SessionActions.logout;
 
-  window.receiveCurrentUser = SessionActions.receiveCurrentUser;
-  
+  // let store = configureStore();
+  let store;
+  if (window.currentUser) {
+    const preloadedState = {
+      entities: {
+        users: { [window.currentUser.id]: window.currentUser }
+      },
+      session: { currentUserId: window.currentUser.id }
+    };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
+
+
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   
