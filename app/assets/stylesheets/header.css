@@ -1,16 +1,23 @@
 header {
+  
+}
+
+.header-banner {
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
 }
 
 .banner {
   height: 200px;
   background: rgba(94, 109, 109, 0.3);
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .banner-nav > div{
   display: flex;
-  background: cyan;
+  width: 200px;
+  /* border: 1px solid black; */
 }
 
 .banner h1 {

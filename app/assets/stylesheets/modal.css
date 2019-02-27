@@ -1,0 +1,56 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  background: cyan;
+  width: 504px;
+  margin: 0px auto;
+}
+
+.modal-form {
+  padding: 32px;
+}
+
+.session-form {
+  border-top: 1px solid #767676;
+  background: white;
+}
+
+.form-input {
+  box-sizing: border-box;
+  background: transparent;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 4px;
+  padding: 11px;
+  margin: 15px 0px;
+  width: 100%;
+  font-size: 16px;
+  color: #727272
+}
+
+.session-form button {
+  width: 100%;
+  padding: 10px 22px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 2px;
+  background-color: rgb(255, 90, 95);
+  color: white;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 800px;
+}

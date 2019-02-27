@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -22,14 +21,14 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
-      // .then(() => this.props.history.push("/"));
+      .then(this.props.closeModal());
   }
 
   handleGuestLogin(e) {
     e.preventDefault();
     const user = Object.assign({}, { username: "guest", password: "password" });
     this.props.processForm(user)
-      // .then(() => this.props.history.push("/"));
+      .then(this.props.closeModal());
   }
 
   renderErrors() {
@@ -48,7 +47,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'Sign Up') {
       return (
         <div className="modal">
-          <div className="modal-box">
+          <div className="modal-form">
           <h1>Sign up now</h1>
             <form className="session-form" onSubmit={this.handleSubmit}>
               <div onClick={this.props.closeModal} className="close-x">X</div>
@@ -78,7 +77,7 @@ class SessionForm extends React.Component {
     } else {
       return (
         <div className="modal">
-          <div className="model-box">
+          <div className="model-form">
             <h1>Welcome Back! Please Log In.</h1>
             <form className="session-form" onSubmit={this.handleSubmit}>
               <div onClick={this.props.closeModal} className="close-x">X</div>

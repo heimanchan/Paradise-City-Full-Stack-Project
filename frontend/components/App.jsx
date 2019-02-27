@@ -10,15 +10,16 @@ const App = () => (
     <div className="splash">
       <Modal />
       <header className="banner">
-        <Link to="/" className="header-logo">
-          {/* <img src="../../app/assets/images/airbnb.png" /> */}
-          <h1>Take me down to the paradise city</h1>
-        </Link>
-        <NavBarContainer />
+        <div className="header-banner">
+          <Link to="/" className="logo-button">
+            <div className="logo-box">
+              <div className="logo"></div>
+            </div>
+          </Link>
+          <NavBarContainer />
+        </div>
       </header>
       <Switch>
-        {/* <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} /> */}
         <Route path="/" component={Splash} />
       </Switch>
     </div>
