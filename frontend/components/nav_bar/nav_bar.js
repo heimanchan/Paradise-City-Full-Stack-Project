@@ -19,7 +19,7 @@ import { Link, Route } from 'react-router-dom';
     );
 
   return (
-    <nav>
+    <nav className="banner">
       {display}
     </nav>
   )

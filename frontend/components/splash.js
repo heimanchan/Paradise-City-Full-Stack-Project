@@ -1,17 +1,19 @@
 import React from 'react';
+import NavBarContainer from '../components/nav_bar/nav_bar_container'
 
 export default () => {
   return (
-    <div class="splash">
+    <div className="splash">
       <div className="main">
-        <div className="banner">
+        {/* <div className="banner">
           banner is here
-        <nav className="nav-bar">
+          <nav className="nav-bar">
             <button>
 
             </button>
           </nav>
-      </div>
+        </div> */}
+        <NavBarContainer />
 
         <div className="fo">
           <div className="next-trip">

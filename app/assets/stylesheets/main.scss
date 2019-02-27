@@ -3,7 +3,7 @@
 }
 
 .main {
-  background: url(../images/e4914d86-8b68-4360-b0bc-7588c1b14ad3.jpg);
+  background: image_url("background.jpg");
   /* background: #767676; */
   background-size: cover;
   background-position-y: -50px;
@@ -16,6 +16,8 @@
 }
 
 .fo {
+  display: flex;
+  justify-content: center;
   height: 222px;
   width: 80%;
   margin: 0 auto;
