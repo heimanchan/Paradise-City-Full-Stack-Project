@@ -9,20 +9,6 @@
   height: 100vh;
 }
 
-.banner {
-  height: 200px;
-  background: rgba(94, 109, 109, 0.1);
-}
-
-.banner-nav {
-  background: cyan;
-}
-
-.banner h1 {
-  font-size: 50px;
-  font-weight: 700;
-}
-
 .fo {
   display: flex;
   justify-content: center;
@@ -72,8 +58,9 @@
   width: 545px;
 }
 
-.trip-location svg {
+.trip-location i {
   padding: 25px 0 0 0;
+  font-size: 25px;
 }
 
 form {
@@ -92,4 +79,8 @@ form {
   color: white;
   box-shadow: 0 10px 36px rgba(0,0,0,0.65)
 
+}
+
+.trip-button i {
+  font-size: 30px;
 }

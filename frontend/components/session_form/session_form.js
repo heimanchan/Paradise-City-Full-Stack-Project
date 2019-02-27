@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class SessionForm extends React.Component {
@@ -32,6 +32,18 @@ class SessionForm extends React.Component {
       // .then(() => this.props.history.push("/"));
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.session.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     if (this.props.formType === 'Sign Up') {
       return (
@@ -39,6 +51,7 @@ class SessionForm extends React.Component {
           <div className="modal-box">
           <h1>Sign up now</h1>
             <form className="session-form" onSubmit={this.handleSubmit}>
+              <div onClick={this.props.closeModal} className="close-x">X</div>
               <div className="session-input">
                 <input placeholder='Username' type="text" className="form-input" value={this.state.username} onChange={this.handleChange("username")} />
               </div>
@@ -68,6 +81,7 @@ class SessionForm extends React.Component {
           <div className="model-box">
             <h1>Welcome Back! Please Log In.</h1>
             <form className="session-form" onSubmit={this.handleSubmit}>
+              <div onClick={this.props.closeModal} className="close-x">X</div>
               <div className="session-input">
                 <input type="text" className="form-input" value={this.state.username} onChange={this.handleChange("username")} />
               </div>
@@ -87,7 +101,6 @@ class SessionForm extends React.Component {
         </div>
       )
     }
-    
   }
 }
-export default SessionForm;
+export default withRouter(SessionForm);

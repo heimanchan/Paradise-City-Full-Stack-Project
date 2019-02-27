@@ -2,7 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
-import SignupFormContainer from '../session_form/signup_form_container';
+import SignupFormContainer from '../session_form/sign_up_form_container';
 
 const Modal = ({modal, closeModal}) => {
   if (!modal) {
@@ -11,10 +11,10 @@ const Modal = ({modal, closeModal}) => {
 
   let component;
   switch (modal) {
-    case 'login':
+    case 'Log In':
       component = <LoginFormContainer />;
       break;
-    case 'signup':
+    case 'Sign Up':
       component = <SignupFormContainer />;
       break;
     default:

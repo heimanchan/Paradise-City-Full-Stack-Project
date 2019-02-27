@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner {
+  height: 200px;
+  background: rgba(94, 109, 109, 0.3);
+}
+
+.banner-nav > div{
+  display: flex;
+  background: cyan;
+}
+
+.banner h1 {
+  font-size: 30px;
+  font-weight: 700;
+}

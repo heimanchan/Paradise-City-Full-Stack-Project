@@ -6,15 +6,6 @@ export default () => {
 
       <div className="splash-box">
         <div className="main">
-          {/* <div className="banner">
-          banner is here
-          <nav className="nav-bar">
-            <button>
-
-            </button>
-          </nav>
-        </div> */}
-          {/* <NavBarContainer /> */}
 
           <div className="fo">
             <div className="next-trip">
@@ -26,14 +17,14 @@ export default () => {
                 <div>
                   <form>
                     <div className="trip-location">
-                      img
+                      <i className="fa fa-search" aria-hidden="true"></i>
                       <input placeholder="Surfing in Los Angeles" type="text" />
                     </div>
 
                     <div className="trip-button">
                       <div>
-                        <button type="submit">
-                          search
+                        <button type="trip-submit">
+                          <i className="fa fa-search" aria-hidden="true"></i>
                         </button>
                       </div>
                     </div>
