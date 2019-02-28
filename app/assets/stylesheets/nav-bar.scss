@@ -14,15 +14,45 @@
   height: 34px;
 }
 
+.header-banner {
+  height: 80px;
+  display: flex;
+  justify-content: space-between; 
+}
+
+.banner {
+  height: 200px;
+  // background: rgba(94, 109, 109, 0.3);
+  background: linear-gradient(rgba(75, 78, 78, 0.8), rgba(255, 255, 255, 0));
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.banner-nav {
+  display: flex;
+}
+
+.banner-nav > div{
+  
+  width: 200px;
+  /* border: 1px solid black; */
+}
+
+.banner h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
 .banner-nav {
   width: 150px;
-  padding: 24px;
+  // padding: 24px;
+  height: 100%;
   font-size: 14px;
 }
 
 .banner-nav button {
   color: white;
   margin: 0px 15px;
+  height: 100%;
 }
 
 .banner-nav button:hover {

@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
     }
   }
 
-  renderErrors() {
+  showErrors() {
     return (
       <ul>
         {this.props.errors.session.map((error, i) => (
@@ -64,11 +64,14 @@ class SessionForm extends React.Component {
                 </div>
                 <div className="session-input">
                   <input placeholder='Last Name' type="text" className="form-input" value={this.state.last_name} onChange={this.handleChange("last_name")} />
-                  <i className="fa fa-user-circle" aria-hidden="true"></i>
+                  <i className="fa fa-id-card" aria-hidden="true"></i>
                 </div>
                 <div className="session-input">
                   <input placeholder='Password' type="text" className="form-input" value={this.state.password} onChange={this.handleChange("password")} />
                   <i className="fa fa-lock" aria-hidden="true"></i>
+                </div>
+                <div className="session-errors">
+                  {this.showErrors()}
                 </div>
                 <div className="session-submit">
                   <button>Sign up</button>
@@ -98,6 +101,9 @@ class SessionForm extends React.Component {
               <div className="session-input">
                 <input placeholder="Password" type="text" className="form-input" value={this.state.password} onChange={this.handleChange("password")} />
                 <i className="fa fa-lock" aria-hidden="true"></i>
+              </div>
+              <div className="session-errors">
+                {this.showErrors()}
               </div>
               <div className="session-submit">
                 <button>Log In</button>
