@@ -21,7 +21,10 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
-      .then(this.props.closeModal());
+      .then(() => {
+        this.props.closeModal();
+        // this.props.history.push(`/users/${currentUserId}`)
+      });
   }
 
   handleGuestLogin(e) {
@@ -92,7 +95,7 @@ class SessionForm extends React.Component {
         <div className="modal">
           <div className="modal-form">
             <div onClick={this.props.closeModal} className="close-x">X</div>
-            <h1>Welcome Back! Please Log In.</h1>
+            <h1>Log in to continue</h1>
             <form className="session-form" onSubmit={this.handleSubmit}>
               <div className="session-input">
                 <input placeholder="Username" type="text" className="form-input" value={this.state.username} onChange={this.handleChange("username")} />
@@ -106,7 +109,7 @@ class SessionForm extends React.Component {
                 {this.sessionErrors()}
               </div>
               <div className="session-submit">
-                <button>Log In</button>
+                <button>Log in</button>
                 <button onClick={this.handleGuestLogin}>Demo User</button>
               </div>
             </form>
