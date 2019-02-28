@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
                   <i className="fa fa-id-card" aria-hidden="true"></i>
                 </div>
                 <div className="session-input">
-                  <input placeholder='Password' type="text" className="form-input" value={this.state.password} onChange={this.handleChange("password")} />
+                  <input placeholder='Password' type="password" className="form-input" value={this.state.password} onChange={this.handleChange("password")} />
                   <i className="fa fa-lock" aria-hidden="true"></i>
                 </div>
                 <div className="session-errors">
@@ -102,7 +102,7 @@ class SessionForm extends React.Component {
                 <i className="fa fa-user" aria-hidden="true"></i>
               </div>
               <div className="session-input">
-                <input placeholder="Password" type="text" className="form-input" value={this.state.password} onChange={this.handleChange("password")} />
+                <input placeholder="Password" type="password" className="form-input" value={this.state.password} onChange={this.handleChange("password")} />
                 <i className="fa fa-lock" aria-hidden="true"></i>
               </div>
               <div className="session-errors">
