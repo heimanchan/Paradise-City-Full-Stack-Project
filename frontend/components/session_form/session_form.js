@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
     }
   }
 
-  showErrors() {
+  sessionErrors() {
     return (
       <ul>
         {this.props.errors.session.map((error, i) => (
@@ -71,7 +71,7 @@ class SessionForm extends React.Component {
                   <i className="fa fa-lock" aria-hidden="true"></i>
                 </div>
                 <div className="session-errors">
-                  {this.showErrors()}
+                  {this.sessionErrors()}
                 </div>
                 <div className="session-submit">
                   <button>Sign up</button>
@@ -103,7 +103,7 @@ class SessionForm extends React.Component {
                 <i className="fa fa-lock" aria-hidden="true"></i>
               </div>
               <div className="session-errors">
-                {this.showErrors()}
+                {this.sessionErrors()}
               </div>
               <div className="session-submit">
                 <button>Log In</button>

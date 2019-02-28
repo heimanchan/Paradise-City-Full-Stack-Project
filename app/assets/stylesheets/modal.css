@@ -70,7 +70,7 @@
   margin-top: 15px;
 }
 
-.session-input:focus {
+.session-input:focus-within {
   border: 1px solid rgb(0, 132, 137);
 }
 
@@ -111,4 +111,10 @@
 .session-alt-form:hover {
   color: #008489;
   text-decoration: underline;
+}
+
+.session-errors {
+  text-align: center;
+  font-size: 14px;
+  color: red;
 }

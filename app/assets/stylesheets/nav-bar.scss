@@ -29,12 +29,7 @@
 
 .banner-nav {
   display: flex;
-}
-
-.banner-nav > div{
-  
-  width: 200px;
-  /* border: 1px solid black; */
+  // padding-right: 30px;
 }
 
 .banner h1 {
@@ -42,9 +37,15 @@
   font-weight: 700;
 }
 
-.banner-nav {
+// .banner-nav {
+//   width: 150px;
+//   // padding: 24px;
+//   height: 100%;
+//   font-size: 14px;
+// }
+.user-nav {
   width: 150px;
-  // padding: 24px;
+  padding-right: 30px;
   height: 100%;
   font-size: 14px;
 }
@@ -57,4 +58,17 @@
 
 .banner-nav button:hover {
   border-bottom: 2px solid white;
+}
+
+.profile-box {
+  padding: 20px 20px 20px 20px;
+  // margin-right: 20px;
+}
+
+.profile-pic {
+  background: image_url("cheese.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
