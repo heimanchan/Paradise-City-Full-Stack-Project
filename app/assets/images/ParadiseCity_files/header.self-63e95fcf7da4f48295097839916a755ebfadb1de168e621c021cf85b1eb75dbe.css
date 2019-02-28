@@ -1,0 +1,26 @@
+/* line 6, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/header.scss */
+.header-banner {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 12, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/header.scss */
+.banner {
+  height: 200px;
+  background: linear-gradient(rgba(75, 78, 78, 0.8), rgba(255, 255, 255, 0));
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* line 19, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/header.scss */
+.banner-nav > div {
+  display: flex;
+  width: 200px;
+  /* border: 1px solid black; */
+}
+
+/* line 25, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/header.scss */
+.banner h1 {
+  font-size: 30px;
+  font-weight: 700;
+}

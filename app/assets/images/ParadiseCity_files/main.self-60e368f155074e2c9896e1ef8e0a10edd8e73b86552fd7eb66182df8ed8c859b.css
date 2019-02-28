@@ -1,0 +1,95 @@
+/* line 1, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.splash {
+  background: url(/assets/background-c169c11cf6fefd81c3ee2d911c44c12720e7fcfac4c377b2dadb7f20736ccf9e.jpg);
+  background-size: cover;
+  background-position-y: -30px;
+}
+
+/* line 7, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.splash-box {
+  font-family: 'Noto Sans', sans-serif;
+  height: 100vh;
+}
+
+/* line 12, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.fo {
+  display: flex;
+  justify-content: center;
+  height: 222px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 20, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.next-trip {
+  padding: 0px 24px 48px 24px;
+}
+
+/* line 24, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-search {
+  padding: 24px 0px 0px 0px;
+}
+
+/* line 28, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-search > div {
+  /* background: cyan; */
+  padding: 16px 0px 14px 0px;
+}
+
+/* line 34, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-title h1 {
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 6px 84px rgba(0, 0, 0, 0.8);
+  line-height: 60px;
+}
+
+/* line 43, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-location {
+  display: flex;
+  background: white;
+  color: #767676;
+  font-size: 17px;
+  padding: 0 16px;
+  border-radius: 5px;
+  height: 78px;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.65);
+}
+
+/* line 55, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-location input {
+  padding: 0 0 0 20px;
+  width: 545px;
+}
+
+/* line 60, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-location i {
+  padding: 25px 0px;
+  font-size: 25px;
+}
+
+/* line 65, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+form {
+  display: flex;
+}
+
+/* line 69, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-button {
+  padding: 0 0 0 12px;
+}
+
+/* line 73, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-button button {
+  display: inline-block;
+  padding: 23px;
+  background-color: #ff5a5f;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.65);
+}
+
+/* line 83, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/main.scss */
+.trip-button i {
+  font-size: 30px;
+}

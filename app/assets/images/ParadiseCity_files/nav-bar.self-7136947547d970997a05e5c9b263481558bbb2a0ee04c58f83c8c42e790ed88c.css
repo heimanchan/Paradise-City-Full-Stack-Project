@@ -1,0 +1,36 @@
+/* line 1, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/nav-bar.scss */
+.logo-button {
+  width: 99px;
+  height: 80px;
+}
+
+/* line 6, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/nav-bar.scss */
+.logo-box {
+  padding: 24px;
+}
+
+/* line 10, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/nav-bar.scss */
+.logo {
+  background: url(/assets/airbnb-c36c484a3db6ddd459e24eb761a34ad25c6bac10b09b83f3ba907875a46f13e4.png);
+  background-size: cover;
+  width: 34px;
+  height: 34px;
+}
+
+/* line 17, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/nav-bar.scss */
+.banner-nav {
+  width: 150px;
+  padding: 24px;
+  font-size: 14px;
+}
+
+/* line 23, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/nav-bar.scss */
+.banner-nav button {
+  color: white;
+  margin: 0px 15px;
+}
+
+/* line 28, /Users/heimanchan/Documents/App Academy/paradise_city/app/assets/stylesheets/nav-bar.scss */
+.banner-nav button:hover {
+  border-bottom: 2px solid white;
+}

@@ -45,37 +45,27 @@
 }
 
 .session-input {
-  border: 1px solid rgb(235, 235, 235);
-  border-radius: 4px;
   display: flex;
   justify-content: space-between;
 }
 
-.session-input i {
-  padding: 0 10px;
-  font-size: 16px;
-}
-
-.session-input {
+.form-input {
   box-sizing: border-box;
   background: transparent;
-  
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 4px;
   padding: 11px;
   margin: 5px 0px;
   width: 100%;
   font-size: 14px;
 }
 
-.session-input:first-child {
+.form-input:first-child {
   margin-top: 15px;
 }
 
-.session-input:focus {
+.form-input:focus {
   border: 1px solid rgb(0, 132, 137);
-}
-
-.form-input {
-  width: 100%
 }
 
 .session-submit button {
