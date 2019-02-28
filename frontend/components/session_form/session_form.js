@@ -11,6 +11,10 @@ class SessionForm extends React.Component {
     this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
+  componentDidMount(){
+    this.state.errors = [];
+  }
+
   handleChange(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });

@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_193128) do
     t.float "lng", null: false #
     t.float "lat", null: false #
     t.integer "ratings" #
-    t.integer "owner_id", null: false
+    t.integer "owner_id", null: false#
     t.integer "city_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

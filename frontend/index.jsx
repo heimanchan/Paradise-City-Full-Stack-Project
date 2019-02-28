@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signup = SessionActions.signup;
   window.login = SessionActions.login;
   window.logout = SessionActions.logout;
-
   // let store = configureStore();
   let store;
   if (window.currentUser) {
