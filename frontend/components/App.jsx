@@ -20,7 +20,7 @@ const App = () => (
         </div>
       </header>
       <Switch>
-        <Route path="/" component={Splash} />
+        <Route exact path="/" component={Splash} />
       </Switch>
     </div>
     
