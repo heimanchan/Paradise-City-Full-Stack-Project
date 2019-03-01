@@ -9,11 +9,15 @@
   /* padding-right: 10px; */
   background: white;
   color: #727272;
-  /* border: 1px solid rgb(242, 242, 242); */
+  border: 1px solid rgb(235, 235, 235);
   border-top: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
   width: 282px;
   right: 2px;
+}
+
+.user-dropdown-link {
+  width: 100%;
 }
 
 .user-dropdown-el {
@@ -22,7 +26,7 @@
   font-weight: 600;
 }
 
-.user-dropdown-el div {
+.user-dropdown-el div{
   padding: 16px 0;  
   border-bottom: 1px solid rgb(242, 242, 242);
 }

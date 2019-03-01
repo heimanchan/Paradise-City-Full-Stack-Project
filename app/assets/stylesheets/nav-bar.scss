@@ -42,18 +42,30 @@
   font-size: 14px;
 }
 
-.banner-nav > button {
+.user-nav > button {
   color: white;
   margin: 0px 15px;
   height: 100%;
 }
 
-.banner-nav > button:hover {
+.user-nav > button:hover {
   border-bottom: 2px solid white;
 }
 
+.profile-box:hover {
+  border-bottom: 2px solid white;
+}
+
+.profile-box:active{
+  border: none;
+}
+
+.profile-box:focus{
+  border: none;
+}
+
 .profile-box {
-  padding: 20px 20px 20px 20px;
+  padding: 20px 30px;
 }
 
 .profile-box {
