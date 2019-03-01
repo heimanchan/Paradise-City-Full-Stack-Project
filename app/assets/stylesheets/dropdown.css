@@ -1,9 +1,5 @@
-.dropdown-background {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.profile-pic {
+  position: relative;
 }
 
 .user-dropdown {
@@ -16,6 +12,7 @@
   border: 1px solid rgb(242, 242, 242);
   border-top: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+  top: 40px;
 }
 
 .user-dropdown-link {

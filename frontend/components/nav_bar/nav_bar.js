@@ -5,8 +5,8 @@ import Dropdown from '../dropdown'
  const NavBar = ({ currentUser, logout, openModal }) => {
   const display = currentUser ? (
     <div>
-      <button onClick={logout}>logout</button>
-      <Dropdown />
+      {/* <button onClick={logout}>logout</button> */}
+      <Dropdown logout={logout}/>
     </div>
   ) : (
       <div className="user-nav">
