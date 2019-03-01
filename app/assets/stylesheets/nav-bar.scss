@@ -42,13 +42,13 @@
   font-size: 14px;
 }
 
-.banner-nav button {
+.banner-nav > button {
   color: white;
   margin: 0px 15px;
   height: 100%;
 }
 
-.banner-nav button:hover {
+.banner-nav > button:hover {
   border-bottom: 2px solid white;
 }
 

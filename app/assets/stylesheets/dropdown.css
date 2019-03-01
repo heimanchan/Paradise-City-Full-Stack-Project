@@ -5,26 +5,29 @@
 .user-dropdown {
   position: absolute;
   white-space: nowrap;
-  text-align: right;
-  padding-right: 10px;
-  background: wheat;
-  color: #484848;
-  border: 1px solid rgb(242, 242, 242);
+  /* text-align: right; */
+  /* padding-right: 10px; */
+  background: white;
+  color: #727272;
+  /* border: 1px solid rgb(242, 242, 242); */
   border-top: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
-  top: 40px;
-}
-
-.user-dropdown-link {
-  padding: 0px 16px;
-  border-bottom: 1px solid rgb(242, 242, 242);
+  width: 282px;
+  right: 2px;
 }
 
 .user-dropdown-el {
-  padding: 16px 0;
-  border-bottom: 1px solid rgb(242, 242, 242);
+  padding: 0 16px;
   font-size: 14px;
   font-weight: 600;
 }
 
+.user-dropdown-el div {
+  padding: 16px 0;  
+  border-bottom: 1px solid rgb(242, 242, 242);
+}
+
 /* hover rgb(118, 118, 118); */
+.user-dropdown-el div:hover {
+  border-bottom: 1px solid rgb(118, 118, 118);
+}

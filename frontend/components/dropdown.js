@@ -32,10 +32,9 @@ export default class Dropdown extends React.Component {
   render() {
     return (
       <div>
-        <div className="profile-box" onClick={this.showDropdown}>
+        <button className="profile-box" onClick={this.showDropdown}>
           <div className="profile-pic"></div>
-        </div>
-
+        </button>
         {
           this.state.showMenu ? (
             <div 
@@ -46,11 +45,11 @@ export default class Dropdown extends React.Component {
             >
               <div className="user-dropdown">
                 <Link to="/" className="user-dropdown-link">
-                  <div className="user-dropdown-el">My Profile</div>
+                  <div className="user-dropdown-el"><div>My Profile</div></div>
                 </Link>
 
                 <button onClick={this.props.logout} className="user-dropdown-link">
-                  <div className="user-dropdown-el">Logout</div>
+                  <div className="user-dropdown-el"><div>Logout</div></div>
                 </button>
               </div>
             </div>
