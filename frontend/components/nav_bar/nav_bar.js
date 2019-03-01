@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
     <div>
       <button onClick={logout}>
         <div className="profile-box">
-          <div className="profile-pic">{currentUser.first_name}</div>
+          <div className="profile-pic"></div>
         </div>
       </button>
     </div>
