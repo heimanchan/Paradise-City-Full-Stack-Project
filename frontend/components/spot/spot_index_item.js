@@ -7,7 +7,13 @@ export default class IndexItem extends React.Component {
     this.state = props.spots;
   }
 
-  componentDidMount() {
+  // componentDidMount() {
 
+  // }
+
+  render() {
+    return (
+      <h1>spot items</h1>
+    )
   }
 }

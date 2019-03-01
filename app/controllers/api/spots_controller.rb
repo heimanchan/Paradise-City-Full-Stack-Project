@@ -11,6 +11,7 @@ class Api::SpotsController < ApplicationController
       render :show
     else
       render json: ["Not Logged In"], status: 400
+    end
   end
 end
 
