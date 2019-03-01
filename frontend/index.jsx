@@ -8,8 +8,8 @@ import * as SpotActions from './actions/spot_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Testing
-  window.fetchAllSpots = SpotActions.fetchAllSpots;
-  // let store = configureStore();
+  // 
+
   let store;
   if (window.currentUser) {
     const preloadedState = {
