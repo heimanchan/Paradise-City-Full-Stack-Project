@@ -22,14 +22,12 @@
 
 .banner {
   height: 200px;
-  // background: rgba(94, 109, 109, 0.3);
-  background: linear-gradient(rgba(75, 78, 78, 0.8), rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(75, 78, 78, 0.5), rgba(255, 255, 255, 0));
   font-family: 'Noto Sans', sans-serif;
 }
 
 .banner-nav {
   display: flex;
-  // padding-right: 30px;
 }
 
 .banner h1 {
@@ -58,10 +56,16 @@
   padding: 20px 20px 20px 20px;
 }
 
+.profile-box {
+  cursor: pointer;
+}
+
 .profile-pic {
+  position: relative;
   background: image_url("cheese.jpg");
   background-size: cover;
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
+

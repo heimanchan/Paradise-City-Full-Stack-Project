@@ -6,7 +6,11 @@ class Api::SpotsController < ApplicationController
 
   def show
     @spot = Spot.find(params[:id])
-    render :show
+    
+    if @spot
+      render :show
+    else
+      render json: ["Not Logged In"], status: 400
   end
 end
 

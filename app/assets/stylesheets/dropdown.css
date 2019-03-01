@@ -1,0 +1,33 @@
+.dropdown-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.user-dropdown {
+  position: absolute;
+  white-space: nowrap;
+  text-align: right;
+  padding-right: 10px;
+  background: wheat;
+  color: #484848;
+  border: 1px solid rgb(242, 242, 242);
+  border-top: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+}
+
+.user-dropdown-link {
+  padding: 0px 16px;
+  border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+.user-dropdown-el {
+  padding: 16px 0;
+  border-bottom: 1px solid rgb(242, 242, 242);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* hover rgb(118, 118, 118); */

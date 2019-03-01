@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Dropdown from '../dropdown'
 
  const NavBar = ({ currentUser, logout, openModal }) => {
   const display = currentUser ? (
     <div>
-      <button onClick={logout}>
-        <div className="profile-box">
-          <div className="profile-pic"></div>
-        </div>
-      </button>
+      <button onClick={logout}>logout</button>
+      <Dropdown />
     </div>
   ) : (
       <div className="user-nav">
