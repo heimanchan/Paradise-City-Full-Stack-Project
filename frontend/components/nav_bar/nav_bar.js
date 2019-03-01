@@ -9,17 +9,25 @@ import Dropdown from '../dropdown'
     // </div>
   ) : (
       <div className="user-nav">
-        {/* <Link to="/signup">Sign up</Link>
-        <Link to="/login">Log in</Link> */}
         <button className="nav-button" onClick={() => openModal('Sign Up')}>Sign up</button>
         <button className="nav-button" onClick={() => openModal('Log In')}>Log in</button>
       </div>
     );
 
   return (
-    <nav className="banner-nav">
-      {display}
-    </nav>
+    <header className="banner">
+      <div className="header-banner">
+        <Link to="/" className="logo-button">
+          <div className="logo-box">
+            <div className="logo"></div>
+          </div>
+        </Link>
+        <nav className="banner-nav">
+          {display}
+        </nav>
+      </div>
+    </header>
+    
   )
 }
 

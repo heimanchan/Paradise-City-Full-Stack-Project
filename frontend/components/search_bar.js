@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    alert("Finish this part later!")
+    alert(`${document.getElementById("search-bar-input").value}\nsucks, find somewhere else.`)
   }
 
   render() {
@@ -42,7 +42,7 @@ class SearchBar extends React.Component {
 
           <div className="trip-button">
             <div>
-              <button type="trip-submit">
+              <button type="trip-submit" onClick={this.handleSubmit}>
                 <i className="fa fa-search" aria-hidden="true"></i>
               </button>
             </div>

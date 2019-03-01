@@ -12,7 +12,7 @@ const App = () => (
     {/* if in splash, no search nav, else <SearchNav />*/}
     <Switch>
       <Route path="/spots" component={SpotIndexContainer} />
-      <Route exact path="/" component={Splash} />
+      <Route path="/" component={Splash} />
     </Switch>
   </div>
 )

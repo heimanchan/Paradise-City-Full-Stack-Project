@@ -6,7 +6,7 @@ import SearchBar from '../components/search_bar';
 export default () => {
   return (
     <div className="splash">
-      <header className="banner">
+      {/* <header className="banner">
         <div className="header-banner">
           <Link to="/" className="logo-button">
             <div className="logo-box">
@@ -15,7 +15,8 @@ export default () => {
           </Link>
           <NavBarContainer />
         </div>
-      </header>
+      </header> */}
+      <NavBarContainer />
       <div className="splash-box">
         <div className="fo">
           <div className="next-trip">
@@ -23,24 +24,6 @@ export default () => {
               <h1>Plan your next trip</h1>
             </div>
             <SearchBar />
-            {/* <div className="trip-search">
-              <div>
-                <form>
-                  <div className="trip-location">
-                    <i className="fa fa-search" aria-hidden="true"></i>
-                    <input placeholder="Surfing in Los Angeles" type="text" />
-                  </div>
-
-                  <div className="trip-button">
-                    <div>
-                      <button type="trip-submit">
-                        <i className="fa fa-search" aria-hidden="true"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
