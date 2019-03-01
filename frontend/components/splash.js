@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBarContainer from '../components/nav_bar/nav_bar_container'
+import NavBarContainer from '../components/nav_bar/nav_bar_container';
+import SearchBar from '../components/search_bar';
 
 export default () => {
   return (
@@ -21,8 +22,8 @@ export default () => {
             <div className="trip-title">
               <h1>Plan your next trip</h1>
             </div>
-
-            <div className="trip-search">
+            <SearchBar />
+            {/* <div className="trip-search">
               <div>
                 <form>
                   <div className="trip-location">
@@ -39,7 +40,7 @@ export default () => {
                   </div>
                 </form>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -21,4 +21,4 @@ class SpotIndex extends React.Component {
 }
 export default SpotIndex;
 
-width: 80%!!!!
+// width: 80%!!!!

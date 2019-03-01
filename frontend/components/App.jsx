@@ -9,7 +9,7 @@ import SpotIndexContainer from './spot/spot_index_container';
 const App = () => (
   <div>
     <Modal />
-    
+    {/* if in splash, no search nav, else <SearchNav />*/}
     <Switch>
       <Route path="/spots" component={SpotIndexContainer} />
       <Route exact path="/" component={Splash} />
