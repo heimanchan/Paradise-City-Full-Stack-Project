@@ -5,8 +5,6 @@ export default () => {
   return (
 
       <div className="splash-box">
-        <div className="main">
-
           <div className="fo">
             <div className="next-trip">
               <div className="trip-title">
@@ -33,7 +31,6 @@ export default () => {
               </div>
             </div>
           </div>
-        </div>
       </div>
 
   )

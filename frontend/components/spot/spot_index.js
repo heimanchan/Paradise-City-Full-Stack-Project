@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SpotIndex = () {
+const SpotIndex = () => {
   
   return(
     <div className="spot-index">

@@ -10,4 +10,4 @@ const mapDispatchToProps = dispatch => ({
   fetchSpot: spot => dispatch(fetchSpot(spot))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(SpotIndex)
+// export default connect(mapStateToProps, mapDispatchToProps)(SpotIndex)

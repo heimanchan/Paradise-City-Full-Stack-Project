@@ -1,14 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-export default class IndexItem extends React.Component {
+class IndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.spots;
   }
 
   // componentDidMount() {
-
+  //  fetch
   // }
 
   render() {
@@ -17,3 +17,5 @@ export default class IndexItem extends React.Component {
     )
   }
 }
+
+export default withRouter(IndexItem);
