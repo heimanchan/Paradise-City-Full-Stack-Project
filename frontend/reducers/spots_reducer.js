@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_SPOTS, RECEIVE_SPOT } from '../actions/spot_actions';
 
-const spotReducer = (oldState = {}, action) => {
+const spotsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
 
   let newState = Object.assign({}, oldState);
@@ -14,4 +14,4 @@ const spotReducer = (oldState = {}, action) => {
   }
 }
 
-export default spotReducer;
+export default spotsReducer;
