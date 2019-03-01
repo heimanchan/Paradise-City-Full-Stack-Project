@@ -16,22 +16,14 @@ class SpotIndex extends React.Component {
     return (
       <div className="sub-banner">
         <SearchNavContainer />
-        <div>
-          <div className="filter-banner">
-            <div className="filter-type-box">
-              <span className="filter-type">Dates</span>
-            </div>
-            <div className="filter-type-box">
-              <span className="filter-type">Dates</span>
-            </div>
-            <div className="filter-type-box">
-              <span className="filter-type">Dates</span>
-            </div>
-          </div>
+        <div className="content-box">
           <div className="spots-index">
-            {spotsItems}
+            <div>
+              {spotsItems}
+            </div>
           </div>
         </div>
+        
       </div>
         
       

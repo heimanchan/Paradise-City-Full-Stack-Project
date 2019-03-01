@@ -1,0 +1,11 @@
+.spots-index {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.spot-item {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 1px solid black;
+}
