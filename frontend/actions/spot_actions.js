@@ -8,7 +8,17 @@ const receiveAllSpots = spots => ({
   spots
 })
 
+const receiveSpot = spot => ({
+  type: RECEIVE_SPOT,
+  spot
+})
+
 export const fetchAllSpots = () => dispatch => (
   SpotAPI.fetchAllSpots()
     .then(res => dispatch(receiveAllSpots(res)))
+)
+
+export const fetchSpot = () => dispatch => (
+  SpotAPI.fetchSpot()
+    .then(res => dispatch(receiveSpot(res)))
 )
