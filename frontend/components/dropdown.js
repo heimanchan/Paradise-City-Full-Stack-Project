@@ -9,6 +9,7 @@ export default class Dropdown extends React.Component {
 
     this.showDropdown = this.showDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
+    this.setDropdownMenu = this.setDropdownMenu.bind(this);
   }
 
   showDropdown(e) {
@@ -27,7 +28,9 @@ export default class Dropdown extends React.Component {
     }
   }
 
-  
+  setDropdownMenu(element) {
+    this.dropdownMenu = element;
+  }
   
   render() {
     return (
@@ -39,9 +42,10 @@ export default class Dropdown extends React.Component {
           this.state.showMenu ? (
             <div 
               className="dropdown-background"
-              ref={(element) => {
-                this.dropdownMenu = element;
-              }}
+              // ref={(element) => {
+              //   this.dropdownMenu = element;
+              // }}
+              ref={this.setDropdownMenu}
             >
               <div className="user-dropdown">
                 <Link to="/" className="user-dropdown-link">
