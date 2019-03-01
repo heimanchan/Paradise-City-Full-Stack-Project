@@ -4,13 +4,11 @@ import configureStore from './store/store';
 import Root from './components/root'
 
 // Testing
-import * as SessionActions from './actions/session_actions';
+import * as SpotActions from './actions/spot_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Testing
-  window.signup = SessionActions.signup;
-  window.login = SessionActions.login;
-  window.logout = SessionActions.logout;
+  window.fetchAllSpots = SpotActions.fetchAllSpots;
   // let store = configureStore();
   let store;
   if (window.currentUser) {
