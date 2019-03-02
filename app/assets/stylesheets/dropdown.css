@@ -1,5 +1,6 @@
 .profile-pic {
   position: relative;
+  z-index: 0;
 }
 
 .user-dropdown {
@@ -12,10 +13,12 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
   width: 282px;
   right: 2px;
+  z-index: 6;
 }
 
 .user-dropdown-link {
   width: 100%;
+  z-index: auto;
 }
 
 .user-dropdown-el {

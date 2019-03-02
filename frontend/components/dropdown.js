@@ -42,9 +42,6 @@ export default class Dropdown extends React.Component {
           this.state.showMenu ? (
             <div 
               className="dropdown-background"
-              // ref={(element) => {
-              //   this.dropdownMenu = element;
-              // }}
               ref={this.setDropdownMenu}
             >
               <div className="user-dropdown">

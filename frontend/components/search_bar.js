@@ -27,6 +27,9 @@ class SearchBar extends React.Component {
   }
 
   render() {
+    let placeholder = (
+      location.pathname === "#/" ? 
+      "Surfing in Los Angeles" : `Try "San Francisco"`)
     return(
       <div className="trip-search">
         <form>
@@ -34,7 +37,7 @@ class SearchBar extends React.Component {
             <i className="fa fa-search" aria-hidden="true"></i>
             <input 
               id="search-bar-input" 
-              placeholder="Surfing in Los Angeles" 
+              placeholder = {placeholder}
               type="text" 
               onChange={this.handleUpdate} 
             />
@@ -53,4 +56,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);

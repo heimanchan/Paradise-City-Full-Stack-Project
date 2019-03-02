@@ -30,7 +30,6 @@ class SpotIndex extends React.Component {
                 z-index: -1;
                 z-index: -1;
                 z-index: -1;
-                v
                 z-index: -1;
                 z-index: -1;
                 z-index: -1;
