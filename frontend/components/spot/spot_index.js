@@ -2,6 +2,7 @@ import React from 'react';
 import SpotIndexItem from './spot_index_item';
 import SpotIndexItem2 from './spot_index_item2';
 import SearchNavContainer from '../nav_bar/search_nav_container';
+import SpotMap from '../spot_map/spot_map';
 
 class SpotIndex extends React.Component {
   constructor(props) {
@@ -16,8 +17,8 @@ class SpotIndex extends React.Component {
     const spotsItems = this.props.spots.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
     const spotsItems2 = this.props.spots.map(spot => <SpotIndexItem2 key={spot.id} spot={spot} />)
     return (
-      <div className="sub-banner">
-        <SearchNavContainer />
+      <div>
+        
         <div className="content-box">
           <div className="spots-index">
             {spotsItems}
@@ -27,25 +28,12 @@ class SpotIndex extends React.Component {
           </div>
           <div className="map-box">
             <div className="map-search">
-              <p>
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-                z-index: -1;
-
-                z-index: -1;z-index: -1;z-index: -1;z-index: -1;z-index: -1;z-index: -1;z-index: -1;
-              </p>
+              <SpotMap />
             </div>
           </div>
         </div>
       </div>
+      
         
       
     )
