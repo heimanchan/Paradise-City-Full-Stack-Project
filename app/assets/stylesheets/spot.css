@@ -6,7 +6,7 @@
 
 .spots-index {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   background: cyan;
   width: 100%;
   padding: 30px 24px 48px 24px;
@@ -16,11 +16,48 @@
   flex-wrap: wrap;
 }
 
+.spot-item-box {
+  /* border: 1px solid black; */
+  width: 100%;
+}
+
 .spot-item {
-  /* width:100%; */
   display: flex;
+  flex-direction: column;
   border: 1px solid black;
-  padding: 8px 8px 12px 8px;
+  margin: 8px 8px 12px 8px;
+  /* change to padding after design */
+  /* padding: 8px 8px 12px 8px; */
+}
+
+.spot-title {
+  overflow-wrap: break-word;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.375em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px !important;
+}
+
+.spot-price {
+  overflow-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.28571em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px !important;
+}
+
+.spot-reviews {
+  overflow-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1.33333em !important;
+    color: rgb(72, 72, 72) !important;
+    margin: 0px !important;
 }
 
 .map-box {
@@ -40,15 +77,26 @@
 }
 
 @media (min-width: 768px){
-  .spot-item {
-      width: 50% !important;
-  }
+    .spot-item-box {
+      width: 50%;
+    }
 
-  .spots-index {
-    width: 66%;
-  }
+    .spots-index {
+      width: 66%;
+    }
 
-  .map-box .map-search{
+    .map-box {
     display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
+  }
+
+  .map-search {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 128px);
+    z-index: -1;
   }
 }
