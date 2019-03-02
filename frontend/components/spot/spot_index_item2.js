@@ -7,7 +7,7 @@ const spotIndexItem = (props) => {
     <div className="spot-item-container">
       <Link className="spot-item-box" to={`/spots/${spot.id}`}>
         <div className="spot-image">
-          <img src={window.livingURL} />
+          <img src={window.libURL} />
         </div>
         <div className="spot-caption">
           <div className="spot-item">
