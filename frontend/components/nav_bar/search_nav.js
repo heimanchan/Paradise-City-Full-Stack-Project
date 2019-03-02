@@ -42,10 +42,10 @@ const SearchNav = ({ currentUser, logout, openModal }) => {
           <span className="filter-type">Dates</span>
         </button>
         <button className="filter-type-box">
-          <span className="filter-type">Dates</span>
+          <span className="filter-type">City</span>
         </button>
         <button className="filter-type-box">
-          <span className="filter-type">Dates</span>
+          <span className="filter-type">Guests</span>
         </button>
       </div>
     </div>

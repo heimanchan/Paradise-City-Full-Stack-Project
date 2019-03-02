@@ -57,7 +57,7 @@ body {
   background: white;
 }
 
-.filter-type-box:hover {
+button.filter-type-box span:hover {
   background: rgb(242, 242, 242);
 }
 
@@ -70,7 +70,6 @@ body {
 
 .search-bar .trip-search {
   padding: 15px 0 0 0;
-  
 }
 
 .search-bar i {

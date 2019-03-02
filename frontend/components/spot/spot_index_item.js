@@ -4,13 +4,13 @@ import { Link, withRouter } from 'react-router-dom';
 const spotIndexItem = (props) => {
   const spot = props.spot;
   return (
-    <div className="spot-item-box">
-      <Link className="spot-item" to={`/spots/${spot.id}`}>
+    <Link className="spot-item-box" to={`/spots/${spot.id}`}>
+      <div className="spot-item">
         {spot.title}
         {spot.price}
         {spot.ownerName}
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 
