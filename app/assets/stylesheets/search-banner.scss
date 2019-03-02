@@ -1,0 +1,90 @@
+body {
+  font-family: 'Noto Sans', sans-serif;  
+}
+
+.search-header .logo {
+  background: image_url("airbnb-red.png");
+  background: cover;
+  width: 31px;
+  height: 32px;
+}
+
+.search-header{
+  font-family: 'Noto Sans', sans-serif;
+  background: white;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  height: 81px;
+  width: 100%;
+}
+/* rgb(228, 228, 228) */
+
+.logo-search {
+  display: flex;
+  width: 100%;
+}
+
+.sub-banner > .a {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  // z-index: 10;
+}
+
+.sub-banner {
+  width: 100%;
+  color: #787878;
+  font-size: 14px;
+}
+
+.filter-banner {
+  height:48px;
+  background: white;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  padding-left: 16px; 
+  display: flex;
+}
+
+.filter-type-box {
+  margin: 0 4px 0 8px;
+  align-self: center;
+  background: white;
+}
+
+.filter-type {
+  padding: 6px 12px;
+  border: 1px solid rgb(220, 224, 224);
+  border-radius: 4px;
+  background: white;
+}
+
+.filter-type-box:hover {
+  background: rgb(242, 242, 242);
+}
+
+.search-bar .trip-location {
+  width: 442px;
+  height: 48px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar .trip-search {
+  padding: 15px 0 0 0;
+  
+}
+
+.search-bar i {
+  padding: 12px 0 0 0;
+}
+
+.search-bar .search-bar-input {
+  font-size: 17px;
+}
+
+.search-bar .trip-button {
+  display: none;
+}
+
+.search-header button {
+  color: #787878;
+}
+

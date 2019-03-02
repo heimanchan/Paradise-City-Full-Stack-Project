@@ -17,14 +17,20 @@ const SearchNav = ({ currentUser, logout, openModal }) => {
     );
 
   return (
-    <div>
+    <div className="a">
       <header className="search-header">
         <div className="header-banner">
-          <Link to="/" className="logo-button">
-            <div className="logo-box">
-              <div className="logo"></div>
+          <div className="logo-search">
+            <Link to="/" className="logo-button">
+              <div className="logo-box">
+                <div className="logo"></div>
+              </div>
+            </Link>
+            <div className="search-bar">
+              <SearchBar />
             </div>
-          </Link>
+          </div>
+          
           <nav className="banner-nav">
             {display}
           </nav>
@@ -32,15 +38,15 @@ const SearchNav = ({ currentUser, logout, openModal }) => {
       </header>
 
       <div className="filter-banner">
-        <div className="filter-type-box">
+        <button className="filter-type-box">
           <span className="filter-type">Dates</span>
-        </div>
-        <div className="filter-type-box">
+        </button>
+        <button className="filter-type-box">
           <span className="filter-type">Dates</span>
-        </div>
-        <div className="filter-type-box">
+        </button>
+        <button className="filter-type-box">
           <span className="filter-type">Dates</span>
-        </div>
+        </button>
       </div>
     </div>
     

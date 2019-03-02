@@ -5,8 +5,6 @@
 .user-dropdown {
   position: absolute;
   white-space: nowrap;
-  /* text-align: right; */
-  /* padding-right: 10px; */
   background: white;
   color: #727272;
   border: 1px solid rgb(235, 235, 235);

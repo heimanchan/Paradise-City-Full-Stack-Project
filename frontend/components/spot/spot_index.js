@@ -18,12 +18,29 @@ class SpotIndex extends React.Component {
         <SearchNavContainer />
         <div className="content-box">
           <div className="spots-index">
-            <div>
-              {spotsItems}
+            {spotsItems}
+          </div>
+          <div className="map-box">
+            <div className="map-search">
+              <p>
+                z-index: -1;
+                z-index: -1;
+                z-index: -1;
+                z-index: -1;
+                z-index: -1;
+                z-index: -1;
+                z-index: -1;
+                v
+                z-index: -1;
+                z-index: -1;
+                z-index: -1;
+                z-index: -1;
+
+                z-index: -1;z-index: -1;z-index: -1;z-index: -1;z-index: -1;z-index: -1;z-index: -1;
+              </p>
             </div>
           </div>
         </div>
-        
       </div>
         
       
