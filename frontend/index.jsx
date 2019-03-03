@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
-
+  window.fetchAllSpots = SpotActions.fetchAllSpots;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   
