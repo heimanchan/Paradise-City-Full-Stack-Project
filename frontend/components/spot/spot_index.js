@@ -18,7 +18,7 @@ class SpotIndex extends React.Component {
     const spotsItems2 = this.props.spots.map(spot => <SpotIndexItem2 key={spot.id} spot={spot} />)
     return (
       <div>
-        
+        <SearchNavContainer />s
         <div className="content-box">
           <div className="spots-index">
             {spotsItems}

@@ -4,9 +4,7 @@ import Dropdown from '../dropdown'
 
  const NavBar = ({ currentUser, logout, openModal }) => {
   const display = currentUser ? (
-    // <div>
       <Dropdown logout={logout}/>
-    // </div>
   ) : (
       <div className="user-nav">
         <button className="nav-button" onClick={() => openModal('Sign Up')}>Sign up</button>
