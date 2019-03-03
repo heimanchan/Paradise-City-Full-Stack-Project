@@ -18,7 +18,7 @@
 
 .user-dropdown-link {
   width: 100%;
-  z-index: auto;
+  /* z-index: auto; */
 }
 
 .user-dropdown-el {
@@ -32,7 +32,6 @@
   border-bottom: 1px solid rgb(242, 242, 242);
 }
 
-/* hover rgb(118, 118, 118); */
 .user-dropdown-el div:hover {
   border-bottom: 1px solid rgb(118, 118, 118);
 }
