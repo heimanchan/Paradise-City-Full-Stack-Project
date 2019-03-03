@@ -16,7 +16,7 @@ const App = () => (
     <Switch>
       <Route path="/spots/:spotId" component={SpotShowContainer} />
       <Route path="/search" component={SearchContainer} />
-      <Route path="/" component={Splash} />
+      <Route exact path="/" component={Splash} />
     </Switch>
   </div>
 )

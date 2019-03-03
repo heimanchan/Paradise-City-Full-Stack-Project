@@ -1,5 +1,8 @@
 body {
-  font-family: 'Noto Sans', sans-serif;  
+  // font-family: 'Noto Sans', sans-serif;  
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color: #484848;
 }
 
 .search-header .logo {
@@ -10,13 +13,11 @@ body {
 }
 
 .search-header{
-  font-family: 'Noto Sans', sans-serif;
   background: white;
   border-bottom: 1px solid rgb(228, 228, 228);
   height: 81px;
   width: 100%;
 }
-/* rgb(228, 228, 228) */
 
 .logo-search {
   display: flex;
@@ -93,3 +94,14 @@ button.filter-type-box span:hover {
   color: #787878;
 }
 
+.search-header .profile-box:hover {
+  border-bottom: 2px solid #008489;
+}
+
+.search-header .profile-box:active{
+  border: none;
+}
+
+.search-header .profile-box:focus{
+  border: none;
+}

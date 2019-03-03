@@ -1,4 +1,6 @@
 .spot-show-container {
+  position: relative;
+  width: 100%;
   padding-top: 130px;
   height: 100px;
   border: 1px solid black;

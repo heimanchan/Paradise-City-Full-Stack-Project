@@ -9,7 +9,6 @@ class SpotShowMap extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     const mapOptions = {
       center: { lat: this.props.spot[0].lat, lng: this.props.spot[0].lng },
       zoom: 14,

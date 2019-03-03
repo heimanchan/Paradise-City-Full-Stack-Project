@@ -24,10 +24,11 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    // debugger
     this.props.processForm(user)
       .then(() => {
         this.props.closeModal();
-        // this.props.history.push(`/users/${currentUserId}`)
+        this.props.history.push(`/search`)
       });
   }
 
@@ -35,9 +36,17 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, { username: "guest", password: "password" });
     if (this.props.formType === "Sign Up") {
-      this.props.login(user).then(this.props.closeModal());
+      this.props.login(user)
+        .then(() => {
+          this.props.closeModal();
+          this.props.history.push(`/search`)
+        });
     } else {
-      this.props.processForm(user).then(this.props.closeModal());
+      this.props.processForm(user)
+        .then(() => {
+          this.props.closeModal();
+          this.props.history.push(`/search`)
+        });
     }
   }
 

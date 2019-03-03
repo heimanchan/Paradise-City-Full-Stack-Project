@@ -23,7 +23,6 @@
 .banner {
   height: 200px;
   background: linear-gradient(rgba(75, 78, 78, 0.5), rgba(255, 255, 255, 0));
-  font-family: 'Noto Sans', sans-serif;
 }
 
 .banner-nav {
@@ -66,10 +65,8 @@
 
 .profile-box {
   padding: 20px 30px;
-}
-
-.profile-box {
   cursor: pointer;
+
 }
 
 .profile-pic {
@@ -78,5 +75,6 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  // box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

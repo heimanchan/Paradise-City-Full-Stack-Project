@@ -5,7 +5,7 @@
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
+  z-index: 11;
 }
 
 .modal-child {
@@ -89,7 +89,6 @@
   background-color: rgb(255, 90, 95);
   color: white;
   font-size: 16px;
-  font-family: sans-serif;
   font-weight: 800px;
   text-align: center;
 }
