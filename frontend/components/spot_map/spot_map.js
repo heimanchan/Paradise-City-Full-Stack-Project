@@ -10,7 +10,6 @@ class SpotMap extends React.Component {
   }
   
   componentDidMount() {
-    // const map = this.refs.map;
     const mapOptions = {
       disableDefaultUI: true,
       center: { lat: 37.7489, lng: -122.309 }, // this is SF

@@ -3,10 +3,6 @@ import SearchNavContainer from '../nav_bar/search_nav_container';
 import SpotMap from '../spot_map/spot_map'
 
 class SpotShow extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId)
   }
@@ -15,7 +11,11 @@ class SpotShow extends React.Component {
     return(
       <>
         <SearchNavContainer />
-        <div className="">
+        <div className="spot-show-container">
+          {this.props.spot.title}
+        </div>
+        <div className="spot-show-map">
+          <SpotMap spots={[this.props.spot]}/>
         </div>
       </>
     )
