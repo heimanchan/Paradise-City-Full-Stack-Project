@@ -15,7 +15,7 @@ const App = () => (
     {/* {nav} */}
     <Switch>
       <Route path="/search" component={SearchContainer} />
-      {/* <Route path="/spots" component={SpotIndexContainer} /> */}
+      <Route path="/spots/:spotId" component={SpotIndexContainer} />
       <Route path="/" component={Splash} />
     </Switch>
   </div>
