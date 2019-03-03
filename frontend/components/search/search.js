@@ -1,21 +1,13 @@
 import React from 'react';
 import SearchNavContainer from '../nav_bar/search_nav_container';
 import SpotMap from '../spot_map/spot_map';
-import 
+import SpotIndexContainer from '../spot/spot_index_container';
 
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state;
-  }
-
-  render() {
-    return (
-      <div className="sub-banner">
-        // <SearchNavContainer />
-      </div>
-    )
-  }
+const Search = ({ spots }) => {
+  return (
+    <div className="search-container">
+      <SpotIndexContainer spots={spots} />
+    </div>
+  )
 }
-
 export default Search;

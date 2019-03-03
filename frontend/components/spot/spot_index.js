@@ -14,17 +14,17 @@ class SpotIndex extends React.Component {
   }
 
   render() {
-    const spotsItems = this.props.spots.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
-    const spotsItems2 = this.props.spots.map(spot => <SpotIndexItem2 key={spot.id} spot={spot} />)
+    const spotItems = this.props.spots.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
+    const spotItems2 = this.props.spots.map(spot => <SpotIndexItem2 key={spot.id} spot={spot} />)
     return (
       <div>
-        <SearchNavContainer />s
+        <SearchNavContainer />
         <div className="content-box">
           <div className="spots-index">
-            {spotsItems}
-            {spotsItems2}
-            {spotsItems}
-            {spotsItems2}
+            {spotItems}
+            {spotItems2}
+            {spotItems}
+            {spotItems2}
           </div>
           <div className="map-box">
             <div className="map-search">
@@ -33,10 +33,8 @@ class SpotIndex extends React.Component {
           </div>
         </div>
       </div>
-      
-        
-      
     )
   }
 }
+
 export default SpotIndex;
