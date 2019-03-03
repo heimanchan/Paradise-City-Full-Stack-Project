@@ -92,18 +92,15 @@
     display: block;
     position: relative;
     overflow: hidden;
-    // z-index: -2;
   }
 
   .map-search {
     display: block;
     position: fixed;
-    width: 100%;
-    height: calc(100vh - 128px);
-    // z-index: -1;
   }
 
   #map-container {
-    height: 100vh;
+    width: 33.333%;
+    height: calc(100vh - 130px);
   }
 }

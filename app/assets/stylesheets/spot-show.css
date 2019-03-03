@@ -1,9 +1,11 @@
 .spot-show-container {
-  height: 300px;
+  padding-top: 130px;
+  height: 100px;
   border: 1px solid black;
 }
 
-.spot-show-map {
+#spot-show-map {
   height: 300px;
   width: 500px;
+  padding-left: 30px;
 }
