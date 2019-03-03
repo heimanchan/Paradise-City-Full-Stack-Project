@@ -28,7 +28,7 @@ class SpotIndex extends React.Component {
           </div>
           <div className="map-box">
             <div className="map-search">
-              <SpotMap />
+              <SpotMap spots={this.props.spots}/>
             </div>
           </div>
         </div>

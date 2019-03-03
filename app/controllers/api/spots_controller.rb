@@ -1,6 +1,6 @@
 class Api::SpotsController < ApplicationController
   def index
-    @spots = Spot.all
+    @spots = bounds ? Spot.in_bounds(bounds) : Spot.all
     render :index
   end
 
@@ -12,6 +12,20 @@ class Api::SpotsController < ApplicationController
     else
       render json: ["Not Logged In"], status: 400
     end
+  end
+
+  private
+  def spot_params
+    params.require(:spot).permit(
+      :lat,
+      :lng,
+      :price,
+      :max_guest
+    )
+  end
+
+  def bounds
+    params[:bounds]
   end
 end
 

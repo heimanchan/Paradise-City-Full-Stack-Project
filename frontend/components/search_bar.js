@@ -24,6 +24,18 @@ class SearchBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     alert(`${document.getElementById("search-bar-input").value}\nsucks, find somewhere else.`)
+
+    // const geocoder = new google.maps.Geocoder();
+
+    // geocoder.geocode({ address: e.target.value }, (results, status) => {
+    //   if (status === google.maps.GeocoderStatus.OK) {
+    //     const lat = results[0].geometry.location.lat();
+    //     const lng = results[0].geometry.location.lng();
+    //     this.props.history.push(`/search?lat=${lat}&lng=${lng}`);
+    //   } else {
+    //     this.props.history.push(`/search?lat=34.019956&lng=-118.824270`);
+    //   }
+    // })
   }
 
   render() {

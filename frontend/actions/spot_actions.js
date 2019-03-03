@@ -13,8 +13,8 @@ const receiveSpot = spot => ({
   spot
 })
 
-export const fetchAllSpots = () => dispatch => (
-  SpotAPI.fetchAllSpots()
+export const fetchAllSpots = filters => dispatch => (
+  SpotAPI.fetchAllSpots(filters)
     .then(res => dispatch(receiveAllSpots(res)))
 )
 
