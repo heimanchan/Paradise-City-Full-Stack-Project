@@ -18,7 +18,7 @@ export const fetchAllSpots = filters => dispatch => (
     .then(res => dispatch(receiveAllSpots(res)))
 )
 
-export const fetchSpot = () => dispatch => (
-  SpotAPI.fetchSpot()
+export const fetchSpot = (id) => dispatch => (
+  SpotAPI.fetchSpot(id)
     .then(res => dispatch(receiveSpot(res)))
 )

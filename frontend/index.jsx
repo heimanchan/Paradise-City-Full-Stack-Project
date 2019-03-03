@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   window.fetchAllSpots = SpotActions.fetchAllSpots;
+  window.fetchSpot = SpotActions.fetchSpot;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   
