@@ -11,7 +11,7 @@ class SpotIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllSpots();
+    // this.props.fetchAllSpots();
   }
 
   render() {
@@ -31,7 +31,10 @@ class SpotIndex extends React.Component {
           </div>
           <div className="map-box">
             <div className="map-search">
-              <SpotMap spots={this.props.spots}/>
+              <SpotMap 
+                spots={this.props.spots}
+                updateFilter={this.props.updateFilter}
+              />
             </div>
           </div>
         </div>

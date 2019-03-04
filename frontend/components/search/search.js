@@ -1,10 +1,12 @@
 import React from 'react';
 import SpotIndexContainer from '../spot/spot_index_container';
 
-const Search = ({ spots }) => {
+const Search = ({ spots, updateFilter }) => {
   return (
     <>
-      <SpotIndexContainer />
+      <SpotIndexContainer 
+        spots={spots}
+        updateFilter={updateFilter}/>
     </>
   )
 }

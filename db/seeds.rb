@@ -60,7 +60,7 @@ sf = City.create({
 })
 
 la = City.create({
-  name: "la"
+  name: "Los Angeles"
 })
 
 hk = City.create({

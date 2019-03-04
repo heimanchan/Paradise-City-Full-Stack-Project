@@ -1,6 +1,7 @@
 export const fetchAllSpots = filter => (
   $.ajax({ 
     url: '/api/spots/',
+    data: filter
   })
 )
 

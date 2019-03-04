@@ -10,10 +10,13 @@ class Spot < ApplicationRecord
     class_name: :User
 
   def self.in_bounds(bounds)
-    self.where("lat < ?", bounds[:northEast][:lat])
+    result = []
+    spots = self.where("lat < ?", bounds[:northEast][:lat])
+      .where("lng < ?", bounds[:northEast][:lng])
       .where("lat > ?", bounds[:southWest][:lat])
-      .where("lng < ?", bounds[:southWest][:lng])
-      .where("lng > ?", bounds[:northEast][:lng])
+      .where("lng > ?", bounds[:southWest][:lng])
+    spots.each{ |spot| result << spot}
+    result
   end
 
   # def average_rating

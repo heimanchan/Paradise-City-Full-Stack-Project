@@ -4,7 +4,13 @@
   line-height: 1.375em
 }
 
+.amenities-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .amenities {
   display: flex;
+  margin-right: 30px;
 }
 
