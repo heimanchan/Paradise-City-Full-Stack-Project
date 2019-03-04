@@ -2,7 +2,7 @@ import React from 'react';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import SearchNavContainer from '../../nav_bar/search_nav_container';
 import SpotShowMap from '../../spot_map/spot_show_map';
-import Amenity from './amenity';
+import Amenity from '../../amenities/amenities';
 
 
 // Testing
