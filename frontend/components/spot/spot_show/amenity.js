@@ -5,8 +5,8 @@ const Amenity = (props) => {
 
   return (
     <div className="amenity-box">
-      <div className="amenity">
-        <h2>Amenities</h2>
+      <div className="spot-header">
+        Amenities
       </div>
       <div className="amenities-box">
         <div className="amenities">

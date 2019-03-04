@@ -1,5 +1,4 @@
 import React from 'react';
-import 'react-dates/initialize';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import SearchNavContainer from '../../nav_bar/search_nav_container';
 import SpotShowMap from '../../spot_map/spot_show_map';
@@ -60,7 +59,6 @@ class SpotShow extends React.Component {
                       <h1>
                         <span>
                           {this.props.spot.title}
-                          {this.props.spot.title}
                         </span>
                       </h1>
                     </div>
@@ -116,24 +114,38 @@ class SpotShow extends React.Component {
 
                 {/* css divided line */}
                 <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
+                <div className="availability-box">
+                  <div className="spot-header">Availability</div>
+                  <div className="availability">
+                    <DayPickerRangeController
+                      startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+
+                      endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+
+                      onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                      focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                      onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                      numberOfMonths={2}
+                      hideKeyboardShortcutsPanel={true}
+                    />
+                  </div>
+                </div>
                 
-                
+                {/* css divided line */}
+                <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
+                <div className="show-map-box">
+                  <div className="spot-h1">The neighborhood</div>
+
+                  <div id="spot-show-map">
+                    <SpotShowMap spot={[this.props.spot]} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <DateRangePicker
-          startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-          startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-          endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-          endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-          onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-          focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-          onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-        />
-        <div id="spot-show-map">
-          <SpotShowMap spot={[this.props.spot]}/>
-        </div>
+        
+        
       </div>
     )
   }

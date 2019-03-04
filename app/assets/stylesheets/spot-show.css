@@ -139,6 +139,14 @@
   line-height: 1.375em
 }
 
+.spot-header {
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.375em;
+  margin-bottom: 16px;
+}
+
 .spot-nums > div {
   margin-right: 24px;
   display: inline-block;
@@ -161,3 +169,21 @@
   line-height: 1.375em
 }
 
+.availability {
+  margin-left: -10px;
+  width: 633px;
+}
+
+.show-map-box {
+  margin-top: 40px;
+}
+
+.spot-h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25em;
+  color: #484848;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
