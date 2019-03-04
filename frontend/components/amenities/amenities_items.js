@@ -1,9 +1,9 @@
 import React from 'react';
 
-const amenitiesItem = (type) => {
+const amenitiesItem = (props) => {
   let icon;
   let text;
-  switch(type) {
+  switch(props.type) {
     case "tv":
       icon = "fas fa-tv";
       text = "Television";
@@ -48,3 +48,5 @@ const amenitiesItem = (type) => {
     </div>
   )
 }
+
+export default amenitiesItem;
