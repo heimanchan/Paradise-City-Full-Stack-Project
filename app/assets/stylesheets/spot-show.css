@@ -48,13 +48,16 @@
 }
 
 .spot-detail {
-  display: flex;
   background: cyan;
   position: relative;
   padding: 0 8px;
   min-height: 1px;
   width: 58.33333336%;
   /* float: left; */
+}
+
+.title-flex {
+  display: flex;
 }
 
 .spot-title-box {
@@ -120,7 +123,7 @@
   width: 100%;
 }
 
-.spot-house-icon {
+.spot-show-icon {
   margin-right: 8px;
   width: 16px;
 }
@@ -157,3 +160,4 @@
   font-weight: 400;
   line-height: 1.375em
 }
+

@@ -1,0 +1,15 @@
+.amenity {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.375em
+}
+
+.amenities {
+  display: flex;
+}
+
+.amenities-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em
+}

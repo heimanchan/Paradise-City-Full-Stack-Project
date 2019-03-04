@@ -6,7 +6,7 @@ import NavBarContainer from '../components/nav_bar/nav_bar_container';
 import Modal from './modal/modal';
 import Splash from './splash';
 import SearchContainer from './search/search_container';
-import SpotShowContainer from './spot/spot_show_container';
+import SpotShowContainer from './spot/spot_show/spot_show_container';
 
 // const nav = (location.href.split("#")[1] !== '/' ? <SearchNavContainer /> : <></> );
 const App = () => (

@@ -1,6 +1,6 @@
 import SpotShow from './spot_show';
 import { connect } from 'react-redux';
-import { fetchSpot } from '../../actions/spot_actions'
+import { fetchSpot } from '../../../actions/spot_actions'
 
 const mapStateToProps = (state, ownProps) => ({
   spot: state.entities.spots[ownProps.match.params.spotId]
