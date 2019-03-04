@@ -1,13 +1,159 @@
 .spot-show-container {
   position: relative;
-  width: 100%;
-  padding-top: 130px;
-  height: 100px;
-  border: 1px solid black;
+  /* width: 90%; */
+  padding: 0 24px;
+  border: 1px solid #484848;
+}
+
+.spot-show-page > .a {
+  position: relative;
 }
 
 #spot-show-map {
   height: 300px;
   width: 500px;
-  padding-left: 30px;
+}
+
+.image-banner {
+  display: flex;
+  flex-wrap: wrap;
+  height: 294.6667px;
+  /* padding-top: 82px; */
+}
+
+.large-img {
+  width: 50%;
+  height: 100%;
+  background: cyan;
+  border: 1px solid #484848;
+  box-sizing: border-box;
+}
+
+.small-col {
+  width: 25%;
+  height: 100%;
+}
+
+.small-img {
+  height: 50%;
+  background: red;
+  border: 1px solid #484848;
+  box-sizing: border-box;
+}
+
+.spot-box {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: wheat;  
+}
+
+.spot-detail {
+  display: flex;
+  background: cyan;
+  position: relative;
+  padding: 0 8px;
+  min-height: 1px;
+  width: 58.33333336%;
+  /* float: left; */
+}
+
+.spot-title-box {
+  margin-top: 24px;
+  width: 83.3333%
+}
+
+.spot-show-title {
+  margin-bottom: 6px;
+}
+
+.spot-show-title > h1 {
+  font-size: 1em;
+}
+
+.spot-show-title > h1 > span{
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.spot-city-box {
+  margin-bottom: 16px;
+}
+
+.spot-city-name {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+}
+
+.owner-box {
+  padding: 24px 8px 0 8px;
+  width: 16.666664%;
+  height: 100%;
+  background: antiquewhite;
+}
+
+.owner-pic-box {
+  margin-bottom: 6px;
+}
+
+.owner-pic {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  background: #484848;
+}
+
+.fake-pic {
+  box-sizing: border-box;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: lavender;
+}
+
+.owner-name {
+  text-align: center;
+}
+
+.spot-spec-box {
+  display: flex;
+  width: 100%;
+}
+
+.spot-house-icon {
+  margin-right: 8px;
+  width: 16px;
+}
+
+.spot-spec {
+  width: 100%;
+}
+
+.spot-type {
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.375em
+}
+
+.spot-nums > div {
+  margin-right: 24px;
+  display: inline-block;
+}
+
+.br {
+  border-bottom: 1px solid #EBEBEB;
+  height: 1px;
+}
+
+.spot-des-box {
+  overflow-wrap: break-word;
+  margin-bottom: 15px;
+}
+
+.spot-des {
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em
 }

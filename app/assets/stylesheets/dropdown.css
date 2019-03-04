@@ -10,7 +10,8 @@
   color: #727272;
   border: 1px solid rgb(235, 235, 235);
   border-top: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px; */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   width: 282px;
   right: 2px;
   z-index: 6;

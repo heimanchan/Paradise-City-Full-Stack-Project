@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from '../dropdown';
 import SearchBar from '../search_bar';
-import FilterNav from './filter_nav'
-
 
 const SearchNav = ({ currentUser, logout, openModal }) => {
   const display = currentUser ? (
@@ -38,7 +36,6 @@ const SearchNav = ({ currentUser, logout, openModal }) => {
         </div>
       </header>
 
-      <FilterNav />
     </div>
     
 
