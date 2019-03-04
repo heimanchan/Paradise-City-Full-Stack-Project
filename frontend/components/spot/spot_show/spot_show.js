@@ -22,7 +22,8 @@ class SpotShow extends React.Component {
   }
 
   render() {
-    if (this.props.spot === undefined) return null;
+    const spot = this.props.spot;
+    if (spot === undefined) return null;
     return(
       <div className="spot-show-page">
         <SearchNavContainer />
@@ -58,7 +59,7 @@ class SpotShow extends React.Component {
                     <div className="spot-show-title">
                       <h1>
                         <span>
-                          {this.props.spot.title}
+                          {spot.title}
                         </span>
                       </h1>
                     </div>
@@ -73,14 +74,14 @@ class SpotShow extends React.Component {
                       </div>
                     </div>
                     <div className="owner-name">
-                      {this.props.spot.ownerName}
+                      {`${spot.ownerFirstName} ${spot.ownerLastName}`}
                     </div>
                   </div>
                 </div>
 
                 <div className="spot-city-box">
                   <div className="spot-city-name">
-                    {this.props.spot.cityName}
+                    {spot.cityName}
                   </div>
                 </div>
                 <div className="spot-spec-box">
@@ -92,9 +93,9 @@ class SpotShow extends React.Component {
                       Entire Apartment
                     </div>
                     <div className="spot-nums">
-                      <div>{this.props.spot.max_guests} guests</div>
-                      <div>{this.props.spot.num_bedrooms} bedrooms</div>
-                      <div>{this.props.spot.num_beds} beds</div>
+                      <div>{spot.maxGuests} guests</div>
+                      <div>{spot.numBedrooms} bedrooms</div>
+                      <div>{spot.numBeds} beds</div>
                     </div>
                   </div>
                 </div>
@@ -104,13 +105,13 @@ class SpotShow extends React.Component {
 
                 <div className="spot-des-box">
                   <div className="spot-des">
-                    {this.props.spot.description}
+                    {spot.description}
                   </div>
                 </div>
 
                 {/* css divided line */}
                 <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
-                <Amenity spot={this.props.spot} />
+                <Amenity spot={spot} />
 
                 {/* css divided line */}
                 <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
@@ -135,9 +136,11 @@ class SpotShow extends React.Component {
                 <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
                 <div className="show-map-box">
                   <div className="spot-h1">The neighborhood</div>
-
+                  <div className="spot-location">
+                    {`${spot.ownerFirstName}'s spot is located in ${spot.cityName}.`}
+                  </div>
                   <div id="spot-show-map">
-                    <SpotShowMap spot={[this.props.spot]} />
+                    <SpotShowMap spot={[spot]} />
                   </div>
                 </div>
               </div>
