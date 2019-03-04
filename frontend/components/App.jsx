@@ -1,12 +1,11 @@
 import React from 'react';
-import { AuthRoute } from '../util/route_util';
 import { Route, Switch, Link } from 'react-router-dom';
-import SearchNavContainer from '../components/nav_bar/search_nav_container';
-import NavBarContainer from '../components/nav_bar/nav_bar_container';
 import Modal from './modal/modal';
 import Splash from './splash';
 import SearchContainer from './search/search_container';
 import SpotShowContainer from './spot/spot_show/spot_show_container';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
 
 // const nav = (location.href.split("#")[1] !== '/' ? <SearchNavContainer /> : <></> );
 const App = () => (

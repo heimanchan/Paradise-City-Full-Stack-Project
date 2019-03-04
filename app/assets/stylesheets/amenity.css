@@ -8,8 +8,6 @@
   display: flex;
 }
 
-.amenities-text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.375em
+.amenities > h2 {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif
 }

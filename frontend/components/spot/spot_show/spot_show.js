@@ -1,7 +1,10 @@
 import React from 'react';
+import 'react-dates/initialize';
+import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import SearchNavContainer from '../../nav_bar/search_nav_container';
 import SpotShowMap from '../../spot_map/spot_show_map';
 import Amenity from './amenity';
+
 
 // Testing
 import { fetchSpot } from '../../../actions/spot_actions';
@@ -9,7 +12,10 @@ import { fetchSpot } from '../../../actions/spot_actions';
 class SpotShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state;
+    this.state = {
+      startDate: null,
+      endDate: null,
+    }
   }
   
   componentDidMount() {
@@ -86,7 +92,7 @@ class SpotShow extends React.Component {
                   <div className="spot-spec">
                     <div className="spot-type">
                       Entire Apartment
-                      </div>
+                    </div>
                     <div className="spot-nums">
                       <div>{this.props.spot.max_guests} guests</div>
                       <div>{this.props.spot.num_bedrooms} bedrooms</div>
@@ -110,10 +116,21 @@ class SpotShow extends React.Component {
 
                 {/* css divided line */}
                 <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
+                
+                
               </div>
             </div>
           </div>
         </div>
+        <DateRangePicker
+          startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+          startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+          endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+          endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+          onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+          focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+          onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+        />
         <div id="spot-show-map">
           <SpotShowMap spot={[this.props.spot]}/>
         </div>

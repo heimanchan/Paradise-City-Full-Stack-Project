@@ -11,7 +11,7 @@ const Amenity = (props) => {
       <div className="amenities-box">
         <div className="amenities">
           <div className="spot-show-icon">
-            <i class="fa fa-fire" aria-hidden="true"></i>
+            <i className="fa fa-fire" aria-hidden="true"></i>
           </div>
           <div className="amenities-text">
             Heater
