@@ -11,9 +11,9 @@ const spotIndexItem = (props) => {
         </div>
         <div className="spot-caption">
           <div className="spot-item">
-            <div className="spot-title">{spot.title} font: 16px</div>
-            <div className="spot-price">{spot.price}</div>
-            <div className="spot-reviews">{spot.ownerName} this should be reviews later</div>
+            <div className="spot-title">{spot.title}</div>
+            <div className="spot-price">${spot.price} per night</div>
+            <div className="spot-reviews">{spot.ownerName}</div>
           </div>
         </div>
       </Link>

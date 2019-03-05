@@ -30,7 +30,7 @@ class SpotMap extends React.Component {
 
     const mapOptions = {
       center: { lat: parseFloat(coords.lat), lng: parseFloat(coords.lng) },
-      zoom: 12
+      zoom: 11
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);

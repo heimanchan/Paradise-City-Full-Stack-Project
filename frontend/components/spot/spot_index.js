@@ -28,9 +28,8 @@ class SpotIndex extends React.Component {
         <div className="content-box">
           <div className="spots-index">
             {spotItems}
-            {spotItems2}
-            {spotItems}
-            {spotItems2}
+            {/* {spotItems2} */}
+            {/* {spotItems2} */}
           </div>
           <div className="map-box">
             <div className="map-search">
