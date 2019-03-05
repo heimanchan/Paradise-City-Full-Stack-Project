@@ -5,3 +5,4 @@ json.ownerLastName spot.owner.last_name
 json.cityName spot.city.name
 json.ownerPhotoUrl url_for(spot.owner.photo) if spot.owner.photo.attached?
 
+json.photoUrls spot.photos.map { |pic| url_for(pic) } if spot.photos.attached?

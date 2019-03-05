@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'open-url'
+require 'open-uri'
 
 # File.open()
 # open("https://hhjskfh")
@@ -35,7 +35,7 @@ dave = User.new(
 dave.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/dave.jpg"), filename: "dave.jpg")
 dave.save!
 
-ned]= User.new(
+ned= User.new(
   username: "nedjohnson",
   first_name: "Ned",
   last_name: "Johnson",
@@ -165,7 +165,7 @@ spot2.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-s
 spot2.save!
 
 spot3 = Spot.create!({
-  owner_id: nedjohnson.id,
+  owner_id: ned.id,
   city_id: sf.id,
   title: 'Furnished Architect Designed 4br/2ba 2nd Fl flat GGP/Ocean Beach',
   address: '4051 Balboa St',
