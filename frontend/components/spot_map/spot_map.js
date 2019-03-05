@@ -51,7 +51,7 @@ class SpotMap extends React.Component {
   }
 
   componentWillUnmount() {
-    google.maps.event.clearListeners(this.map, 'idle');
+    // google.maps.event.clearListeners(this.map, 'idle');
   }
 
   componentDidUpdate(prevProps) {
