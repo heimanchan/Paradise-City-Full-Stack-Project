@@ -3,3 +3,4 @@ json.extract! spot, :id, :title, :address, :lat, :lng, :max_guests, :num_bedroom
 json.ownerFirstName spot.owner.first_name
 json.ownerLastName spot.owner.last_name
 json.cityName spot.city.name
+json.ownerPhotoUrl url_for(spot.owner.photo) if spot.owner.photo.attached?

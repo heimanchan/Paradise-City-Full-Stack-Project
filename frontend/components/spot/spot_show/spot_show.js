@@ -71,7 +71,7 @@ class SpotShow extends React.Component {
                     <div className="owner-pic-box">
                       <div className="owner-pic">
                         {/* <div className="fake-pic"> */}
-                          <img className="fake-pic" src={window.ryanURL} />
+                        <img className="fake-pic" src={spot.ownerPhotoUrl} />
                         {/* </div> */}
                       </div>
                     </div>

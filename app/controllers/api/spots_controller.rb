@@ -20,7 +20,8 @@ class Api::SpotsController < ApplicationController
       :lat,
       :lng,
       :price,
-      :max_guest
+      :max_guests,
+      photos: []
     )
   end
 

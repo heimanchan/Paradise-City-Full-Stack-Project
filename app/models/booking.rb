@@ -11,7 +11,9 @@ class Booking < ApplicationRecord
 
   def valid_dates?
     if self.start_date && self.end_date
-      current_requests
+      dates = Booking.where(spot_id: self.spot_id).where('start_date < ? OR end_date > ?', self.start_date, self.end_date)
+      return true if dates.empty?
     end
+    return false
   end
 end

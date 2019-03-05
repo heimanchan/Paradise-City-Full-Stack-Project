@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default class Dropdown extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = { showMenu: false, }
-
     this.showDropdown = this.showDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
     this.setDropdownMenu = this.setDropdownMenu.bind(this);
@@ -36,7 +35,8 @@ export default class Dropdown extends React.Component {
     return (
       <div>
         <button className="profile-box" onClick={this.showDropdown}>
-          <div className="profile-pic"></div>
+          {/* <div className="profile-pic"></div> */}
+          <img className="profile-pic" src={this.props.user.photoUrl} />
         </button>
         {
           this.state.showMenu ? (

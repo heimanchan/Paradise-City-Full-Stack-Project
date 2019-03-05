@@ -13,8 +13,8 @@ class Spot < ApplicationRecord
     foreign_key: :spot_id,
     class_name: :Booking
 
-  has_one_attached :photo
-  
+  has_many_attached :photos
+
   def self.in_bounds(bounds)
     result = []
     spots = self.where("lat < ?", bounds[:northEast][:lat])

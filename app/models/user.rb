@@ -12,7 +12,7 @@ class User < ApplicationRecord
     foreign_key: :guest_id,
     class_name: :Booking
 
-  has_one_attached :photo  
+  has_one_attached :photo
   
   attr_reader :password
   

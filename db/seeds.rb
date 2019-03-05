@@ -79,23 +79,17 @@ tokyo = City.create({
 spot1 = Spot.create!({
   owner_id: dave.id,
   city_id: sf.id,
-  title: 'Awesome home in SF!',
-  address: '1490 23rd Ave',
+  title: 'Lovely Remodeled, Fully Furnished 1 brm/1ba Apt in Cow Hollow!',
+  address: '900 Baker St',
   lat: 37.759870,
   lng: -122.480860,
   max_guests: 3,
   num_bedrooms: 2,
-  num_beds: 3,
-  price: 190,
+  num_beds: 2,
+  price: 89,
   ratings: 4,
-  description: 'The guest apartment has its own entrance located on the ground level of our home. The private apartment is 720 sq and has 8 ft ceilings. The living room and kitchen are new and the bath and the two bedrooms are remodeled.
-The apartment can sleep 4. The 2 bedrooms have garden view windows. One room with a queen size bed and the second bedroom with two twin size beds. All bed linens are provided.
-Private bath has a large shower (two shower heads), cherrywood vanity/sink, and a large mirror. Towels and soap/shampoo are provided.
-In the Living room area there is cable TV. Free WiFi is available throughout the apartment.
-Guests are welcome to share the garden; there is a large deck with seating and a small table.
-Neighborhood is the quiet Sunnyside district. The apartment is within 5 walk minutes of City College (CCSF). In our immediate neighborhood Whole Foods and Safeway supermarkets are within 5-15 walk minutes, 5 drive minutes and there are small cafes and eateries within the neighborhood.
-Glen Park is 25 walk or 10 bus minutes away and has several small shops, local restaurants, a postal service, library and is the location of the Glen Park BART station.',
-  heat: false,
+  description: 'Enter through the newly landscaped garden into this private, quiet 1 bedroom, 1 bath apartment which has been recently remodeled, tastily furnished and fully equipped for maximum comfort. New hardwood floors, stainless steel appliances, quartz and marble countertops, lovely linens, and a well stocked kitchen make this the perfect home away from home. Cow Hollow is one of the finest neighborhoods in San Francisco - close to the Marina green, Golden Gate Bridge, Presidio Historic Trust recreation area, charming shopping districts, wonderful restaurants, and stately homes. This is truly a spectacular, quiet gem in the City with easy access to downtown via Public Transit, car or bicycle.',
+  heat: true,
   pool: false,
   shampoo: false,
   tv: true,
@@ -107,18 +101,18 @@ Glen Park is 25 walk or 10 bus minutes away and has several small shops, local r
   laundry: true
 })
 
-lst2 = Spot.create!({
+spot2 = Spot.create!({
   owner_id: ryanmapa.id,
-  city_id: la.id,
-  title: 'Perfect home in Richmond district',
+  city_id: sf.id,
+  title: 'Controlled Access/Gated, Perfect home in Richmond district',
   address: '4051 19th St',
   lat: 37.759140,
   lng: -122.433880,
-  max_guests: 3,
+  max_guests: 6,
   num_bedrooms: 2,
   num_beds: 3,
-  price: 190,
-  ratings: 4,
+  price: 149,
+  ratings: 5,
   description: "1895 Victorian flat w/ 12 ft ceilings. (No Long Term Rentals or couples) Close to Mission, & 2.5 blocks from Castro theater. MUNI is 3 blocks away. Room is small and cosy, and great value for one of the most expensive neighborhoods in the US!
 More information
 The space
@@ -129,13 +123,96 @@ Restaurants are plentiful and beautiful Dolores Park is quite close. Your room h
 For all you foodies out there BiRite Creamery, Tartine, Delfina's Pizza and Proper are within 4.5 blocks of our front door. Michelin rated Range is just a few farther.
 As much as we love bikes, and we do, we don't have space for storage. If you rent one please return it at the end of the day or lock up on the street at your own risk. Please ask if you would like to have a friend for a short visit.",
   heat: true,
-  pool: false,
-  shampoo: false,
+  pool: true,
+  shampoo: true,
   tv: true,
   wifi: true,
   air_conditioning: true,
   iron: true,
   hair_dryer: true,
   first_aid: true,
+  laundry: true
+})
+
+spot3 = Spot.create!({
+  owner_id: nedjohnson.id,
+  city_id: sf.id,
+  title: 'Furnished Architect Designed 4br/2ba 2nd Fl flat GGP/Ocean Beach',
+  address: '4051 Balboa St',
+  lat: 37.775690,
+  lng: -122.5006,
+  max_guests: 8,
+  num_bedrooms: 3,
+  num_beds: 3,
+  price: 225,
+  ratings: 5,
+  description: "CompletelyFurnished Architect Designed 4br/2ba 2nd Fl flat near GGP/Ocean Beach/VA Med (richmond / seacliff) (map)
+
+Availability: 03/01/2019
+Rent $5800 per month, includes Water, Garbage pick up, Utility, High speed Internet and Twice a month House Cleaning, One car garage parking 
+
+Security Deposit: $6000
+
+Lease Terms: Minimum 6 months, Non-Smoking, No Pet, No Drugs.
+
+Will charge $200 cleaning fee upon departure.
+
+Description:
+
+Completely Furnished Newly Built Architect Designed Contemporary 4 bedrooms + Study and 2 full baths 2nd floor Flat (master bath has shower and Whirlpool Tub) 
+
+40th Avenue at Balboa St., San Francisco
+
+For Long Term Rental only
+
+Email for appointment.",
+  heat: true,
+  pool: false,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: false,
+  iron: false,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: true
+})
+
+spot4 = Spot.create!({
+  owner_id: cindy.id,
+  city_id: la.id,
+  title: 'Near Metro - Brand New 2 Bed/2 Bath Condo available',
+  address: '1741-1701 N Las Palmas Ave',
+  lat: 34.101763,
+  lng: -118.337468,
+  max_guests: 4,
+  num_bedrooms: 2,
+  num_beds: 3,
+  price: 120,
+  ratings: 5,
+  description: "Brand new condo unit available for rent in brand new building. Very walk-able location. (Walkscore of 97 out of 100)
+
+Includes In-Unit Washer and Dryer. Also stainless steel appliances (not pictured): Refrigerator, Oven, Gas Stove, Microwave and Dishwasher. 
+
+Large bathrooms and large closets with built-in shelving. Recessed lighting throughout the unit.
+
+1751 North Las Palmas Avenue has a Walk Score of 97 out of 100. This location is a Walker's Paradise so daily errands do not require a car.
+
+1751 North Las Palmas Avenue is a five minute walk from the Metro Red Line (802) at the Hollywood / Highland Station stop.
+
+This location is in the Hollywood Hills West neighborhood in Los Angeles. Nearby parks include Las Palmas Playground, Whitley Heights Historic District, and Hollywood Franklin Park.
+
+Very close the Hollywood Highland mall. Right in the scene of Hollywood where there are top and classic hotels, restaurants, museums, and theaters. Live in the heart of it all!
+
+Price and availability subject to change without notice. Listing description and square footage are estimates and should be verified by tenant prior to signing lease.",
+  heat: false,
+  pool: false,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: false,
+  iron: false,
+  hair_dryer: true,
+  first_aid: false,
   laundry: true
 })

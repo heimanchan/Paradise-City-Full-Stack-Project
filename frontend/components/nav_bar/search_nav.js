@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from '../dropdown';
+import Dropdown from '../dropdown/dropdown';
 import SearchBar from '../search_bar';
 
 const SearchNav = ({ currentUser, logout, openModal, receiveSearch}) => {
   const display = currentUser ? (
-    // <div>
-    <Dropdown logout={logout} />
-    // </div>
+    <Dropdown logout={logout} user={ currentUser }/>
   ) : (
       <div className="user-nav">
         <button className="nav-button" onClick={() => openModal('Sign Up')}>Sign up</button>

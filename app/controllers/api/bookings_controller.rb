@@ -1,20 +1,32 @@
 class Api::BookingsController < ApplicationController
   def index
-    @bookings = Booking.where(guest_id: current_user.id)
+    @bookings = User.find(params[:id]).bookings
+    render :index
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.guest = current_user
-
+    if @booking.valid_dates? && @booking.save
+      render :show
+    else 
+      render json: ["This date is not availalbe. Please select another date."], status: 400
+    end
   end
 
-  def edit
-    
+  def update
+    @booking = Booking.find(params[:id])
+
+    if @booking.update(booking_params)
+      render :show
+    else
+      render @booking.errors.full_messages, status: 400
+    end
   end
 
   def destroy
-    
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    render :show
   end
 
   private
