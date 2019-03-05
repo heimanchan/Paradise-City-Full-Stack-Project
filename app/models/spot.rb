@@ -9,6 +9,10 @@ class Spot < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
+  has_many :bookings,
+    foreign_key: :spot_id,
+    class_name: :Booking
+
   def self.in_bounds(bounds)
     result = []
     spots = self.where("lat < ?", bounds[:northEast][:lat])

@@ -3,6 +3,15 @@ class User < ApplicationRecord
   validates :password, length:{ minimum: 6, allow_nil: true }
 
   after_initialize :ensuure_session_token
+
+  has_many :spots,
+    foreign_key: :owner_id,
+    class_name: :Spot
+
+  has_many :bookings,
+    foreign_key: :guest_id,
+    class_name: :Booking
+
   
   attr_reader :password
   
