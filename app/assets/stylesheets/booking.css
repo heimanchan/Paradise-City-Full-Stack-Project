@@ -14,7 +14,7 @@
   /* z-index: 1; */
   padding: 0 24px;
   border: 1px solid #e4e4e4;
-  background: wheat;
+  /* background: wheat; */
 }
 
 .booking-price {
@@ -29,7 +29,7 @@
 
 .booking-form-box {
   /* background: #ffffff; */
-  height: 430px;
+  /* height: 430px; */
   width: 326px;
 }
 
@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   height: 300px;
-  background: cyan;
+  /* background: cyan; */
 }
 
 .booking-fields {
@@ -57,13 +57,20 @@
   padding-bottom: 4px;
 }
 
-.booking-guests > select {
+.booking-guests > div {
+  background: white;
   width: 100%;
+  padding: 8px;
+  border: 1px solid rgb(235,235,235);
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
-/* .booking-submit-box {
-  margin-top: 24px;
-} */
+.booking-guest-input {
+  width: 100%;
+  font-size: 17px;
+  padding:
+}
 
 .booking-submit {
   box-sizing: border-box;
@@ -85,4 +92,8 @@
   font-weight: 600;
   line-height: 1.33333em;
   color: rgb(72, 72, 72);
+}
+
+.DateRangePickerInput {
+  width: 326px;
 }

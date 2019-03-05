@@ -31,23 +31,23 @@ class SpotShow extends React.Component {
         <SearchNavContainer />
         <div className="image-banner">
           <div className="large-img">
-            large
-            </div>
-          <div className="small-col">
-            <div className="small-img">
-              small
-              </div>
-            <div className="small-img">
-              small
-              </div>
+            <img src={spot.photoUrls[0]} />
           </div>
           <div className="small-col">
             <div className="small-img">
-              small
-              </div>
+              <img src={spot.photoUrls[1]} />
+            </div>
             <div className="small-img">
-              small
-              </div>
+              <img src={spot.photoUrls[2]} />
+            </div>
+          </div>
+          <div className="small-col">
+            <div className="small-img">
+              <img src={spot.photoUrls[3]} />
+            </div>
+            <div className="small-img">
+              <img src={spot.photoUrls[4]} />
+            </div>
           </div>
         </div> 
 

@@ -6,6 +6,8 @@ class BookingFrom extends React.Component {
     super(props);
     this.state = { startDate: this.props.startDate, endDate: null, numGuests: 1 };
   }
+
+  
   
   render() {
     return (
@@ -40,14 +42,9 @@ class BookingFrom extends React.Component {
                 </div>
                 <div className="booking-guests">
                   <label className="booking-form-label">Guests</label>
-                  <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                  </select>
+                  <div>
+                    <input placeholder="1 guest" className='booking-guest-input' type="number" min='1' max={this.props.spot.maxGuests} />
+                  </div>
                 </div>
               </div>
 

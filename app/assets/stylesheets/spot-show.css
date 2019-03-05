@@ -24,9 +24,14 @@
 .large-img {
   width: 50%;
   height: 100%;
-  background: cyan;
+  /* background: cyan; */
   border: 1px solid #484848;
   box-sizing: border-box;
+}
+
+.large-img > img {
+  width: 100%;
+  height: 100%;
 }
 
 .small-col {
@@ -39,6 +44,11 @@
   background: red;
   border: 1px solid #484848;
   box-sizing: border-box;
+}
+
+.small-img > img {
+  width: 100%;
+  height: 100%;
 }
 
 .spot-box {
