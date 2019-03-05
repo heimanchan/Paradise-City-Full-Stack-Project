@@ -3,6 +3,7 @@ import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'rea
 import SearchNavContainer from '../../nav_bar/search_nav_container';
 import SpotShowMap from '../../spot_map/spot_show_map';
 import Amenity from '../../amenities/amenities';
+import BookingForm from '../../booking/booking_form';
 
 
 // Testing
@@ -145,10 +146,11 @@ class SpotShow extends React.Component {
                   </div>
                 </div>
               </div>
+              <BookingForm spot={spot} />
+
             </div>
           </div>
         </div>
-        
         
       </div>
     )

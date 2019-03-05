@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Dropdown from '../dropdown';
 import SearchBar from '../search_bar';
 
-const SearchNav = ({ currentUser, logout, openModal }) => {
+const SearchNav = ({ currentUser, logout, openModal, receiveSearch}) => {
   const display = currentUser ? (
     // <div>
     <Dropdown logout={logout} />
@@ -26,7 +26,7 @@ const SearchNav = ({ currentUser, logout, openModal }) => {
               </div>
             </Link>
             <div className="search-bar">
-              <SearchBar />
+              <SearchBar receiveSearch={receiveSearch}/>
             </div>
           </div>
           

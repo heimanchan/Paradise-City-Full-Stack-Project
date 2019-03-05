@@ -1,11 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { updateFilter } from '../actions/filter_actions';
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { address: null }
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -23,19 +25,23 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    alert(`${document.getElementById("search-bar-input").value}\nsucks, find somewhere else.`)
-
-    // const geocoder = new google.maps.Geocoder();
-
-    // geocoder.geocode({ address: e.target.value }, (results, status) => {
-    //   if (status === google.maps.GeocoderStatus.OK) {
-    //     const lat = results[0].geometry.location.lat();
-    //     const lng = results[0].geometry.location.lng();
-    //     this.props.history.push(`/search?lat=${lat}&lng=${lng}`);
-    //   } else {
-    //     this.props.history.push(`/search?lat=34.019956&lng=-118.824270`);
-    //   }
-    // })
+    // alert(`${document.getElementById("search-bar-input").value}\nsucks, find somewhere else.`)
+    let coord = new google.maps.Geocoder();
+    coord.geocode( {"address": this.state.address }, (results, status) => {
+      let lat, lng;
+      if (status === 'OK') {
+        lat = results[0].geometry.location.lat();
+        lng = results[0].geometry.location.lng();
+        this.props.history.push(`/search?lat=${lat}&lng=${lng}`)
+        this.props.receiveSearch({lat, lng})
+      } else {
+        lat = 37.7758;
+        lng = -122.435;
+        this.props.history.push(`/search?lat=${lat}&lng=${lng}`)
+        this.props.receiveSearch({ lat, lng })
+        console.log("Default SF")        
+      }
+    })
   }
 
   render() {

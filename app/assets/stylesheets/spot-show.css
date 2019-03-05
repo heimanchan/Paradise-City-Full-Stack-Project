@@ -44,7 +44,12 @@
 .spot-box {
   max-width: 1080px;
   margin: 0 auto;
-  background: wheat;  
+  /* background: wheat;   */
+}
+
+.spot-detail-box {
+  position: relative;
+  display: flex;
 }
 
 .spot-detail {
