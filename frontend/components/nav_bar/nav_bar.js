@@ -15,7 +15,7 @@ import Dropdown from '../dropdown/dropdown'
   return (
     <header className="banner">
       <div className="header-banner">
-        <Link to="/" className="logo-button">
+        <Link to="/search" className="logo-button">
           <div className="logo-box">
             <div className="logo"></div>
           </div>

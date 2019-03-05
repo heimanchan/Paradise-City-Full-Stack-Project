@@ -18,7 +18,7 @@ const SearchNav = ({ currentUser, logout, openModal, receiveSearch}) => {
       <header className="search-header">
         <div className="header-banner">
           <div className="logo-search">
-            <Link to="/" className="logo-button">
+            <Link to="/search" className="logo-button">
               <div className="logo-box">
                 <div className="logo"></div>
               </div>
