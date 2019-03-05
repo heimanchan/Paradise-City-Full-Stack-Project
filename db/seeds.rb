@@ -5,53 +5,71 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-url'
+
+# File.open()
+# open("https://hhjskfh")
+
 User.delete_all
 City.delete_all
 Spot.delete_all
 
+
 # USERS
 # id = 7
-demo = User.create(
+demo = User.new(
   username: "guest",
   first_name: "Guest",
   last_name: "Johnson",
   password: "password"
 )
+demo.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/demo_user.jpg"), filename: "demo_user.jpg")
+demo.save!
 
-dave = User.create(
+dave = User.new(
   username: "dave",
   first_name: "Dave",
   last_name: "Chan",
   password: "password"
 )
+dave.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/dave.jpg"), filename: "dave.jpg")
+dave.save!
 
-nedjohnson = User.create(
+ned]= User.new(
   username: "nedjohnson",
   first_name: "Ned",
   last_name: "Johnson",
   password: "password"
 )
+ned.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/ned.jpg"), filename: "ned.jpg")
+ned.save!
 
-ryanmapa = User.create(
+ryanmapa = User.new(
   username: "ryanmapa",
   first_name: "Ryan",
   last_name: "Mapa",
   password: "password"
 )
+ryanmapa.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/ryanmapa.jpg"), filename: "ryanmapa.jpg")
+ryanmapa.save!
 
-cindy = User.create(
+cindy = User.new(
   username: "cindy",
   first_name: "Cindy",
   last_name: "Ke",
   password: "password"
 )
+cindy.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/cindy.jpg"), filename: "cindy.jpg")
+cindy.save!
 
-alec = User.create(
+alec = User.new(
   username: "alec",
   first_name: "Alec",
   last_name: "Ning",
   password: "password"
 )
+alec.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/alec.jpg"), filename: "alec.jpg")
+alec.save!
 
 # CITIES
 # id = 6
@@ -100,6 +118,12 @@ spot1 = Spot.create!({
   first_aid: true,
   laundry: true
 })
+spot1.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot1_1.jpg"), filename: "spot1.jpg")
+spot1.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot1_2.jpg"), filename: "spot1.jpg")
+spot1.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot1_3.jpg"), filename: "spot1.jpg")
+spot1.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot1_4.jpg"), filename: "spot1.jpg")
+spot1.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot1_5.jpg"), filename: "spot1.jpg")
+spot1.save!
 
 spot2 = Spot.create!({
   owner_id: ryanmapa.id,
@@ -133,6 +157,12 @@ As much as we love bikes, and we do, we don't have space for storage. If you ren
   first_aid: true,
   laundry: true
 })
+spot2.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot2_1.jpg"), filename: "spot2.jpg")
+spot2.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot2_2.jpg"), filename: "spot2.jpg")
+spot2.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot2_3.jpg"), filename: "spot2.jpg")
+spot2.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot2_4.jpg"), filename: "spot2.jpg")
+spot2.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot2_5.jpg"), filename: "spot2.jpg")
+spot2.save!
 
 spot3 = Spot.create!({
   owner_id: nedjohnson.id,
@@ -177,6 +207,12 @@ Email for appointment.",
   first_aid: true,
   laundry: true
 })
+spot3.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot3_1.jpg"), filename: "spot3.jpg")
+spot3.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot3_2.jpg"), filename: "spot3.jpg")
+spot3.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot3_3.jpg"), filename: "spot3.jpg")
+spot3.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot3_4.jpg"), filename: "spot3.jpg")
+spot3.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot3_5.jpg"), filename: "spot3.jpg")
+spot3.save!
 
 spot4 = Spot.create!({
   owner_id: cindy.id,
@@ -216,3 +252,9 @@ Price and availability subject to change without notice. Listing description and
   first_aid: false,
   laundry: true
 })
+spot4.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot4_1.jpg"), filename: "spot4.jpg")
+spot4.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot4_2.jpg"), filename: "spot4.jpg")
+spot4.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot4_3.jpg"), filename: "spot4.jpg")
+spot4.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot4_4.jpg"), filename: "spot4.jpg")
+spot4.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot4_5.jpg"), filename: "spot4.jpg")
+spot4.save!

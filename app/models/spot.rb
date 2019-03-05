@@ -13,7 +13,7 @@ class Spot < ApplicationRecord
     foreign_key: :spot_id,
     class_name: :Booking
 
-  # has_many_attached :photos
+  has_many_attached :photos
 
   def self.in_bounds(bounds)
     result = []
