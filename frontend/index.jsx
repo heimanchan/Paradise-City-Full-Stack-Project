@@ -4,12 +4,9 @@ import configureStore from './store/store';
 import Root from './components/root'
 
 // Testing
-import * as SpotActions from './actions/spot_actions';
+import * as BookingActions from './actions/booking_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Testing
-  // 
-
   let store;
   if (window.currentUser) {
     const preloadedState = {
@@ -23,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  window.fetchAllSpots = SpotActions.fetchAllSpots;
-  window.fetchSpot = SpotActions.fetchSpot;
+
+  // Testing
+  window.fetchAllBookings = BookingActions.fetchAllBookings;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   
