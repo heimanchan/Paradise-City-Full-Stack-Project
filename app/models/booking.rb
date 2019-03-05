@@ -3,11 +3,11 @@ class Booking < ApplicationRecord
 
   belongs_to :guest,
     foreign_key: :guest_id,
-    className: :User
+    class_name: :User
 
   belongs_to :spot,
     foreign_key: :spot_id,
-    className: :Spot
+    class_name: :Spot
 
   def valid_dates?
     if self.start_date && self.end_date
