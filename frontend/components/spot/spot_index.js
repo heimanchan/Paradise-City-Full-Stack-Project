@@ -2,7 +2,7 @@ import React from 'react';
 import SpotIndexItem from './spot_index_item';
 import SpotIndexItem2 from './spot_index_item2';
 import SearchNavContainer from '../nav_bar/search_nav_container';
-import SpotMap from '../spot_map/spot_map2';
+import SpotMap from '../spot_map/spot_map';
 import FilterNav from '../nav_bar/filter_nav';
 
 class SpotIndex extends React.Component {

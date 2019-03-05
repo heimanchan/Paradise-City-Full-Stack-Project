@@ -146,7 +146,11 @@ class SpotShow extends React.Component {
                   </div>
                 </div>
               </div>
-              <BookingForm spot={spot} />
+              <BookingForm
+                spot={spot}
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+              />
 
             </div>
           </div>
