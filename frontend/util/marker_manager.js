@@ -22,7 +22,20 @@ export default class MarkerManager {
     const marker = new google.maps.Marker({
       position,
       map: this.map,
-      spotId: spot.id
+      spotId: spot.id,
+      icon: {
+        path: 'M22-48h-44v43h16l6 5 6-5h16z',
+        fillColor: 'white',
+        fillOpacity: 1,
+        scale: 0.85,
+        labelOrigin: new google.maps.Point(-1, -25),
+        strokeColor: 'gray',
+      },
+      label: {
+        text: `$${spot.price}`,
+        fontWeight: '600',
+        fontSize: '14px',
+      }
     })
 
     marker.addListener('click', () => this.handleClick(spot));
