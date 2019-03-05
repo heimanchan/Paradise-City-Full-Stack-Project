@@ -44,7 +44,6 @@
 .spot-box {
   max-width: 1080px;
   margin: 0 auto;
-  /* background: wheat;   */
 }
 
 .spot-detail-box {
@@ -53,7 +52,6 @@
 }
 
 .spot-detail {
-  background: cyan;
   position: relative;
   padding: 0 8px;
   padding-bottom: 40px;
@@ -98,7 +96,6 @@
   padding: 24px 8px 0 8px;
   width: 16.666664%;
   height: 100%;
-  background: antiquewhite;
 }
 
 .owner-pic-box {
@@ -109,7 +106,6 @@
   width: 64px;
   height: 64px;
   margin: 0 auto;
-  background: #484848;
 }
 
 .fake-pic {
@@ -117,7 +113,6 @@
   height: 100%;
   border: 2px solid white;
   border-radius: 50%;
-  background: lavender;
 }
 
 .owner-name {

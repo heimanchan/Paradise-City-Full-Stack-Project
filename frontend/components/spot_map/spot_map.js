@@ -61,7 +61,8 @@ class SpotMap extends React.Component {
   }
   
   handleClick(spot) {
-    console.log(`${spot.lat}, ${spot.lng}`);
+    // console.log(`${spot.lat}, ${spot.lng}`);
+    this.props.history.push(`spot/${spot.id}`)
   }
   
   componentWillUnmount() {

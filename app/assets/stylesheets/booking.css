@@ -5,19 +5,19 @@
   position: relative;
   width: 41.66667%;
   float: left;
-  background: green;
+  /* background: green; */
 }
 
 .booking-form-container {
-  position: fixed;
+  top: 75px;
+  position: sticky;
   z-index: 3;
   padding: 0 24px;
-
-  background: wheat;
+  border: 1px solid #e4e4e4;
+  /* background: wheat; */
 }
 
 .booking-form-box {
-  border: 1px solid #e4e4e4;
   /* background: #ffffff; */
   height: 430px;
   width: 326px;

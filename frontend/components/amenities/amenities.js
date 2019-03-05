@@ -8,7 +8,6 @@ const Amenities = (props) => {
   Object.keys(spot).forEach(key => (
     spot[key] === true ? types.push(key) : null
   ));
-  console.log(types);
 
   const amenityItem = types.map(aType => <AmenitiyItem key={aType} type={aType}/>)
   return (

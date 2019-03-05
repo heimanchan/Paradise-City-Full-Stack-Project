@@ -15,7 +15,7 @@ const bookingFrom = ({ spot }) => {
           <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
 
           <form className="booking-form"> 
-
+            Booking from here
           </form>
         </div>
       </div>
