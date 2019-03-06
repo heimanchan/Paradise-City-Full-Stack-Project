@@ -17,6 +17,7 @@ export default class UserIndex extends React.Component {
         booking={booking} 
         key={booking.id}
         deleteBooking={this.props.deleteBooking}
+        openModal={this.openModal}
       />
     )
     return(

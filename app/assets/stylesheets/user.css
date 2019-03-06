@@ -38,10 +38,12 @@
 }
 
 .spot-flex .session-submit {
-  position: absolute;
-  bottom: -14px;
+  /* position: absolute; */
+  /* bottom: -14px; */
+  margin-top: 5px;
 }
 
 .spot-flex .session-submit button {
   font-size: 12px;
 }
+
