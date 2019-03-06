@@ -8,7 +8,6 @@ class BookingForm extends React.Component {
     // this.state = { startDate: this.props.startDate, endDate: null, numGuests: 1 };
     this.state = { startDate: null, endDate: null, numGuests: 1 };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // debugger
     this.updateGuests = this.updateGuests.bind(this);
   }
 
@@ -24,8 +23,11 @@ class BookingForm extends React.Component {
       num_guests: parseInt(this.state.numGuests),
       spot_id: this.props.spot.id,
     }
-    debugger
-    this.props.action(booking).then(() => this.props.history.push("/search"));
+    this.props.currentUser ? (
+      this.props.action(booking).then(() => this.props.history.push("/search"))
+    ) : (
+      dispatch(this.props.openModal("Log In"))
+    )
   }
 
   render() {
