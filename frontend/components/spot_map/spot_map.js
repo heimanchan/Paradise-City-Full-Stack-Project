@@ -24,7 +24,9 @@ class SpotMap extends React.Component {
     let coords, zoom;
     if (this.props.location.search) {
       coords = queryString.parse(this.props.location.search);
+      if (coords.lat === '37.09024' && coords.lng === '-95.71289100000001') this.props.history.push(`/search?lat=37.7558&lng=-122.450`)
       zoom = (coords.lat === '37.7558' && coords.lng === '-122.45') ? 12 : 13
+      // debugger
     } else {
       coords = { lat: '37.7558', lng: '-122.450' }
       zoom = 12;
