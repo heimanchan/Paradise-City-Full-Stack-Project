@@ -23,8 +23,9 @@ class BookingForm extends React.Component {
       end_date: this.state.endDate._d,
       num_guests: parseInt(this.state.numGuests),
       spot_id: this.props.spot.id,
+      guest_id: this.props.currentUserId
     }
-    debugger
+
     this.props.action(booking).then(() => this.props.history.push("/search"));
   }
 

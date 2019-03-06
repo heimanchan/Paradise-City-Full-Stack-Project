@@ -32,7 +32,6 @@ export const fetchAllBookings = () => dispatch => (
     .then(res => dispatch(receiveAllBookings(res)))
 )
 
-
 export const fetchBooking = bookingId => dispatch => (
   BookingAPI.fetchBooking(bookingId)
     .then(res => dispatch(receiveBooking(res)))
