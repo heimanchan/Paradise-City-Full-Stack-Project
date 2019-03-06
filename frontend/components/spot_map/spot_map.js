@@ -24,12 +24,14 @@ class SpotMap extends React.Component {
     let coords, zoom;
     if (this.props.location.search) {
       coords = queryString.parse(this.props.location.search);
-      zoom = 13;
-    } else {
-      // coords = { lat: '37.7758', lng: '-122.435' }
-      coords = { lat: '37.7558', lng: '-122.450' }
-      zoom = 12;
+      zoom = (coords.lat === '37.7558' && coords.lng === '-122.45') ? 12 : 13
+      // debugger
     }
+    // } else {
+    //   // coords = { lat: '37.7758', lng: '-122.435' }
+    //   coords = { lat: '37.7558', lng: '-122.450' }
+    //   zoom = 12;
+    // }
 
     const mapOptions = {
       center: { lat: parseFloat(coords.lat), lng: parseFloat(coords.lng) },

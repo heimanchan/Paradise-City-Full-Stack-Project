@@ -35,8 +35,8 @@ class SearchBar extends React.Component {
         this.props.history.push(`/search?lat=${lat}&lng=${lng}`)
         this.props.receiveSearch({lat, lng})
       } else {
-        lat = 37.7758;
-        lng = -122.435;
+        lat = 37.7558;
+        lng = -122.45;
         this.props.history.push(`/search?lat=${lat}&lng=${lng}`)
         this.props.receiveSearch({ lat, lng })   
       }
