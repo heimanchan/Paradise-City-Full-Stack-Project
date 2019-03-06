@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import BookingForm from './booking_form';
 import { createBooking } from '../../actions/booking_actions';
-import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const booking = { startDate: null, endDate: null, numGuests: null };
@@ -13,7 +12,6 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  openModal: modal => dispatch(openModal(modal)),
   action: booking => dispatch(createBooking(booking))
 })
 
