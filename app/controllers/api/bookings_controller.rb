@@ -1,15 +1,17 @@
 class Api::BookingsController < ApplicationController
   def index
-    @bookings = User.find(params[:id]).bookings
+    @bookings = Booking.all.select{ |booking| booking.guest_id = current_user.id } 
     render :index
   end
 
   def create
     @booking = Booking.new(booking_params)
-    if @booking.valid_dates? && @booking.save
+    @booking.guest_id = current_user.id
+    @booking.owner_id = Spot.find(params[:booking][:spot_id]).owner.id
+    if @booking.save!
       render :show
     else 
-      render json: ["This date is not availalbe. Please select another date."], status: 400
+      render json: ["This date is not available. Please select another date."], status: 422
     end
   end
 

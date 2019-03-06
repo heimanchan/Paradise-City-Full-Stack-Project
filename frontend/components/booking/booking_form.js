@@ -1,14 +1,33 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 
-class BookingFrom extends React.Component {
+class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { startDate: this.props.startDate, endDate: null, numGuests: 1 };
+    // this.state = { startDate: this.props.startDate, endDate: null, numGuests: 1 };
+    this.state = { startDate: null, endDate: null, numGuests: 1 };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    // debugger
+    this.updateGuests = this.updateGuests.bind(this);
   }
 
-  
-  
+  updateGuests(e) {
+    this.setState({ numGuests: e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const booking = { 
+      start_date: this.state.startDate._d,
+      end_date: this.state.endDate._d,
+      num_guests: parseInt(this.state.numGuests),
+      spot_id: this.props.spot.id,
+    }
+    debugger
+    this.props.action(booking).then(() => this.props.history.push("/search"));
+  }
+
   render() {
     return (
       <div className="booking-position">
@@ -22,7 +41,7 @@ class BookingFrom extends React.Component {
           <div className="booking-form-box">
             <div style={{ marginTop: 16, marginBottom: 16 }}><div className="br"></div></div>
 
-            <form className="booking-form">
+            <form className="booking-form" onSubmit={this.handleSubmit}>
               <div className="booking-fields">
                 <div className="booking-dates">
                   <label className="booking-form-label">Dates</label>
@@ -43,14 +62,21 @@ class BookingFrom extends React.Component {
                 <div className="booking-guests">
                   <label className="booking-form-label">Guests</label>
                   <div>
-                    <input placeholder="1 guest" className='booking-guest-input' type="number" min='1' max={this.props.spot.maxGuests} />
+                    <input
+                      placeholder="1 guest"
+                      className='booking-guest-input'
+                      type="number"
+                      min='1'
+                      max={this.props.spot.maxGuests}
+                      onChange={this.updateGuests}
+                    />
                   </div>
                 </div>
               </div>
 
-              <div style={ {marginTop: 24} }>
-                <button className="booking-submit"> 
-                  Request to Book
+              <div style={{ marginTop: 24 }}>
+                <button className="booking-submit">
+                  {this.props.formType}
                 </button>
               </div>
               <div style={{ marginTop: 8 }}>
@@ -64,7 +90,7 @@ class BookingFrom extends React.Component {
       </div>
     )
   }
-  
+
 }
 
-export default BookingFrom;
+export default withRouter(BookingForm);

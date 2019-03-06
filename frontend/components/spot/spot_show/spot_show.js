@@ -4,10 +4,13 @@ import SearchNavContainer from '../../nav_bar/search_nav_container';
 import SpotShowMap from '../../spot_map/spot_show_map';
 import Amenity from '../../amenities/amenities';
 import BookingForm from '../../booking/booking_form';
+import CreateBookingContainer from '../../booking/create_booking_container';
+import EditBookingContainer from '../../booking/edit_booking_container';
 
 
 // Testing
 import { fetchSpot } from '../../../actions/spot_actions';
+import { format } from 'util';
 
 class SpotShow extends React.Component {
   constructor(props) {
@@ -146,12 +149,12 @@ class SpotShow extends React.Component {
                   </div>
                 </div>
               </div>
-              <BookingForm
+              {/* <BookingForm
                 spot={spot}
                 startDate={this.state.startDate}
                 endDate={this.state.endDate}
-              />
-
+              /> */}
+              <CreateBookingContainer spot={spot}/>
             </div>
           </div>
         </div>

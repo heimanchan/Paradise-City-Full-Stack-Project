@@ -1,4 +1,4 @@
-export const fetchBookings = () => (
+export const fetchAllBookings = () => (
   $.ajax({
     url: 'api/bookings',
   })

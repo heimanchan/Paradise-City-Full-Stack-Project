@@ -27,27 +27,28 @@ const receiveBookingErrors = errors => ({
   errors
 })  
 
-export const fetchAllBookings = () => dispatch => {
+export const fetchAllBookings = () => dispatch => (
   BookingAPI.fetchAllBookings()
     .then(() => dispatch(receiveAllBookings()))
-}
+)
 
-// export const fetchBooking = bookingId => dispatch => {
-//   BookingAPI.fetchBooking(bookingId)
-//     .then(res => dispatch(receiveBooking(res)))
-// }
 
-export const createBooking = booking => dispatch => {
+export const fetchBooking = bookingId => dispatch => (
+  BookingAPI.fetchBooking(bookingId)
+    .then(res => dispatch(receiveBooking(res)))
+)
+
+export const createBooking = booking => dispatch => (
   BookingAPI.createBooking(booking)
     .then(res => dispatch(receiveBooking(res, "create")))
     // .fail(...)
-}
+)
 
-export const updateBooking = booking => dispatch => {
+export const updateBooking = booking => dispatch => (
   BookingAPI.updateBooking(booking)
     .then(res => dispatch(receiveBooking(res, "update")))
     // .fail(...)
-}
+)
 
 export const deleteBooking = bookingId => dispatch => (
   BookingAPI.deleteBooking(bookingId)

@@ -8,8 +8,8 @@ const bookingReducer = (state = {}, action) => {
     case RECEIVE_ALL_BOOKINGS:
       return action.bookings;
     case RECEIVE_BOOKING:
-      newState[action.booking.id] = action.booking
-      return newState
+      // newState[action.booking.id] = action.booking
+      return Object.assign(newState, action.booking)
     case REMOVE_BOOKING:
       delete newState[bookingId]
       return newState

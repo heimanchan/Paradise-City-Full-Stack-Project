@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Testing
   window.fetchAllBookings = BookingActions.fetchAllBookings;
+  window.createBooking = BookingActions.createBooking;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   
