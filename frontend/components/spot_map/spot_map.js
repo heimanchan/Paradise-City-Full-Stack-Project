@@ -21,16 +21,19 @@ class SpotMap extends React.Component {
   }
 
   renderMap() {
-    let coords;
+    let coords, zoom;
     if (this.props.location.search) {
       coords = queryString.parse(this.props.location.search);
+      zoom = 13;
     } else {
-      coords = { lat: '37.7758', lng: '-122.435' }
+      // coords = { lat: '37.7758', lng: '-122.435' }
+      coords = { lat: '37.7558', lng: '-122.450' }
+      zoom = 12;
     }
 
     const mapOptions = {
       center: { lat: parseFloat(coords.lat), lng: parseFloat(coords.lng) },
-      zoom: 11
+      zoom: zoom
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);

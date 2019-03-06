@@ -21,7 +21,7 @@ const spotIndexItem = (props) => {
           <div className="spot-item">
             <div className="spot-title">{spot.title}</div>
             <div className="spot-price">${spot.price} per night</div>
-            <div className="spot-reviews">{spot.ownerName}</div>
+            <div className="spot-reviews">by {`${spot.owner.first_name} ${spot.owner.last_name}`}</div>
           </div>
         </div>
       </Link>

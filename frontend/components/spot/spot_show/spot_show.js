@@ -3,7 +3,6 @@ import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'rea
 import SearchNavContainer from '../../nav_bar/search_nav_container';
 import SpotShowMap from '../../spot_map/spot_show_map';
 import Amenity from '../../amenities/amenities';
-import BookingForm from '../../booking/booking_form';
 import CreateBookingContainer from '../../booking/create_booking_container';
 import EditBookingContainer from '../../booking/edit_booking_container';
 

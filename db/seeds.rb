@@ -255,3 +255,191 @@ spot4.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-s
 spot4.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot4_4.jpg"), filename: "spot4.jpg")
 spot4.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot4_5.jpg"), filename: "spot4.jpg")
 spot4.save!
+
+spot5 = Spot.create!({
+  owner_id: dave.id,
+  city_id: la.id,
+  title: 'Spacious Modern Living! L.A 2 Bd / 2 Ba Apts!!',
+  address: '7045 Lanewood Avenue',
+  lat: 34.099689,
+  lng: -118.343002,
+  max_guests: 4,
+  num_bedrooms: 1,
+  num_beds: 1,
+  price: 200,
+  ratings: 5,
+  description: "Our apartments for rent in Hollywood, CA is a secured community that features spacious one and two bedroom floor plans that include large closets, air conditioning, private oversized patios and in-house washers and dryers! The community also boasts gated underground parking, a beautiful fitness center and more!! The Pines welcomes cats and dogs too; please see our pet policy as some restrictions may apply. Give us a call or stop by to get current availability and to check out all of the amenities!",
+  heat: false,
+  pool: false,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: true,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: true
+})
+spot5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot5_1.jpg"), filename: "spot5.jpg")
+spot5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot5_2.jpg"), filename: "spot5.jpg")
+spot5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot5_3.jpg"), filename: "spot5.jpg")
+spot5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot5_4.jpg"), filename: "spot5.jpg")
+spot5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot5_5.jpg"), filename: "spot5.jpg")
+spot5.save!
+
+spot6 = Spot.create!({
+  owner_id: ryanmapa.id,
+  city_id: la.id,
+  title: 'Fully Furnished 1 bed',
+  address: '7045 Lanewood Avenue',
+  lat: 34.099659,
+  lng: -118.313102,
+  max_guests: 4,
+  num_bedrooms: 1,
+  num_beds: 1,
+  price: 99,
+  ratings: 5,
+  description: "Our apartments for rent in Hollywood, CA is a secured community that features spacious one and two bedroom floor plans that include large closets, air conditioning, private oversized patios and in-house washers and dryers! The community also boasts gated underground parking, a beautiful fitness center and more!! The Pines welcomes cats and dogs too; please see our pet policy as some restrictions may apply. Give us a call or stop by to get current availability and to check out all of the amenities!",
+  heat: false,
+  pool: false,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: true,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: true
+})
+spot6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot6_1.jpg"), filename: "spot6.jpg")
+spot6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot6_2.jpg"), filename: "spot6.jpg")
+spot6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot6_3.jpg"), filename: "spot6.jpg")
+spot6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot6_4.jpg"), filename: "spot6.jpg")
+spot6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot6_5.jpg"), filename: "spot6.jpg")
+spot6.save!
+
+spot7 = Spot.create!({
+  owner_id: ned.id,
+  city_id: la.id,
+  title: 'STUNNING 1 BED 1 BATH CONDO',
+  address: '6201 Hollywood Blvd',
+  lat: 34.102250,
+  lng: -118.323996,
+  max_guests: 2,
+  num_bedrooms: 1,
+  num_beds: 1,
+  price: 160,
+  ratings: 5,
+  description: "Welcome to Eastown. The new place to live, work, and play in the heart of East Hollywood. An apartment community where contemporary design meets world-class amenities, Eastown offers a modern take on luxury apartment living offering studio, one bedroom apartments and one bedroom live-work lofts for rent in the heart of LAs most iconic neighborhood. Live among the stars on the Hollywood Walk of Fame. A state-of-the-art gym, rooftop pool and spa, and on-site shopping are just a few of the benefits that come with calling Eastown home.",
+  heat: false,
+  pool: true,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: false,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: true
+})
+spot7.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot7_1.jpg"), filename: "spot7.jpg")
+spot7.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot7_2.jpg"), filename: "spot7.jpg")
+spot7.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot7_3.jpg"), filename: "spot7.jpg")
+spot7.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot7_4.jpg"), filename: "spot7.jpg")
+spot7.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot7_5.jpg"), filename: "spot7.jpg")
+spot7.save!
+
+spot8 = Spot.create!({
+  owner_id: ned.id,
+  city_id: la.id,
+  title: 'Fully Furnished Luxury Penthouse - Rates are Negotiable',
+  address: '6201 Hollywood Blvd',
+  lat: 34.051722,
+  lng: -118.262312,
+  max_guests: 6,
+  num_bedrooms: 2,
+  num_beds: 3,
+  price: 260,
+  ratings: 5,
+  description: "Our fully-furnished Live/Work lofts are the best place to live- work - play in Downtown LA. At TENTEN Wilshire fully-furnished apartments you have everything you need including a full business center with multiple board and conference rooms equipped for both video as well as tele-conferencing. * Fully equipped gourmet kitchens with stainless steel appliances *CaesarStone Countertops *Rich hardwood floors throughout, with glass tile bathrooms *Soaking tubs with breathtaking panoramic views *In-unit laundry machines *Custom housekeeping services available *Individual thermostats for optimum cooling and heating *24 hour valet service and garage parking *24 hour courtesy patrol",
+  heat: false,
+  pool: false,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: false,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: false
+})
+spot8.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot8_1.jpg"), filename: "spot8.jpg")
+spot8.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot8_2.jpg"), filename: "spot8.jpg")
+spot8.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot8_3.jpg"), filename: "spot8.jpg")
+spot8.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot8_4.jpg"), filename: "spot8.jpg")
+spot8.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot8_5.jpg"), filename: "spot8.jpg")
+spot8.save!
+
+spot9 = Spot.create!({
+  owner_id: ned.id,
+  city_id: sf.id,
+  title: '2 bed 1 bath For Rent in Crocker Amazon',
+  address: 'Mission Terrace, San Francisco, CA 94112',
+  lat: 37.719958,
+  lng: -122.441540,
+  max_guests: 3,
+  num_bedrooms: 1,
+  num_beds: 1,
+  price: 300,
+  ratings: 5,
+  description: "1st floor Unfurnished 2 bed, 1 bath in Crocker Amazon. A few blocks away from Mission St. Plenty of restaurants, grocery stores, shops, cafes and much more nearby. Short drive to freeways 280 & 101. Close to public transportation. Near City College and SF State. Shared laundry. 1 parking space in driveway.",
+  heat: true,
+  pool: false,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: false,
+  iron: true,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: false
+})
+spot9.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot9_1.jpg"), filename: "spot9.jpg")
+spot9.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot9_2.jpg"), filename: "spot9.jpg")
+spot9.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot9_3.jpg"), filename: "spot9.jpg")
+spot9.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot9_4.jpg"), filename: "spot9.jpg")
+spot9.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot9_5.jpg"), filename: "spot9.jpg")
+spot9.save!
+
+spot10 = Spot.create!({
+  owner_id: ned.id,
+  city_id: sf.id,
+  title: 'SPECIAL! SPECIAL! SPECIAL! CALL TODAY!',
+  address: '3580 W. Grant Line Rd',
+  lat: 37.751967,
+  lng: -22.443485,
+  max_guests: 8,
+  num_bedrooms: 4,
+  num_beds: 4,
+  price: 550,
+  ratings: 5,
+  description: "Be the first to ever live in these unbeatable luxury apartment homes! Gateway Crossing is Tracy's newest and most desirable apartment homes. Residents can enjoy lying out by the sparkling swimming pool, relaxing in the steaming spa, working out in our state-of-the-art fitness center or taking their fury friend to our onsite dog park. Gateway Crossing has everything at your fingertips without leaving the comfort of your home. Stainless steel appliances, full size washer and dryer and granite counter tops are just a few of the luxuries you will enjoy. ",
+  heat: true,
+  pool: true,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: true,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: true
+})
+spot10.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot10_1.jpg"), filename: "spot10.jpg")
+spot10.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot10_2.jpg"), filename: "spot10.jpg")
+spot10.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot10_3.jpg"), filename: "spot10.jpg")
+spot10.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot10_4.jpg"), filename: "spot10.jpg")
+spot10.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot10_5.jpg"), filename: "spot10.jpg")
+spot10.save!
+
+

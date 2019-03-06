@@ -1,0 +1,47 @@
+.user-index-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 82px;
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;\
+  /* background: wheat; */
+}
+
+.user-index-container > h1 {
+  /* align-self: center; */
+  padding: 10px;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.user-booking-index {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.user-booking-index .spot-item-box {
+  padding: 10px;
+  margin: 15px 20px;
+  width: 40%;
+  border: 1px solid #EBEBEB;
+}
+
+.spot-flex {
+  display: flex;
+  position: relative;
+}
+
+.booking-details {
+  width: 70%;
+}
+
+.spot-flex .session-submit {
+  position: absolute;
+  bottom: -14px;
+}
+
+.spot-flex .session-submit button {
+  font-size: 12px;
+}

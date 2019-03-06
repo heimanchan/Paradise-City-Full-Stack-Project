@@ -10,7 +10,7 @@ const bookingReducer = (state = {}, action) => {
     case RECEIVE_BOOKING:
       return Object.assign(newState, action.booking)
     case REMOVE_BOOKING:
-      delete newState[bookingId]
+      delete newState[action.bookingId]
       return newState
     default:
       return state;
