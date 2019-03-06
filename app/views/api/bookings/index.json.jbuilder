@@ -1,9 +1,3 @@
-# @bookings.each do |booking|
-#   json.set! booking.id do
-#     json.partial! 'api/bookings/booking', booking: booking
-#   end
-# end
-
 @bookings.each do |booking|
   json.set booking.id do 
     json.extract! booking, :id, :start_date, :end_date, :num_guests, :spot_id

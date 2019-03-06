@@ -6,30 +6,42 @@ export default class Dropdown extends React.Component {
     super(props);
 
     this.state = { showMenu: false, }
-    this.showDropdown = this.showDropdown.bind(this);
-    this.closeDropdown = this.closeDropdown.bind(this);
-    this.setDropdownMenu = this.setDropdownMenu.bind(this);
+    this.toggleShow = this.toggleShow.bind(this);
+    this.hide = this.hide.bind(this);
+    // this.showDropdown = this.showDropdown.bind(this);
+    // this.closeDropdown = this.closeDropdown.bind(this);
+    // this.setDropdownMenu = this.setDropdownMenu.bind(this);
   }
 
-  showDropdown(e) {
-    e.preventDefault();
-    this.setState({ showMenu: true }, () => {
-      document.addEventListener('click', this.closeDropdown);
-    });
+  toggleShow() {
+    this.setState({ showMenu: !this.state.showMenu });
   }
 
-  closeDropdown(e) {
-    e.preventDefault();
-    if(!this.dropdownMenu.contains(e.target)) {
-      this.setState({ showMenu: false }, () => {
-        document.removeEventListener('click', this.closeDropdown);
-      })
+  hide(e) {
+    if (e && e.relatedTarget) {
+      e.relatedTarget.click();
     }
+    this.setState({ showMenu: false });
   }
+  // showDropdown(e) {
+  //   e.preventDefault();
+  //   this.setState({ showMenu: true }, () => {
+  //     document.addEventListener('click', this.closeDropdown);
+  //   });
+  // }
 
-  setDropdownMenu(element) {
-    this.dropdownMenu = element;
-  }
+  // closeDropdown(e) {
+  //   e.preventDefault();
+  //   if(!this.dropdownMenu.contains(e.target)) {
+  //     this.setState({ showMenu: false }, () => {
+  //       document.removeEventListener('click', this.closeDropdown);
+  //     })
+  //   }
+  // }
+
+  // setDropdownMenu(element) {
+  //   this.dropdownMenu = element;
+  // }
   
   render() {
     let url;
@@ -40,19 +52,20 @@ export default class Dropdown extends React.Component {
     }
     return (
       <div>
-        <button className="profile-box" onClick={this.showDropdown}>
-          {/* <div className="profile-pic"></div> */}
-          {/* <img className="profile-pic" src={this.props.user.photoUrl} /> */}
+        {/* <button className="profile-box" onClick={this.showDropdown}> */}
+        <button className="profile-box" onClick={this.toggleShow} onBlur={this.hide}>
           <img className="profile-pic" src={url} />
         </button>
         {
-          this.state.showMenu ? (
+          // this.state.showMenu ? (
+          this.state.showMenu && (
             <div 
               className="dropdown-background"
               ref={this.setDropdownMenu}
             >
               <div className="user-dropdown">
-                <Link to="/" className="user-dropdown-link">
+                {/* <Link to="/" className="user-dropdown-link"> */}
+                <Link to={`/users/${this.props.user.id}`} className="user-dropdown-link">
                   <div className="user-dropdown-el"><div>My Profile</div></div>
                 </Link>
 
@@ -61,7 +74,8 @@ export default class Dropdown extends React.Component {
                 </button>
               </div>
             </div>
-          ) : ( null )
+          // ) : ( null )
+          )
         }
       </div>
     )

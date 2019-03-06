@@ -1,6 +1,7 @@
 class Api::BookingsController < ApplicationController
   def index
-    @bookings = Booking.all.select{ |booking| booking.guest_id = current_user.id } 
+    # @bookings = Booking.all.select{ |booking| booking.guest_id = current_user.id } 
+    @bookings = User.find(params[:userId]).bookings
     render :index
   end
 

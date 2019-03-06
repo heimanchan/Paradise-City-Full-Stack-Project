@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchNavContainer from '../nav_bar/search_nav_container';
+import SearchNavContainer from '../components/nav_bar/search_nav_container';
 
 export default class UserIndex extends React.Component {
   constructor(props) {
