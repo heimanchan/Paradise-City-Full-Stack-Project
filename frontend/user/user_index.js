@@ -7,14 +7,17 @@ export default class UserIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllBookings();
+    this.props.fetchAllBookings(this.props.userId);
   }
 
   render() {
     return(
       <>
         <SearchNavContainer />
+        <div>
+
         <h2>Your Next Trip to the Paradise City...</h2>
+        </div>
       </>
     )
   }

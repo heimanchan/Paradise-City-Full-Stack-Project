@@ -27,8 +27,8 @@ const receiveBookingErrors = errors => ({
   errors
 })  
 
-export const fetchAllBookings = () => dispatch => (
-  BookingAPI.fetchAllBookings()
+export const fetchAllBookings = (userId) => dispatch => (
+  BookingAPI.fetchAllBookings(userId)
     .then(res => dispatch(receiveAllBookings(res)))
 )
 

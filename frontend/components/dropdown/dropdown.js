@@ -8,9 +8,6 @@ export default class Dropdown extends React.Component {
     this.state = { showMenu: false, }
     this.toggleShow = this.toggleShow.bind(this);
     this.hide = this.hide.bind(this);
-    // this.showDropdown = this.showDropdown.bind(this);
-    // this.closeDropdown = this.closeDropdown.bind(this);
-    // this.setDropdownMenu = this.setDropdownMenu.bind(this);
   }
 
   toggleShow() {
@@ -23,25 +20,6 @@ export default class Dropdown extends React.Component {
     }
     this.setState({ showMenu: false });
   }
-  // showDropdown(e) {
-  //   e.preventDefault();
-  //   this.setState({ showMenu: true }, () => {
-  //     document.addEventListener('click', this.closeDropdown);
-  //   });
-  // }
-
-  // closeDropdown(e) {
-  //   e.preventDefault();
-  //   if(!this.dropdownMenu.contains(e.target)) {
-  //     this.setState({ showMenu: false }, () => {
-  //       document.removeEventListener('click', this.closeDropdown);
-  //     })
-  //   }
-  // }
-
-  // setDropdownMenu(element) {
-  //   this.dropdownMenu = element;
-  // }
   
   render() {
     let url;
@@ -52,19 +30,16 @@ export default class Dropdown extends React.Component {
     }
     return (
       <div>
-        {/* <button className="profile-box" onClick={this.showDropdown}> */}
         <button className="profile-box" onClick={this.toggleShow} onBlur={this.hide}>
           <img className="profile-pic" src={url} />
         </button>
         {
-          // this.state.showMenu ? (
           this.state.showMenu && (
             <div 
               className="dropdown-background"
               ref={this.setDropdownMenu}
             >
               <div className="user-dropdown">
-                {/* <Link to="/" className="user-dropdown-link"> */}
                 <Link to={`/users/${this.props.user.id}`} className="user-dropdown-link">
                   <div className="user-dropdown-el"><div>My Profile</div></div>
                 </Link>
@@ -74,7 +49,6 @@ export default class Dropdown extends React.Component {
                 </button>
               </div>
             </div>
-          // ) : ( null )
           )
         }
       </div>
