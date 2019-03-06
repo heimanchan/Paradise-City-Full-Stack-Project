@@ -7,9 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
-# File.open()
-# open("https://hhjskfh")
-
 User.delete_all
 City.delete_all
 Spot.delete_all

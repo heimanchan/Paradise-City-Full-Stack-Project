@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root'
 
 // Testing
-import * as BookingActions from './actions/booking_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Testing
-  window.fetchAllBookings = BookingActions.fetchAllBookings;
-  window.createBooking = BookingActions.createBooking;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   

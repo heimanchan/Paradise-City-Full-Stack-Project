@@ -32,11 +32,18 @@ export default class Dropdown extends React.Component {
   }
   
   render() {
+    let url;
+    if (!this.props.user.photoUrl) {
+      url = "https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/cheese.jpg"
+    } else {
+      url = this.props.user.photoUrl;
+    }
     return (
       <div>
         <button className="profile-box" onClick={this.showDropdown}>
           {/* <div className="profile-pic"></div> */}
-          <img className="profile-pic" src={this.props.user.photoUrl} />
+          {/* <img className="profile-pic" src={this.props.user.photoUrl} /> */}
+          <img className="profile-pic" src={url} />
         </button>
         {
           this.state.showMenu ? (

@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   const defaultBooking = { startDate: null, endDate: null, numGuests: null };
   const booking = state.entities.bookings[ownProps.match.params.bookingId] || defaultBooking;
   const currentUser = state.entities.users[state.session.currentUserId];
-  const userBookings = state.entities.users.userBookings;  
+  // const userBookings = state.entities.users.userBookings;  
   const formType = "Update";
 
   return { booking, formType, currentUser, userBookings}

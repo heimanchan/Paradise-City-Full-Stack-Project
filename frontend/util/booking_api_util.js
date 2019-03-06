@@ -1,6 +1,13 @@
 export const fetchAllBookings = () => (
   $.ajax({
     url: 'api/bookings',
+    // data: {userId}
+  })
+)
+
+export const fetchBooking = bookingId => (
+  $.ajax({
+    url: `api/bookings/${bookingId}`
   })
 )
 
@@ -16,7 +23,7 @@ export const updateBooking = booking => (
   $.ajax({
     method: 'PATCH',
     url: `api/bookings/${booking.id}`,
-    data: booking,
+    data: { booking },
   })
 )
 
