@@ -1,15 +1,38 @@
 import React from 'react';
+import swal from 'sweetalert';
 
 class UserIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
+    this.cancelAlert = this.cancelAlert.bind(this);
+  }
+
+  cancelAlert() {
+    swal({
+      title: "Are you sure?",
+      text: "Still wanted to see you in a paradise city :(",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        this.handleClick().then(() => (
+          swal("Your booking is canclled.", {
+            icon: "success",
+          })
+        ))
+      } else {
+        swal("Great! See you in the paradise city.");
+      }
+    })
   }
 
   handleClick() {
-    debugger
-    this.props.deleteBooking(this.props.booking.id);
+    this.props.deleteBooking(this.props.booking.id)
+      .then(() => swal("Your booking is canclled."))
   }
 
   handleEdit() {
@@ -43,7 +66,7 @@ class UserIndexItem extends React.Component {
               </div>
               <div className="booking-button-box">
                 <div className="session-submit">
-                  <button onClick={this.handleClick}>
+                  <button onClick={this.cancelAlert}>
                     Cancel Booking
                   </button>
                 </div>

@@ -6,7 +6,11 @@ const bookingReducer = (state = {}, action) => {
   let newState = Object.assign({}, state)
   switch(action.type) {
     case RECEIVE_ALL_BOOKINGS:
-      return action.payload.bookings;
+      if (action.payload.bookings) {
+        return action.payload.bookings;
+      } else {
+        return state;
+      }
     case RECEIVE_BOOKING:
       return Object.assign(newState, action.booking)
     case REMOVE_BOOKING:

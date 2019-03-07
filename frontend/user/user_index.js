@@ -27,6 +27,7 @@ export default class UserIndex extends React.Component {
           <h1>Your next trip to a paradise city...</h1>
           {/* css divided line */}
           <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
+          <div className="b"></div>
           <div className="user-booking-index">
             {userBookingItems}
           </div>

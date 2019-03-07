@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import swal from 'sweetalert';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -26,26 +27,20 @@ class BookingForm extends React.Component {
       guest_id: this.props.currentUserId
     }
     if (this.props.formType === "Update"){
-      // this.props.action(booking)
-      //   .then(() => {
-      //     this.props.closeModal();
-      //     this.props.history.push("/search");
-      //   }
-      // );
       this.props.action(booking)
         .then(() => {
           this.props.closeModal();
-          this.props.history.push("/search");
+          swal("Success!", "You've updated your booking.", "success");
         }
       );
     } else {
-      // this.props.action(booking).then(() => this.props.history.push("/search"));
-      this.props.action(booking).then(() => this.props.history.push("/search"));
+      this.props.action(booking).then(() => {
+        swal("Success!", "You're about to go to a paradise city!", "success", { button: "Nice!"});
+    });
     }
   }
 
   render() {
-    // if (this.props.spot === undefined) return null;
     return (
       <div className="booking-position">
         <div className="booking-form-container">

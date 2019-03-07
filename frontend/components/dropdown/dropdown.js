@@ -41,7 +41,7 @@ export default class Dropdown extends React.Component {
             >
               <div className="user-dropdown">
                 <Link to={`/users/${this.props.user.id}`} className="user-dropdown-link">
-                  <div className="user-dropdown-el"><div>My Profile</div></div>
+                  <div className="user-dropdown-el"><div>My Trips</div></div>
                 </Link>
 
                 <button onClick={this.props.logout} className="user-dropdown-link">
