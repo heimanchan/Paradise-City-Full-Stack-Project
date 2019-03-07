@@ -12,6 +12,7 @@ class BookingForm extends React.Component {
     this.updateGuests = this.updateGuests.bind(this);
   }
 
+  
   updateGuests(e) {
     this.setState({ numGuests: e.target.value });
   }
@@ -30,6 +31,7 @@ class BookingForm extends React.Component {
   }
 
   render() {
+    // if (this.props.spot === undefined) return null;
     return (
       <div className="booking-position">
         <div className="booking-form-container">

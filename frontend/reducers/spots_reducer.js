@@ -1,4 +1,5 @@
 import { RECEIVE_ALL_SPOTS, RECEIVE_SPOT } from '../actions/spot_actions';
+import { RECEIVE_ALL_BOOKINGS } from '../actions/booking_actions';
 
 const spotsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -9,6 +10,8 @@ const spotsReducer = (oldState = {}, action) => {
       return action.spots;
     case RECEIVE_SPOT:
       return newState[action.spot.id] = action.spot;
+    case RECEIVE_ALL_BOOKINGS:
+      return Object.assign(newState, action.payload.spots)
     default:
       return oldState;
   }

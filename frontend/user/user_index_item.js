@@ -6,16 +6,15 @@ class UserIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.openModal = this.openModal.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleClick() {
     this.props.deleteBooking(this.props.booking.id);
   }
-  
-  openModal(){
-    debugger
-    this.props.openModal("Edit Booking");
+
+  handleEdit() {
+    this.props.openModal("Edit Booking", this.props.booking.id)
   }
   
   render() {
@@ -48,8 +47,14 @@ class UserIndexItem extends React.Component {
                     Cancel Booking
                   </button>
                 </div>
+              </div>
 
-                
+              <div className="booking-button-box">
+                <div className="session-submit">
+                  <button onClick={this.handleEdit} >
+                    Edit Booking
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -6,9 +6,9 @@ export const REMOVE_BOOKING = "REMOVE_BOOKING";
 export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS'
 
 
-const receiveAllBookings = bookings => ({
+const receiveAllBookings = payload => ({
   type: RECEIVE_ALL_BOOKINGS,
-  bookings
+  payload
 })
 
 const receiveBooking = (booking, bookingType) => ({
