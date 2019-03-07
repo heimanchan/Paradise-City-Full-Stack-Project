@@ -5,10 +5,8 @@ import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'rea
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = { startDate: this.props.startDate, endDate: null, numGuests: 1 };
     this.state = { startDate: null, endDate: null, numGuests: 1 };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // debugger
     this.updateGuests = this.updateGuests.bind(this);
   }
 
@@ -20,14 +18,30 @@ class BookingForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const booking = { 
+      id: this.props.bookingId,
       start_date: this.state.startDate._d,
       end_date: this.state.endDate._d,
       num_guests: parseInt(this.state.numGuests),
       spot_id: this.props.spot.id,
       guest_id: this.props.currentUserId
     }
-    debugger
-    this.props.action(booking).then(() => this.props.history.push("/search"));
+    if (this.props.formType === "Update"){
+      // this.props.action(booking)
+      //   .then(() => {
+      //     this.props.closeModal();
+      //     this.props.history.push("/search");
+      //   }
+      // );
+      this.props.action(booking)
+        .then(() => {
+          this.props.closeModal();
+          this.props.history.push("/search");
+        }
+      );
+    } else {
+      // this.props.action(booking).then(() => this.props.history.push("/search"));
+      this.props.action(booking).then(() => this.props.history.push("/search"));
+    }
   }
 
   render() {

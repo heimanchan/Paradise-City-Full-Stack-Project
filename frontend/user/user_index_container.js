@@ -1,7 +1,7 @@
 import UserIndex from './user_index';
 import { connect } from'react-redux';
 import { fetchAllBookings, deleteBooking} from '../actions/booking_actions';
-import { openModal } from '../actions/modal_actions';
+import { openModal, closeModal } from '../actions/modal_actions';
 
 
 const mapStateToProps = state => ({
@@ -12,7 +12,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchAllBookings: (userId) => dispatch(fetchAllBookings(userId)),
   deleteBooking: bookingId => dispatch(deleteBooking(bookingId)),
-  openModal: (modal, bookingID) => dispatch(openModal(modal, bookingID)),
+  // openModal: (modal, bookingID) => dispatch(openModal(modal, bookingID)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserIndex)

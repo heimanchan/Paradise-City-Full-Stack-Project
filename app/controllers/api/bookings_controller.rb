@@ -18,7 +18,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def update
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:booking][:id])
 
     if @booking.update(booking_params)
       render '/api/bookings/show'

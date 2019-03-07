@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-// const UserIndexItem = ( props ) => {
 class UserIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +8,7 @@ class UserIndexItem extends React.Component {
   }
 
   handleClick() {
+    debugger
     this.props.deleteBooking(this.props.booking.id);
   }
 
@@ -19,9 +18,10 @@ class UserIndexItem extends React.Component {
   
   render() {
     const booking = this.props.booking;
-
+    const spot = this.props.spot;
     const divStyle = {
-      background: `url(${booking.spotPic})`,
+      // background: `url(${booking.spotPic})`,
+      background: `url(${spot.photoUrls[0]})`,
       backgroundSize: `cover`,
       backgroundPosition: `center`,
     };
@@ -31,11 +31,11 @@ class UserIndexItem extends React.Component {
         </div>
         <div className="spot-caption">
           <div className="spot-item">
-            <div className="spot-title">{booking.spotTitle}</div>
+            <div className="spot-title">{spot.title}</div>
             <div className="spot-flex">
               <div className="booking-details">
-                <div className="spot-price">in {booking.spotCity}</div>
-                <div className="spot-price">${booking.spotPrice} per night</div>
+                <div className="spot-price">in {spot.cityName}</div>
+                <div className="spot-price">${spot.price} per night</div>
                 <div className="spot-reviews">For {booking.numGuests} guest(s)</div>
                 <div className="booking-dates-box">
                   {`${booking.startDate} to ${booking.endDate}`}

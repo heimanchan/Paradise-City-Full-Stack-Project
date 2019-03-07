@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import BookingForm from './booking_form';
 import { fetchBooking, updateBooking } from '../../actions/booking_actions';
 import { withRouter } from 'react-router-dom';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const defaultBooking = { startDate: null, endDate: null, numGuests: null };
@@ -17,7 +18,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchBooking: id => dispatch(fetchBooking(id)),
-  action: booking => dispatch(updateBooking(booking))
+  action: booking => dispatch(updateBooking(booking)),
+  closeModal: () => dispatch(closeModal())
 })
 
 class EditBookingForm extends React.Component {
@@ -32,7 +34,7 @@ class EditBookingForm extends React.Component {
   }
 
   render() {
-    const { action, formType, booking, spot, currentUserId } = this.props;
+    const { action, formType, booking, spot, currentUserId, bookingId, closeModal} = this.props;
     return (
       <BookingForm
         spot={spot}
@@ -40,6 +42,8 @@ class EditBookingForm extends React.Component {
         formType={formType}
         booking={booking}
         currentUserId={currentUserId} 
+        bookingId={bookingId}
+        closeModal={closeModal}
       />
     );
   }

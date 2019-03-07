@@ -96,3 +96,11 @@
 .DateRangePickerInput {
   width: 326px;
 }
+
+.modal-child > .booking-position {
+  width:100%
+}
+
+.modal-child .booking-form-box {
+  margin-right: -24px;
+}
