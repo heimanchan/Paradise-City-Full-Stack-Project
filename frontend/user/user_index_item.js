@@ -50,7 +50,7 @@ class UserIndexItem extends React.Component {
               </div>
 
               <div className="booking-button-box">
-                <div className="session-submit">
+                <div className="session-submit"> 
                   <button onClick={this.handleEdit} >
                     Edit Booking
                   </button>

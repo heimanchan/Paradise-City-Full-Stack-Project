@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-// import { url } from 'inspector';
 
 const spotIndexItem = (props) => {
   const spot = props.spot;
-
+  // debugger
   const divStyle = {
     background: `url(${spot.photoUrls[0]})`,
     backgroundSize: `cover`,

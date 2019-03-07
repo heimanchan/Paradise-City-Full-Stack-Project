@@ -7,12 +7,12 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
   const defaultBooking = { startDate: null, endDate: null, numGuests: null };
   const booking = state.entities.bookings[ownProps.bookingId] || defaultBooking;
-  const currentUser = state.entities.users[state.session.currentUserId];
-  // const userBookings = state.entities.users.userBookings;  
+  // const currentUser = state.entities.users[state.session.currentUserId];
+  const currentUserId = state.session.currentUserId;
   const formType = "Update";
   const spot = state.entities.spots[booking.spotId];
   
-  return { booking, formType, currentUser, spot }
+  return { booking, formType, currentUserId, spot }
 }
 
 const mapDispatchToProps = dispatch => ({
@@ -32,13 +32,15 @@ class EditBookingForm extends React.Component {
   }
 
   render() {
-    const { action, formType, booking, spot } = this.props;
+    const { action, formType, booking, spot, currentUserId } = this.props;
     return (
       <BookingForm
         spot={spot}
         action={action}
         formType={formType}
-        booking={booking} />
+        booking={booking}
+        currentUserId={currentUserId} 
+      />
     );
   }
 }
