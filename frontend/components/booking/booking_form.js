@@ -41,15 +41,29 @@ class BookingForm extends React.Component {
   }
 
   render() {
+    const photo = this.props.spot.photoUrls[0]
+    const formHeader = this.props.formType === 'Update' ? (
+      <img src={photo} />
+    ) : (
+      <> 
+        <div className="booking-price">
+          <span>
+            {`$${this.props.spot.price} `}
+          </span>
+          per night
+        </div>
+      </>
+    )
     return (
       <div className="booking-position">
         <div className="booking-form-container">
-          <div className="booking-price">
+          {/* <div className="booking-price">
             <span>
               {`$${this.props.spot.price} `}
             </span>
             per night
-        </div>
+          </div> */}
+          {formHeader}
           <div className="booking-form-box">
             <div style={{ marginTop: 16, marginBottom: 16 }}><div className="br"></div></div>
 

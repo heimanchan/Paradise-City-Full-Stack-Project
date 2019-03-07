@@ -6,6 +6,8 @@ export const fetchAllSpots = filter => (
 )
 
 export const fetchSpot = id => (
-  $.ajax({ url: `/api/spots/${id}`})
+  $.ajax({ 
+    url: `/api/spots/${id}` 
+  })
 )
 

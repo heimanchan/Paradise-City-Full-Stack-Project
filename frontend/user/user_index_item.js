@@ -43,7 +43,6 @@ class UserIndexItem extends React.Component {
     const booking = this.props.booking;
     const spot = this.props.spot;
     const divStyle = {
-      // background: `url(${booking.spotPic})`,
       background: `url(${spot.photoUrls[0]})`,
       backgroundSize: `cover`,
       backgroundPosition: `center`,
@@ -54,28 +53,31 @@ class UserIndexItem extends React.Component {
         </div>
         <div className="spot-caption">
           <div className="spot-item">
-            <div className="spot-title">{spot.title}</div>
-            <div className="spot-flex">
+            <div className="spot-title">
+              {spot.title}
+            </div>
+            
               <div className="booking-details">
-                <div className="spot-price">in {spot.cityName}</div>
+                <div className="spot-price">{spot.cityName}</div>
                 <div className="spot-price">${spot.price} per night</div>
                 <div className="spot-reviews">For {booking.numGuests} guest(s)</div>
                 <div className="booking-dates-box">
                   {`${booking.startDate} to ${booking.endDate}`}
                 </div>
               </div>
+            <div className="spot-flex">
+              <div className="booking-button-box">
+                <div className="session-submit">
+                  <button onClick={this.handleEdit} >
+                    Edit Booking
+                  </button>
+                </div>
+              </div>
+            
               <div className="booking-button-box">
                 <div className="session-submit">
                   <button onClick={this.cancelAlert}>
                     Cancel Booking
-                  </button>
-                </div>
-              </div>
-
-              <div className="booking-button-box">
-                <div className="session-submit"> 
-                  <button onClick={this.handleEdit} >
-                    Edit Booking
                   </button>
                 </div>
               </div>

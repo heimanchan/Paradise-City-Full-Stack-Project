@@ -101,6 +101,12 @@
   width:100%
 }
 
-.modal-child .booking-form-box {
-  margin-right: -24px;
+.booking-form-container > img {
+  padding-top: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.booking-form-box {
+  margin: 0 auto;
 }

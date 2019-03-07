@@ -33,6 +33,10 @@
   position: relative;
 }
 
+.spot-flex > div {
+  width: 50%;
+}
+
 .booking-details {
   width: 70%;
 }
@@ -50,3 +54,4 @@
 .booking-button-box {
   margin-left: 5px;
 }
+
