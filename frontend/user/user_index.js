@@ -9,7 +9,6 @@ export default class UserIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllBookings(this.props.userId);
-    debugger
   }
 
   render() {
@@ -20,11 +19,16 @@ export default class UserIndex extends React.Component {
         deleteBooking={this.props.deleteBooking}
       />
     )
+    const header = (Object.values(this.props.bookings).length === 0) ? (
+      <h1>You don't have any bookings now</h1>
+      ) : (
+        <h1>Your next trip to a paradise city...</h1>
+     )
     return(
       <>
         <SearchNavContainer />
         <div className="user-index-container">
-          <h1>Your next trip to a paradise city...</h1>
+          {header}
           {/* css divided line */}
           <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
           <div className="user-booking-index">
