@@ -9,11 +9,16 @@ export const receiveAllSpots = spots => ({
   spots
 })
 
-const receiveSpot = ({ spot, reviews }) => ({
+const receiveSpot = payload => {
+  return {
   type: RECEIVE_SPOT,
-  spot,
-  reviews
-})
+  payload
+}}
+// const receiveSpot = ({ spot, reviews }) => ({
+//   type: RECEIVE_SPOT,
+//   spot,
+//   reviews
+// })
 
 const receiveReview = ( {review, average_rating }) => ({
   type: RECEIVE_REVIEW,

@@ -4,7 +4,8 @@ import SearchNavContainer from '../../nav_bar/search_nav_container';
 import SpotShowMap from '../../spot_map/spot_show_map';
 import Amenity from '../../amenities/amenities';
 import CreateBookingContainer from '../../booking/create_booking_container';
-import EditBookingContainer from '../../booking/edit_booking_container';
+import ReviewFormContainer from './review_form_container';
+import ReviewShow from './review_show';
 
 
 // Testing
@@ -25,9 +26,20 @@ class SpotShow extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  componentDidUpdate(prevProps) {
+    this.props.match.params !== prevProps
+  }
+
   render() {
     const spot = this.props.spot;
     if (spot === undefined) return null;
+
+    const reviewList = (reviews = []) => (
+      reviews.map(review => (
+        <ReviewShow review={review} key={review.id} />
+      ))
+    )
+    
     return(
       <div className="spot-show-page">
         <SearchNavContainer />
@@ -147,12 +159,15 @@ class SpotShow extends React.Component {
                     <SpotShowMap spot={[spot]} />
                   </div>
                 </div>
+
+                {/* css divided line */}
+                <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
+                <div className="spot-h1"> {"0"} Reviews</div>
+                <div className="spot-reviews-box">
+                  {reviewList(this.props.reviews)}
+                </div>
+                <ReviewFormContainer />
               </div>
-              {/* <BookingForm
-                spot={spot}
-                startDate={this.state.startDate}
-                endDate={this.state.endDate}
-              /> */}
               <CreateBookingContainer spot={spot}/>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class ReviewFom extends React.Component {
+class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +13,13 @@ class ReviewFom extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const spotId = parseInt(this.props.match.params.spotId);
+    const review = Object.assign({}, this.state, {
+      spot_id: spotId, 
+      author_id: this.props.currentUser.id
+    });
+    this.props.createReview(review);
+    // this.props.history.push(`/spots/${spotId}`);
   }
 
   update(field) {
@@ -24,7 +31,7 @@ class ReviewFom extends React.Component {
       <div className="review-form-box">
         <form className="spot-review-form" onSubmit={this.handleSubmit}>
           <div className="review-form-rating-box">
-            <label className="review-form-rating">Rating</label>
+            <label className="review-form-rating">Rating </label>
             <input 
               type="number" 
               value={this.state.rating}
@@ -40,8 +47,14 @@ class ReviewFom extends React.Component {
               onChange={this.update("body")}
             />
           </div>
+
+          <div className="session-submit"> 
+            <button>Submit</button>
+          </div>
         </form>
       </div>
     )
   }
 }
+
+export default withRouter(ReviewForm);

@@ -11,7 +11,6 @@ class UserIndexItem extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpot(this.props.booking.spotId)
-    
   }
   
   cancelAlert() {
@@ -45,12 +44,12 @@ class UserIndexItem extends React.Component {
   }
   
   render() {
-    // if (spot === undefined) {
-    //   // debugger
-    //   return null;
-    // }
-    const booking = this.props.booking;
     const spot = this.props.spot;
+    if (spot === undefined) {
+      // debugger
+      return null;
+    }
+    const booking = this.props.booking;
     
     const divStyle = {
       background: `url(${spot.photoUrls[0]})`,

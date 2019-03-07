@@ -6,10 +6,12 @@ const reviewsReducer = (state = {}, action) => {
   let newState = Object.assign({}, state);
   switch(action.type) {
     case RECEIVE_SPOT:
-      return Object.assign(newState, action.reviews);
+      return Object.assign(newState, action.payload.reviews);
     case RECEIVE_REVIEW:
       return Object.assign(newState, { [action.review.id]: action.review })
     default:
       return state;
   }
 }
+
+export default reviewsReducer;

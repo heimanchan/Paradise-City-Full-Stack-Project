@@ -8,7 +8,6 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const mapStateToProps = (state, ownProps) => {
   const defaultBooking = { startDate: null, endDate: null, numGuests: null };
   const booking = state.entities.bookings[ownProps.bookingId] || defaultBooking;
-  // const currentUser = state.entities.users[state.session.currentUserId];
   const currentUserId = state.session.currentUserId;
   const formType = "Update";
   const spot = state.entities.spots[booking.spotId];

@@ -1,0 +1,25 @@
+.review-form-box {
+  background: cyan;
+}
+
+.spot-review-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.spot-review-form > div {
+  margin-bottom: 5px;
+}
+
+.review-form-rating > input{
+  background: yellow;
+}
+
+.review-form-body-box > textarea {
+  width: 100%;
+  background: wheat;
+}
+
+.spot-review-form > .session-submit {
+  width: 120px;
+}

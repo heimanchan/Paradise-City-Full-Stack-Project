@@ -57,12 +57,6 @@ class BookingForm extends React.Component {
     return (
       <div className="booking-position">
         <div className="booking-form-container">
-          {/* <div className="booking-price">
-            <span>
-              {`$${this.props.spot.price} `}
-            </span>
-            per night
-          </div> */}
           {formHeader}
           <div className="booking-form-box">
             <div style={{ marginTop: 16, marginBottom: 16 }}><div className="br"></div></div>
@@ -80,8 +74,8 @@ class BookingForm extends React.Component {
                       onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
                       focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                       onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-                      startDatePlaceholderText={'Check in'}
-                      endDatePlaceholderText={'Check out'}
+                      startDatePlaceholderText={this.props.booking.startDate || "Check in"}
+                      endDatePlaceholderText={this.props.booking.endDate || 'Check out'}
                     />
                   </div>
                 </div>
@@ -89,7 +83,7 @@ class BookingForm extends React.Component {
                   <label className="booking-form-label">Guests</label>
                   <div>
                     <input
-                      placeholder="1 guest"
+                      placeholder={this.props.booking.numGuests || "1 guest"}
                       className='booking-guest-input'
                       type="number"
                       min='1'
@@ -116,7 +110,6 @@ class BookingForm extends React.Component {
       </div>
     )
   }
-
 }
 
 export default withRouter(BookingForm);
