@@ -8,7 +8,7 @@ const modalReducer = (oldState = {}, action) => {
       return { type: action.modal, bookingId: action.bookingId }
       // return action.modal;
     case CLOSE_MODAL:
-      return null;
+      return {};
     default:
       return oldState;
   }

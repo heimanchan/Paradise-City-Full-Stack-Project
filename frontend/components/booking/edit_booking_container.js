@@ -11,7 +11,6 @@ const mapStateToProps = (state, ownProps) => {
   // const userBookings = state.entities.users.userBookings;  
   const formType = "Update";
   const spot = state.entities.spots[booking.spotId];
-  debugger
   
   return { booking, formType, currentUser, spot }
 }
