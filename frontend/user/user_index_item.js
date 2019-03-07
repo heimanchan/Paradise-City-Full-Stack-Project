@@ -9,6 +9,11 @@ class UserIndexItem extends React.Component {
     this.cancelAlert = this.cancelAlert.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchSpot(this.props.booking.spotId)
+    
+  }
+  
   cancelAlert() {
     swal({
       title: "Are you sure?",
@@ -40,13 +45,20 @@ class UserIndexItem extends React.Component {
   }
   
   render() {
+    // if (spot === undefined) {
+    //   // debugger
+    //   return null;
+    // }
     const booking = this.props.booking;
     const spot = this.props.spot;
+    
     const divStyle = {
       background: `url(${spot.photoUrls[0]})`,
       backgroundSize: `cover`,
       backgroundPosition: `center`,
     };
+
+    
     return (
       <div className="spot-item-box">
         <div className="spot-image" style={divStyle}>

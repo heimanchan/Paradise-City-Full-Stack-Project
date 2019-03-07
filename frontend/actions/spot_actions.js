@@ -2,15 +2,23 @@ import * as SpotAPI from '../util/spot_api_util';
 
 export const RECEIVE_ALL_SPOTS = "RECEIVE_ALL_SPOTS";
 export const RECEIVE_SPOT = "RECEIVE_SPOT";
+export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 
 export const receiveAllSpots = spots => ({
   type: RECEIVE_ALL_SPOTS,
   spots
 })
 
-const receiveSpot = spot => ({
+const receiveSpot = ({ spot, reviews }) => ({
   type: RECEIVE_SPOT,
-  spot
+  spot,
+  reviews
+})
+
+const receiveReview = ( {review, average_rating }) => ({
+  type: RECEIVE_REVIEW,
+  review,
+  average_rating,
 })
 
 export const fetchAllSpots = filters => dispatch => (
@@ -21,4 +29,9 @@ export const fetchAllSpots = filters => dispatch => (
 export const fetchSpot = (id) => dispatch => (
   SpotAPI.fetchSpot(id)
     .then(res => dispatch(receiveSpot(res)))
+)
+
+export const createReview = review => dispatch => (
+  SpotAPI.createReview(review)
+    .then(res => (dispatch(receiveReview(res))))
 )

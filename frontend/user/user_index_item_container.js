@@ -5,7 +5,6 @@ import { fetchSpot } from '../actions/spot_actions'
 
 const mapStateToProps = (state, ownProps) => ({
   spot: state.entities.spots[ownProps.booking.spotId]
-  // booking: state.entities
 })
 
 const mapDispatchToProps = dispatch => ({

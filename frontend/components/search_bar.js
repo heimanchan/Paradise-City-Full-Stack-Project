@@ -46,7 +46,7 @@ class SearchBar extends React.Component {
   render() {
     let placeholder = (
       location.pathname === "#/" ? 
-      "Surfing in Los Angeles" : `Try "San Francisco"`)
+      "Surfing in Los Angeles" : `Try "Hollywood"`)
     return(
       <div className="trip-search">
         <form>
