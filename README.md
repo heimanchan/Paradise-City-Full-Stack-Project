@@ -1,24 +1,35 @@
-# README
+# Paradise City
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Live Demo](https://paradise-city.herokuapp.com/#/)
 
-Things you may want to cover:
+Paradise City is a single-page Airbnb clone application. Users can search rooms for different places as well as booking them. User can also update their booking and leave reviews for a room. This project makes use of Rails and PostgreSQL on the backend, and React.js and Redux on the frontend.
 
-* Ruby version
+The project was designed and built within a two-week timeframe, but improvements will be adding over time.
 
-* System dependencies
+## Technologies
+### Backend
+* Ruby v2.5.1
+* Rails v5.2.2
+* Postgresql
+### Frontend
+* React
+* Redux
+### APIs
+* Google Maps API
+* Google Geocoding API
+* React Dates
+* React Star Rating Component
+* Sweetalert
 
-* Configuration
+## Features
+* Full frontend to backend user authentication using BCrypt.
+* Users can search for rooms in any location using the Google Maps API.
+* After logged in
+  * Users can book a room and update their booking using React Dates calendar.
+  * Users can cancel their booking in their profile page.
+  * Users can leave reviews for a room
 
-* Database creation
+## Splash
+![splash](https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/readMe/splash.png)
+The splash page has a search bar in the center of the page. The search function is implemented using Google Maps API and Google Geocoding API. There are sign up and log in buttons on the top-right corner. Modal of a corresponding form is rendered after a button is clicked.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

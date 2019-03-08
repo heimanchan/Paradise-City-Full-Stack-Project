@@ -15,15 +15,20 @@ class SpotShow extends React.Component {
     this.state = {
       startDate: null,
       endDate: null,
-      rating_half_star: 3.5,
-      rating_empty_initial: 0
+      rating_half_star: 0,
+      rating_empty_initial: 0,
     }
   }
   
   componentDidMount() {
-    this.props.fetchSpot(this.props.match.params.spotId);
+    this.props.fetchSpot(this.props.match.params.spotId)
     window.scrollTo(0, 0);
   }
+
+  // componentWillMount() {
+  //   debugger
+  //   this.setState({ rating_half_star: parseFloat(this.props.spot.averageRating) })
+  // }
   
   render() {
     const spot = this.props.spot;
@@ -168,7 +173,8 @@ class SpotShow extends React.Component {
                       editing={false}
                       starColor="teal"
                       emptyStarColor="rgb(215,215,215)"
-                      value={parseFloat(spot.averageRating)}
+                      // value={this.state.rating_half_star}
+                      value={this.props.spot.averageRating}
                       renderStarIcon={(index, value) => {
                         return (
                           <span>
@@ -191,7 +197,8 @@ class SpotShow extends React.Component {
                 <div className="spot-reviews-box">
                   {reviewList(this.props.reviews)}
                 </div>
-                <ReviewFormContainer />
+                {this.props.currentUserId ? (<ReviewFormContainer />) : (<div>Pleae log in to leave reivew.</div>)}
+                {/* <ReviewFormContainer /> */}
               </div>
               <CreateBookingContainer spot={spot}/>
             </div>
@@ -204,8 +211,3 @@ class SpotShow extends React.Component {
 }
 
 export default withRouter(SpotShow);
-
-
-
-
-

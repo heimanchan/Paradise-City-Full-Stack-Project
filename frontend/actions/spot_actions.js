@@ -20,10 +20,10 @@ const receiveSpot = payload => {
 //   reviews
 // })
 
-const receiveReview = ( {review, average_rating }) => ({
+const receiveReview = ( {review, averageRating }) => ({
   type: RECEIVE_REVIEW,
   review,
-  average_rating,
+  averageRating,
 })
 
 export const fetchAllSpots = filters => dispatch => (
@@ -40,5 +40,6 @@ export const fetchSpot = (id) => dispatch => (
 
 export const createReview = review => dispatch => (
   SpotAPI.createReview(review)
-    .then(res => (dispatch(receiveReview(res))))
+    .then(res => {
+      return (dispatch(receiveReview(res)))})
 )
