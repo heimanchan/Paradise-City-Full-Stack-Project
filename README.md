@@ -36,3 +36,7 @@ The splash page has a search bar in the center of the page. The search function 
 ## Search for rooms
 The search bar on the navigation bar is the same as on the splash page. Default searching result is San Francisco. User can search for any location and the map on the right hand side will be updated. Rooms on the left are reflected according to the markers on the map. Each room is a link to its show page.
 
+## Show page
+
+
+
