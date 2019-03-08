@@ -33,11 +33,13 @@ class BookingForm extends React.Component {
         this.props.action(booking)
           .then(() => {
             this.props.closeModal();
+            this.setState( { startDate: null, endDate: null })
             swal("Success!", "You've updated your booking.", "success");
           }
           );
       } else {
         this.props.action(booking).then(() => {
+          this.setState({ startDate: null, endDate: null })
           swal("Success!", "You're about to go to a paradise city!", "success", { button: "Nice!" });
         });
       }
@@ -80,6 +82,7 @@ class BookingForm extends React.Component {
                       onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                       startDatePlaceholderText={this.props.booking.startDate || "Check in"}
                       endDatePlaceholderText={this.props.booking.endDate || 'Check out'}
+                      numberOfMonths={1}
                     />
                   </div>
                 </div>

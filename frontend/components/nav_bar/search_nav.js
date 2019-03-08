@@ -12,7 +12,7 @@ const SearchNav = ({ currentUser, logout, openModal, receiveSearch}) => {
         <button className="nav-button" onClick={() => openModal('Log In')}>Log in</button>
       </div>
     );
-
+  
   return (
     <div className="a">
       <header className="search-header">
@@ -33,10 +33,7 @@ const SearchNav = ({ currentUser, logout, openModal, receiveSearch}) => {
           </nav>
         </div>
       </header>
-
     </div>
-    
-
   )
 }
 

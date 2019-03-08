@@ -121,7 +121,7 @@
 .fake-pic {
   box-sizing: border-box;
   height: 100%;
-  border: 2px solid white;
+  border: 2px solid rgb(235,235,235);
   border-radius: 50%;
 }
 

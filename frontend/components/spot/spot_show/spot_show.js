@@ -36,7 +36,7 @@ class SpotShow extends React.Component {
         />
       ))
     )
-
+    
     return(
       <div className="spot-show-page">
         <SearchNavContainer />
