@@ -1,6 +1,6 @@
-.review-form-box {
+/* .review-form-box {
   background: cyan;
-}
+} */
 
 .spot-review-form {
   display: flex;
@@ -11,13 +11,22 @@
   margin-bottom: 5px;
 }
 
-.review-form-rating > input{
-  background: yellow;
+.review-form-rating-box {
+  display: flex;
+}
+
+.review-form-rating-box > div {
+  margin-right: 8px;
+}
+
+.star-container {
+  padding-right: 0px;
 }
 
 .review-form-body-box > textarea {
   width: 100%;
-  background: wheat;
+  color: teal;
+  border: 1px solid rgb(215, 215, 215);
 }
 
 .spot-review-form > .session-submit {
@@ -36,7 +45,7 @@
 .review-author {
   font-size: 16px;
   font-weight: 600;
-  line-height: 1.375em
+line-height: 1.375em
 }
 .review-body {
   margin-top: 16px;
@@ -45,9 +54,14 @@
   line-height: 1.375em ;
 }
 
+.spot-reviews-count {
+  display: flex;
+}
 
+.spot-reviews-count > * {
+  margin-right: 10px;
+}
 
-/* debugger */
-.review-form-rating {
-  background: yellow
+.half-star {
+  height: 1em; width: 1em; display: block; fill: currentcolor;
 }

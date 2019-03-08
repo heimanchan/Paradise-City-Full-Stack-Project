@@ -7,6 +7,7 @@ import CreateBookingContainer from '../../booking/create_booking_container';
 import ReviewFormContainer from './review_form_container';
 import ReviewShow from './review_show';
 import { withRouter } from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 class SpotShow extends React.Component {
   constructor(props) {
@@ -22,20 +23,6 @@ class SpotShow extends React.Component {
     window.scrollTo(0, 0);
   }
   
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.match.params != prevProps.match.params) {
-  //     this.renderReviews();
-  //   }
-  // }
-
-  // renderReviews(reviews = []) {
-  //   return (
-  //     reviews.map(review => (
-  //       <ReviewShow review={review} key={review.id} />
-  //     ))
-  //   )
-  // }
-  
   render() {
     const spot = this.props.spot;
     if (spot === undefined) return null;
@@ -49,15 +36,6 @@ class SpotShow extends React.Component {
         />
       ))
     )
-
-    const reviewStars = ratings => {
-      const int = parseInt(ratings)
-      const pointFive = ratings - int !== 0 ? true : false
-      for (let i = 1; i <= ratings; i++) {
-        return <span class="fa fa-star checked"></span>
-      }
-      if (pointFive) return <span class="fa fa-star"></span>
-    }
 
     return(
       <div className="spot-show-page">
@@ -155,9 +133,7 @@ class SpotShow extends React.Component {
                   <div className="availability">
                     <DayPickerRangeController
                       startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-
                       endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-
                       onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
                       focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
                       onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
@@ -182,10 +158,18 @@ class SpotShow extends React.Component {
                 {/* css divided line */}
                 <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
                 <div className="spot-h1"> 
-                  {this.props.reviews.length} 
-                  <span> Reviews </span>
-                  {spot.averageRating}
-                  {reviewStars(spot.averageRating)}
+                  <div className="spot-reviews-count">
+                    <div>{this.props.reviews.length}</div>
+                    <span> Reviews </span>
+                    <StarRatingComponent
+                      name="rate2"
+                      editing={false}
+                      starColor="teal"
+                      emptyStarColor="rgb(215,215,215)"
+                      value={parseFloat(spot.averageRating)}
+                    />
+                  </div>
+                  
                 </div>
 
                 <div className="spot-reviews-box">

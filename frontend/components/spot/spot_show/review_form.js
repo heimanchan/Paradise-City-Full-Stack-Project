@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 class ReviewForm extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class ReviewForm extends React.Component {
       body: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onStarClick = this.onStarClick.bind(this);
   }
 
   handleSubmit(e) {
@@ -19,11 +21,15 @@ class ReviewForm extends React.Component {
       author_id: this.props.currentUser.id
     });
     this.props.createReview(review);
-    // this.props.history.push(`/spots/${spotId}`);
+    this.setState({ body: "" })
   }
 
   update(field) {
     return e => this.setState({ [field]: e.target.value });
+  }
+  
+  onStarClick(nextValue, prevValue, name) {
+    this.setState({ rating: nextValue });
   }
 
   render() {
@@ -33,12 +39,14 @@ class ReviewForm extends React.Component {
       <div className="review-form-box">
         <form className="spot-review-form" onSubmit={this.handleSubmit}>
           <div className="review-form-rating-box">
-            <label>Rating </label>
-            <input 
-              className="review-form-rating"
-              type="number" 
+            <div>Rating</div>
+            <StarRatingComponent
+              name="rate1"
+              starCount={5}
               value={this.state.rating}
-              onChange={this.update("rating")}
+              starColor="rgb(17,132,137)"
+              emptyStarColor="rgb(215,215,215)"
+              onStarClick={this.onStarClick.bind(this)}
             />
           </div>
           

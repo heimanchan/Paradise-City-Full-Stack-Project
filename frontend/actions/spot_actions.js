@@ -33,7 +33,10 @@ export const fetchAllSpots = filters => dispatch => (
 
 export const fetchSpot = (id) => dispatch => (
   SpotAPI.fetchSpot(id)
-    .then(res => dispatch(receiveSpot(res)))
+    .then(res => {
+      // debugger
+      dispatch(receiveSpot(res))})
+      
 )
 
 export const createReview = review => dispatch => (

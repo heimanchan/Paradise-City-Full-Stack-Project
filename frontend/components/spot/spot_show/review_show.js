@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRatingComponent from 'react-star-rating-component';
 
 const ReviewShow = (props) => {
   // const { rating, body, authorId } = review;
@@ -14,8 +15,16 @@ const ReviewShow = (props) => {
             {`${props.author.firstName} ${props.author.lastName}` }
           </div>
 
-          <div className="">
-            {props.review.rating}
+          <div className="review-rating">
+            {/* {props.review.rating} */}
+            <StarRatingComponent
+              name="rate2"
+              editing={false}
+              starCount={props.review.rating}
+              starColor="teal"
+              emptyStarColor="rgb(215,215,215)"
+              value={props.review.rating}
+            />
           </div>
         </div>
         
