@@ -31,5 +31,5 @@ The project was designed and built within a two-week timeframe, but improvements
 
 ## Splash
 ![splash](https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/readMe/splash.png)
-The splash page has a search bar in the center of the page. The search function is implemented using Google Maps API and Google Geocoding API. There are sign up and log in buttons on the top-right corner. Modal of a corresponding form is rendered after a button is clicked.
+The splash page has a search bar in the center of the page. The search function is implemented using Google Maps API and Google Geocoding API. There are sign up and log in buttons on the top-right corner. Modal of a corresponding form is rendered after a button is clicked and user will be redirected to serach page 
 

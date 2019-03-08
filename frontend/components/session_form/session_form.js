@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -38,13 +38,15 @@ class SessionForm extends React.Component {
       this.props.login(user)
         .then(() => {
           this.props.closeModal();
-          // this.props.history.push(`/search`)
+          debugger
+          if (location.hash === "#/") this.props.history.push(`/search`)
         });
     } else {
       this.props.processForm(user)
         .then(() => {
           this.props.closeModal();
-          // this.props.history.push(`/search`)
+          debugger
+          if (location.hash === "#/") this.props.history.push(`/search`)
         });
     }
   }
