@@ -74,7 +74,7 @@ kevin = User.new(
   last_name: "Bai",
   password: "password"
 )
-kevin.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/kevin.jpg"), filename: "kevin.jpg")
+kevin.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/kevin.jpg"), filename: "kevin.jpg")
 kevin.save!
 
 tim = User.new(
@@ -83,7 +83,7 @@ tim = User.new(
   last_name: "Cook",
   password: "password"
 )
-tim.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/tim.jpg"), filename: "tim.jpg")
+tim.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/tim.jpg"), filename: "tim.jpg")
 tim.save!
 
 hhh = User.new(
@@ -92,7 +92,7 @@ hhh = User.new(
   last_name: "Michael Levesque",
   password: "password"
 )
-hhh.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/hhh.jpg"), filename: "hhh.jpg")
+hhh.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/hhh.jpg"), filename: "hhh.jpg")
 hhh.save!
 
 chris = User.new(
@@ -101,7 +101,7 @@ chris = User.new(
   last_name: "Evans",
   password: "password"
 )
-chris.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/chris.jpg"), filename: "chris.jpg")
+chris.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/chris.jpg"), filename: "chris.jpg")
 chris.save!
 
 # CITIES
@@ -417,7 +417,7 @@ spot8.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-s
 spot8.save!
 
 spot9 = Spot.create!({
-  owner_id: ned.id,
+  owner_id: kevin.id,
   city_id: sf.id,
   title: '2 bed 1 bath For Rent in Crocker Amazon',
   address: 'Mission Terrace, San Francisco, CA 94112',
