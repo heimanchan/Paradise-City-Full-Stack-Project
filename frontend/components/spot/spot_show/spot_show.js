@@ -6,11 +6,7 @@ import Amenity from '../../amenities/amenities';
 import CreateBookingContainer from '../../booking/create_booking_container';
 import ReviewFormContainer from './review_form_container';
 import ReviewShow from './review_show';
-
-
-// Testing
-import { fetchSpot } from '../../../actions/spot_actions';
-import { format } from 'util';
+import { withRouter } from 'react-router-dom';
 
 class SpotShow extends React.Component {
   constructor(props) {
@@ -25,21 +21,44 @@ class SpotShow extends React.Component {
     this.props.fetchSpot(this.props.match.params.spotId);
     window.scrollTo(0, 0);
   }
+  
+  // componentDidUpdate(prevProps) {
+  //   if (this.props.match.params != prevProps.match.params) {
+  //     this.renderReviews();
+  //   }
+  // }
 
-  componentDidUpdate(prevProps) {
-    this.props.match.params !== prevProps
-  }
-
+  // renderReviews(reviews = []) {
+  //   return (
+  //     reviews.map(review => (
+  //       <ReviewShow review={review} key={review.id} />
+  //     ))
+  //   )
+  // }
+  
   render() {
     const spot = this.props.spot;
     if (spot === undefined) return null;
 
-    const reviewList = (reviews = []) => (
+    const reviewList = (reviews) => (
       reviews.map(review => (
-        <ReviewShow review={review} key={review.id} />
+        <ReviewShow 
+          review={review} 
+          key={review.id} 
+          author={this.props.users[review.authorId]}
+        />
       ))
     )
-    
+
+    const reviewStars = ratings => {
+      const int = parseInt(ratings)
+      const pointFive = ratings - int !== 0 ? true : false
+      for (let i = 1; i <= ratings; i++) {
+        return <span class="fa fa-star checked"></span>
+      }
+      if (pointFive) return <span class="fa fa-star"></span>
+    }
+
     return(
       <div className="spot-show-page">
         <SearchNavContainer />
@@ -162,7 +181,13 @@ class SpotShow extends React.Component {
 
                 {/* css divided line */}
                 <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
-                <div className="spot-h1"> {"0"} Reviews</div>
+                <div className="spot-h1"> 
+                  {this.props.reviews.length} 
+                  <span> Reviews </span>
+                  {spot.averageRating}
+                  {reviewStars(spot.averageRating)}
+                </div>
+
                 <div className="spot-reviews-box">
                   {reviewList(this.props.reviews)}
                 </div>
@@ -178,7 +203,7 @@ class SpotShow extends React.Component {
   }
 }
 
-export default SpotShow;
+export default withRouter(SpotShow);
 
 
 

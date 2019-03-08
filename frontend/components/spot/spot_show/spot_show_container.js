@@ -4,7 +4,8 @@ import { fetchSpot } from '../../../actions/spot_actions'
 
 const mapStateToProps = (state, ownProps) => ({
   spot: state.entities.spots[ownProps.match.params.spotId],
-  reviews: Object.values(state.entities.reviews)
+  reviews: Object.values(state.entities.reviews),
+  users: state.entities.users
 })
 
 const mapDispatchToProps = dispatch => ({

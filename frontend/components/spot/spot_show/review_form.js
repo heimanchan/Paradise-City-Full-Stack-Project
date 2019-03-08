@@ -28,11 +28,14 @@ class ReviewForm extends React.Component {
 
   render() {
     return(
+      <>
+      <h2 className="spot-header">Give us your review!</h2>
       <div className="review-form-box">
         <form className="spot-review-form" onSubmit={this.handleSubmit}>
           <div className="review-form-rating-box">
-            <label className="review-form-rating">Rating </label>
+            <label>Rating </label>
             <input 
+              className="review-form-rating"
               type="number" 
               value={this.state.rating}
               onChange={this.update("rating")}
@@ -42,7 +45,7 @@ class ReviewForm extends React.Component {
           <div className="review-form-body-box">
             <textarea 
               cols="20"
-              rows="10"
+              rows="5"
               value={this.state.body}
               onChange={this.update("body")}
             />
@@ -53,6 +56,7 @@ class ReviewForm extends React.Component {
           </div>
         </form>
       </div>
+      </>
     )
   }
 }
