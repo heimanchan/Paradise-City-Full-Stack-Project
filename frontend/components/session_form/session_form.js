@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
     this.props.processForm(user)
       .then(() => {
         this.props.closeModal();
-        // this.props.history.push(`/search`)
+        if (location.hash === "#/") this.props.history.push(`/search`)
       });
   }
 
@@ -38,14 +38,12 @@ class SessionForm extends React.Component {
       this.props.login(user)
         .then(() => {
           this.props.closeModal();
-          debugger
           if (location.hash === "#/") this.props.history.push(`/search`)
         });
     } else {
       this.props.processForm(user)
         .then(() => {
           this.props.closeModal();
-          debugger
           if (location.hash === "#/") this.props.history.push(`/search`)
         });
     }

@@ -24,11 +24,6 @@ class SpotShow extends React.Component {
     this.props.fetchSpot(this.props.match.params.spotId)
     window.scrollTo(0, 0);
   }
-
-  // componentWillMount() {
-  //   debugger
-  //   this.setState({ rating_half_star: parseFloat(this.props.spot.averageRating) })
-  // }
   
   render() {
     const spot = this.props.spot;
