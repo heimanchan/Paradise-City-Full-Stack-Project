@@ -38,6 +38,39 @@ class SpotShow extends React.Component {
         />
       ))
     )
+
+    const ratings = ((spot.averageRating) ? (
+      <>
+        <span className="spot-reviews-count">
+          <div>{this.props.reviews.length}</div>
+          <span> Reviews </span>
+        </span>
+        <StarRatingComponent
+          name="rate2"
+          editing={false}
+          starColor="teal"
+          emptyStarColor="rgb(215,215,215)"
+          // value={this.state.rating_half_star}
+          value={parseInt(spot.averageRating)}
+          renderStarIcon={(index, value) => {
+            return (
+              <span>
+                <i className={index <= value ? 'fas fa-star' : 'far fa-star'} />
+              </span>
+            );
+          }}
+          renderStarIconHalf={() => {
+            return (
+              <span>
+                <span style={{ position: 'absolute' }}><i className="far fa-star" /></span>
+                <span><i className="fas fa-star-half" /></span>
+              </span>
+            );
+          }}
+        />
+      </>
+    ) : ("No reviews yet")
+    )
     
     return(
       <div className="spot-show-page">
@@ -160,33 +193,7 @@ class SpotShow extends React.Component {
                 {/* css divided line */}
                 <div style={{ marginTop: 24, marginBottom: 24 }}><div className="br"></div></div>
                 <div className="spot-h1"> 
-                  <div className="spot-reviews-count">
-                    <div>{this.props.reviews.length}</div>
-                    <span> Reviews </span>
-                    <StarRatingComponent
-                      name="rate2"
-                      editing={false}
-                      starColor="teal"
-                      emptyStarColor="rgb(215,215,215)"
-                      // value={this.state.rating_half_star}
-                      value={this.props.spot.averageRating}
-                      renderStarIcon={(index, value) => {
-                        return (
-                          <span>
-                            <i className={index <= value ? 'fas fa-star' : 'far fa-star'} />
-                          </span>
-                        );
-                      }}
-                      renderStarIconHalf={() => {
-                        return (
-                          <span>
-                            <span style={{ position: 'absolute' }}><i className="far fa-star" /></span>
-                            <span><i className="fas fa-star-half" /></span>
-                          </span>
-                        );
-                      }} />
-                  </div>
-                  
+                  {ratings}
                 </div>
 
                 <div className="spot-reviews-box">

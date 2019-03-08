@@ -31,5 +31,8 @@ The project was designed and built within a two-week timeframe, but improvements
 
 ## Splash
 ![splash](https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/readMe/splash.png)
-The splash page has a search bar in the center of the page. The search function is implemented using Google Maps API and Google Geocoding API. There are sign up and log in buttons on the top-right corner. Modal of a corresponding form is rendered after a button is clicked and user will be redirected to serach page 
+The splash page has a search bar in the center of the page. The search function is implemented using Google Maps API and Google Geocoding API. There are sign up and log in buttons on the top-right corner. Modal of a corresponding form is rendered after a button is clicked and user will be redirected to the serach page. User will be redirected back to this page after log out.
+
+## Search for rooms
+The search bar on the navigation bar is the same as on the splash page. Default searching result is San Francisco. User can search for any location and the map on the right hand side will be updated. Rooms on the left are reflected according to the markers on the map. Each room is a link to its show page.
 

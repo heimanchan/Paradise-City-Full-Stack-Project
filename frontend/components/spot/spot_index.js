@@ -9,10 +9,6 @@ class SpotIndex extends React.Component {
     super(props);
   }
 
-  // componentDidMount() {
-  //   this.props.fetchAllSpots();
-  // }
-
   render() {
     const spotItems = this.props.spots.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
     return (
