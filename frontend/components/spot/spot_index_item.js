@@ -17,7 +17,7 @@ const spotIndexItem = (props) => {
         starColor="teal"
         emptyStarColor="rgb(215,215,215)"
         // value={this.state.rating_half_star}
-        value={parseInt(spot.averageRating)}
+        value={parseFloat(spot.averageRating)}
         renderStarIcon={(index, value) => {
           return (
             <span>
