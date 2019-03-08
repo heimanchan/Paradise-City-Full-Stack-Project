@@ -68,6 +68,42 @@ alec = User.new(
 alec.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/alec.jpg"), filename: "alec.jpg")
 alec.save!
 
+kevin = User.new(
+  username: "kevin",
+  first_name: "Kevin",
+  last_name: "Bai",
+  password: "password"
+)
+kevin.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/kevin.jpg"), filename: "kevin.jpg")
+kevin.save!
+
+tim = User.new(
+  username: "tim",
+  first_name: "Tim",
+  last_name: "Cook",
+  password: "password"
+)
+tim.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/tim.jpg"), filename: "tim.jpg")
+tim.save!
+
+hhh = User.new(
+  username: "hhh",
+  first_name: "Paul",
+  last_name: "Michael Levesque",
+  password: "password"
+)
+hhh.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/hhh.jpg"), filename: "hhh.jpg")
+hhh.save!
+
+chris = User.new(
+  username: "chris",
+  first_name: "Chris",
+  last_name: "Evans",
+  password: "password"
+)
+chris.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/users/chris.jpg"), filename: "chris.jpg")
+chris.save!
+
 # CITIES
 # id = 6
 sf = City.create({      
@@ -417,7 +453,7 @@ spot10 = Spot.create!({
   title: 'SPECIAL! SPECIAL! SPECIAL! CALL TODAY!',
   address: '3580 W. Grant Line Rd',
   lat: 37.751967,
-  lng: -22.443485,
+  lng: -122.443485,
   max_guests: 8,
   num_bedrooms: 4,
   num_beds: 4,
@@ -442,4 +478,170 @@ spot10.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-
 spot10.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot10_5.jpg"), filename: "spot10.jpg")
 spot10.save!
 
+spot11 = Spot.create!({
+  owner_id: chris.id,
+  city_id: sf.id,
+  title: 'Buchanan & Hermann/$0 Deposit/Flexible Lease Terms/Available Now!',
+  address: '78 Buchanan',
+  lat: 37.771008,
+  lng: -122.426450,
+  max_guests: 4,
+  num_bedrooms: 2,
+  num_beds: 2,
+  price: 190,
+  ratings: 5,
+  description: "*MOVE IN SPECIAL*
+Pay $0 Deposit with approved credit. Resident is responsible for any damages to unit at move out.
 
+*FLEXIBLE LEASE TERMS*
+Now offering 7-12 month leases and extended move-in dates! Rent will fluctuate based on lease term and move-in date. 
+*Cancellation fee applies if move-in is cancelled 2 weeks prior to lease start date*
+
+Take a virtual tour here!
+https://real.vision/78-buchanan-street-203?o=u
+
+This apartment is in a fantastic location conveniently located between the neighborhoods of Lower Haight, Hayes Valley, Duboce Triangle and The Mission! You are minutes away from all the attractions that each of those neighborhoods have to offer!
+
+-1 block away from Safeway and Whole Foods
+-2 blocks away from the Church Street Muni Station
+-3 blocks from Dolores Park
+",
+  heat: true,
+  pool: true,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: true,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: true
+})
+spot11.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot11_1.jpg"), filename: "spot11.jpg")
+spot11.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot11_2.jpg"), filename: "spot11.jpg")
+spot11.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot11_3.jpg"), filename: "spot11.jpg")
+spot11.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot11_4.jpg"), filename: "spot11.jpg")
+spot11.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot11_5.jpg"), filename: "spot11.jpg")
+spot11.save!
+
+spot12 = Spot.create!({
+  owner_id: tim.id,
+  city_id: sf.id,
+  title: 'Stylish Features, City and Bay Views, Dog Run',
+  address: '1285 Sutter Street',
+  lat: 37.787610,
+  lng: -122.426450,
+  max_guests: 4,
+  num_bedrooms: 2,
+  num_beds: 2,
+  price: 400,
+  ratings: 5,
+  description: "Open the doors to your new home at ETTA and revel in the floor-to-ceiling windows that give front row seats to San Francisco's beautiful skyline. 
+
+
+Bright and open two bedroom, two bathroom apartment home featuring walk-in master closet, gourmet kitchen and more!",
+  heat: true,
+  pool: false,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: false,
+  hair_dryer: true,
+  first_aid: false,
+  laundry: true
+})
+spot12.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot12_1.jpg"), filename: "spot12.jpg")
+spot12.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot12_2.jpg"), filename: "spot12.jpg")
+spot12.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot12_3.jpg"), filename: "spot12.jpg")
+spot12.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot12_4.jpg"), filename: "spot12.jpg")
+spot12.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot12_5.jpg"), filename: "spot12.jpg")
+spot12.save!
+
+spot13 = Spot.create!({
+  owner_id: hhh.id,
+  city_id: la.id,
+  title: 'Completely Furnished 2 Bedroom Gather Up 3 Roommates & Live Near USC',
+  address: '1275 West 30th Street',
+  lat: 37.742124,
+  lng: -122.427856,
+  max_guests: 4,
+  num_bedrooms: 2,
+  num_beds: 2,
+  price: 209,
+  ratings: 5,
+  description: "This is a 2 bedroom 2 bath. Shared Bedroom, Shared bathroom 
+
+
+APARTMENT AMENITIES
+- 10 ft High Ceilings*
+- In Unit Washer and Dryer
+- Central AC/Heat Controlled by The Nest
+- Quartz Countertops
+- All Units Are Fully Furnished
+- WiFi in Unit
+- Stainless Steel Appliances (Refrigerator, Stove/oven, Microwave, Dishwasher)
+- Direct TV
+- Private Roof Decks*
+- Balconies*
+- Direct Community Deck Access*
+- Sonos Playbar
+- 55' TV
+- Each Unit has their Own Victory Beach Cruiser
+
+COMMUNITY AMENITIES
+- Community Roof Deck with Lush Landscaping and Views of Los Angeles Skyline
+- Community Deck with Lounge Seating and TV
+- 24 Hour Video Surveillance
+- Secured Bike Storage
+- Secured Underground Parking*
+- WiFi Throughout Building*
+- Direct TV",
+  heat: true,
+  pool: false,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: false,
+  hair_dryer: true,
+  first_aid: false,
+  laundry: true
+})
+spot13.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot13_1.jpg"), filename: "spot13.jpg")
+spot13.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot13_2.jpg"), filename: "spot13.jpg")
+spot13.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot13_3.jpg"), filename: "spot13.jpg")
+spot13.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot13_4.jpg"), filename: "spot13.jpg")
+spot13.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot13_5.jpg"), filename: "spot13.jpg")
+spot13.save!
+
+spot14 = Spot.create!({
+  owner_id: dave.id,
+  city_id: hk.id,
+  title: 'Hey, You Found Me! This is Dave Chan!',
+  address: 'Tai Po, Hong Kong ',
+  lat: 22.452047,
+  lng: 114.168858,
+  max_guests: 99,
+  num_bedrooms: 10,
+  num_beds: 20,
+  price: 9999,
+  ratings: 5,
+  description: "This is Dave Chan. I was born and raise and raised in Hong Kong. I like traveling because I can learn different culture and make new friends from different background. Paris is my favorite city. I like to play guitar in my spare which makes me feel peaceful.",
+  heat: true,
+  pool: true,
+  shampoo: true,
+  tv: true,
+  wifi: true,
+  air_conditioning: true,
+  iron: true,
+  hair_dryer: true,
+  first_aid: true,
+  laundry: true
+})
+spot14.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot14_1.jpg"), filename: "spot14.jpg")
+spot14.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot14_2.jpg"), filename: "spot14.jpg")
+spot14.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot14_3.jpg"), filename: "spot14.jpg")
+spot14.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot14_4.jpg"), filename: "spot14.jpg")
+spot14.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/spots/spot14_5.jpg"), filename: "spot14.jpg")
+spot14.save!
