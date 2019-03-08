@@ -26,17 +26,21 @@ class BookingForm extends React.Component {
       spot_id: this.props.spot.id,
       guest_id: this.props.currentUserId
     }
-    if (this.props.formType === "Update"){
-      this.props.action(booking)
-        .then(() => {
-          this.props.closeModal();
-          swal("Success!", "You've updated your booking.", "success");
-        }
-      );
+    if (!this.props.currentUserId) {
+      this.props.openModal("Log In")
     } else {
-      this.props.action(booking).then(() => {
-        swal("Success!", "You're about to go to a paradise city!", "success", { button: "Nice!"});
-    });
+      if (this.props.formType === "Update") {
+        this.props.action(booking)
+          .then(() => {
+            this.props.closeModal();
+            swal("Success!", "You've updated your booking.", "success");
+          }
+          );
+      } else {
+        this.props.action(booking).then(() => {
+          swal("Success!", "You're about to go to a paradise city!", "success", { button: "Nice!" });
+        });
+      }
     }
   }
 

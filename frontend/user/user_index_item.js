@@ -46,7 +46,6 @@ class UserIndexItem extends React.Component {
   render() {
     const spot = this.props.spot;
     if (spot === undefined) {
-      // debugger
       return null;
     }
     const booking = this.props.booking;
