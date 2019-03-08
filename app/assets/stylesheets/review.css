@@ -62,6 +62,11 @@ line-height: 1.375em
   margin-right: 10px;
 }
 
-.half-star {
-  height: 1em; width: 1em; display: block; fill: currentcolor;
+.fa-star-half {
+  margin-right: 13px;
+  color: "teal";
+}
+
+.fa-star {
+  color: "teal";
 }

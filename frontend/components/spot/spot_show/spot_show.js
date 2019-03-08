@@ -15,6 +15,8 @@ class SpotShow extends React.Component {
     this.state = {
       startDate: null,
       endDate: null,
+      rating_half_star: 3.5,
+      rating_empty_initial: 0
     }
   }
   
@@ -167,7 +169,21 @@ class SpotShow extends React.Component {
                       starColor="teal"
                       emptyStarColor="rgb(215,215,215)"
                       value={parseFloat(spot.averageRating)}
-                    />
+                      renderStarIcon={(index, value) => {
+                        return (
+                          <span>
+                            <i className={index <= value ? 'fas fa-star' : 'far fa-star'} />
+                          </span>
+                        );
+                      }}
+                      renderStarIconHalf={() => {
+                        return (
+                          <span>
+                            <span style={{ position: 'absolute' }}><i className="far fa-star" /></span>
+                            <span><i className="fas fa-star-half" /></span>
+                          </span>
+                        );
+                      }} />
                   </div>
                   
                 </div>

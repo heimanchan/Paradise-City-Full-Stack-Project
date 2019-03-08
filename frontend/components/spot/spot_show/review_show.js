@@ -20,7 +20,8 @@ const ReviewShow = (props) => {
             <StarRatingComponent
               name="rate2"
               editing={false}
-              starCount={props.review.rating}
+              starCount={5}
+              value={props.review.rating}
               starColor="teal"
               emptyStarColor="rgb(215,215,215)"
               value={props.review.rating}
