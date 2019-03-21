@@ -8,8 +8,8 @@ const SearchNav = ({ currentUser, logout, openModal, receiveSearch}) => {
     <Dropdown logout={logout} user={ currentUser }/>
   ) : (
       <div className="user-nav">
-        <button className="nav-button" onClick={() => openModal('Sign Up')}>Sign up</button>
-        <button className="nav-button" onClick={() => openModal('Log In')}>Log in</button>
+        <button className="search-nav-button" onClick={() => openModal('Sign Up')}>Sign up</button>
+        <button className="search-nav-button" onClick={() => openModal('Log In')}>Log in</button>
       </div>
     );
   
