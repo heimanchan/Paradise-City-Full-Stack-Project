@@ -30,13 +30,36 @@ y
   * Users can leave reviews for a room
 
 ## Splash
-![splash](https://s3-us-west-1.amazonaws.com/paradise-city-seed/images/readMe/splash.png)
+![splash](Paradise-City-Full-Stack-Project/readme/splash.png)
 The splash page has a search bar in the center of the page. The search function is implemented using Google Maps API and Google Geocoding API. There are sign up and log in buttons on the top-right corner. Modal of a corresponding form is rendered after a button is clicked and user will be redirected to the serach page. User will be redirected back to this page after log out.
 
 ## Search for rooms
+![search](Paradise-City-Full-Stack-Project/readme/search.png)
 The search bar on the navigation bar is the same as on the splash page. Default searching result is San Francisco. User can search for any location and the map on the right hand side will be updated. Rooms on the left are reflected according to the markers on the map. Each room is a link to its show page.
 
 ## Show page
+This page shows all the details of a listing, and provides a form for booking.
+![booking](Paradise-City-Full-Stack-Project/readme/booking.gif)
+When a new booking is being created, data needed to be stored for the booking will be passed from both the global and local state once the submit button is hit.
+```js
+handleSubmit(e) {
+  e.preventDefault();
+  const booking = { 
+    id: this.props.bookingId,
+    start_date: this.state.startDate._d,
+    end_date: this.state.endDate._d,
+    num_guests: parseInt(this.state.numGuests),
+    spot_id: this.props.spot.id,
+    guest_id: this.props.currentUserId
+  }
+  ...
+}
+```
+After logged in, users can leave a review for a listing as well as giving ratings. The average ratings of the listing will be calculated immediately rounding down to one decimal place. Half star will be rendered if the decimal digit is greater than or equal to 0.5 .
+![review](Paradise-City-Full-Stack-Project/readme/spot_review.gif)
 
+## User Profile
+Users are also allowed to update or cancel their bookings, simply by clicking the buttons under each booking in their profile.
+![cancel](Paradise-City-Full-Stack-Project/readme/cancel.gif)
 
 
