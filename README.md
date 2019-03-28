@@ -55,7 +55,7 @@ handleSubmit(e) {
   ...
 }
 ```
-After logged in, users can leave a review for a listing as well as giving ratings. The average ratings of the listing will be calculated immediately rounding down to one decimal place. Half star will be rendered if the decimal digit is greater than or equal to 0.5 .
+After logged in, users can leave a review for a listing as well as giving ratings. The average ratings of the listing will be calculated immediately rounding down to one decimal place.
 ![review](./readme/spot_review.gif)
 
 ## User Profile
