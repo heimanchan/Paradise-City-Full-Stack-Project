@@ -10,7 +10,8 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.guest_id = current_user.id
     @booking.owner_id = Spot.find(params[:booking][:spot_id]).owner.id
-    if @booking.save!
+    if @booking.valid_booking?
+      @booking.save!
       render :show
     else 
       render json: ["This date is not available. Please select another date."], status: 422

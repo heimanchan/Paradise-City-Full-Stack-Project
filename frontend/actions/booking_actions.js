@@ -5,7 +5,6 @@ export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const REMOVE_BOOKING = "REMOVE_BOOKING";
 export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS'
 
-
 const receiveAllBookings = payload => ({
   type: RECEIVE_ALL_BOOKINGS,
   payload
@@ -40,11 +39,13 @@ export const fetchBooking = bookingId => dispatch => (
 export const createBooking = booking => dispatch => (
   BookingAPI.createBooking(booking)
     .then(res => dispatch(receiveBooking(res, "create")))
+    .fail(error => dispatch(receiveBookingErrors(error.responseJSON)))
 )
 
 export const updateBooking = booking => dispatch => (
   BookingAPI.updateBooking(booking)
     .then(res => dispatch(receiveBooking(res, "update")))
+    .fail(error => dispatch(receiveBookingErrors(error.responseJSON)))
 )
 
 export const deleteBooking = bookingId => dispatch => (

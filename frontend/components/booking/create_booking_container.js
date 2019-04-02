@@ -7,8 +7,9 @@ const mapStateToProps = state => {
   const booking = { startDate: null, endDate: null, numGuests: null };
   const currentUserId = state.session.currentUserId;
   const formType = "Book";
+  const errors = state.errors;
 
-  return { booking, formType, currentUserId }
+  return { booking, formType, currentUserId, errors }
 }
 
 const mapDispatchToProps = dispatch => ({

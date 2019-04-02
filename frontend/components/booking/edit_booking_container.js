@@ -11,8 +11,9 @@ const mapStateToProps = (state, ownProps) => {
   const currentUserId = state.session.currentUserId;
   const formType = "Update";
   const spot = state.entities.spots[booking.spotId];
+  const errors = state.errors;
   
-  return { booking, formType, currentUserId, spot }
+  return { booking, formType, currentUserId, spot, errors }
 }
 
 const mapDispatchToProps = dispatch => ({

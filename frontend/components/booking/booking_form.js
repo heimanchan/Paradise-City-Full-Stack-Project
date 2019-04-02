@@ -46,6 +46,18 @@ class BookingForm extends React.Component {
     }
   }
 
+  bookingErrors() {
+    return (
+      <ul>
+        {this.props.errors.booking.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     const photo = this.props.spot.photoUrls[0]
     const formHeader = this.props.formType === 'Update' ? (
@@ -101,6 +113,10 @@ class BookingForm extends React.Component {
                 </div>
               </div>
 
+              <div className="session-errors">
+                {this.bookingErrors()}
+              </div>
+              
               <div style={{ marginTop: 24 }}>
                 <button className="booking-submit">
                   {this.props.formType}
