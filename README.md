@@ -20,8 +20,8 @@ The project was designed and built within a two-week timeframe, but improvements
 * React Dates
 * React Star Rating Component
 * Sweetalert
-y
-#y# Features
+
+## Features
 * Full frontend to backend user authentication using BCrypt.
 * Users can search for rooms in any location using the Google Maps API.
 * After logged in
