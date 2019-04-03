@@ -20,6 +20,17 @@
   justify-content: space-between; 
 }
 
+.logo-n-name {
+  display: flex;
+}
+
+#project-name {
+  color: white;
+  font-size: 36px; 
+  margin: auto 0;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
 .banner {
   height: 200px;
   background: linear-gradient(rgba(75, 78, 78, 0.5), rgba(255, 255, 255, 0));
