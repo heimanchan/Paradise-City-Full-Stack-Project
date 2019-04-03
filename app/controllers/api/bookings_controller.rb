@@ -20,7 +20,6 @@ class Api::BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:booking][:id])
-
     if @booking.update(booking_params)
       render '/api/bookings/show'
     else

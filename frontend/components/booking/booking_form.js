@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import swal from 'sweetalert';
+import { debug } from 'util';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -72,6 +73,12 @@ class BookingForm extends React.Component {
         </div>
       </>
     )
+    const charged = this.props.formType === "Book" ? (
+      <>
+        You won’t be charged yet
+      </>
+    ) : ""
+    
     return (
       <div className="booking-position">
         <div className="booking-form-container">
@@ -124,7 +131,7 @@ class BookingForm extends React.Component {
               </div>
               <div style={{ marginTop: 8 }}>
                 <div className="booking-message">
-                  You won’t be charged yet
+                  {charged}
                 </div>
               </div>
             </form>

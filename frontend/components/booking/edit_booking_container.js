@@ -34,7 +34,7 @@ class EditBookingForm extends React.Component {
   }
 
   render() {
-    const { action, formType, booking, spot, currentUserId, bookingId, closeModal} = this.props;
+    const { action, formType, booking, spot, currentUserId, bookingId, closeModal, errors} = this.props;
     return (
       <BookingForm
         spot={spot}
@@ -44,6 +44,7 @@ class EditBookingForm extends React.Component {
         currentUserId={currentUserId} 
         bookingId={bookingId}
         closeModal={closeModal}
+        errors={errors}
       />
     );
   }
