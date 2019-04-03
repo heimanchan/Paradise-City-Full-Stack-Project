@@ -24,7 +24,7 @@
   width: 50%;
   height: 100%;
   /* background: cyan; */
-  border: 1px solid #484848;
+  /* border: 1px solid #484848; */
   box-sizing: border-box;
 }
 
@@ -40,7 +40,7 @@
 
 .small-img {
   height: 50%;
-  border: 1px solid #484848;
+  /* border: 1px solid #484848; */
   box-sizing: border-box;
 }
 

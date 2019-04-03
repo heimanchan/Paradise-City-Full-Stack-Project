@@ -21,4 +21,4 @@ json.spots do
       json.photoUrls spot.photos.map { |pic| url_for(pic) } if spot.photos.attached?
     end
   end
-end 
+end

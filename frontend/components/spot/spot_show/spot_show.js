@@ -174,6 +174,7 @@ class SpotShow extends React.Component {
                       onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                       numberOfMonths={2}
                       hideKeyboardShortcutsPanel={true}
+                      // disabled={true}
                     />
                   </div>
                 </div>
