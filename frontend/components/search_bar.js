@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { updateFilter } from '../actions/filter_actions';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -25,7 +24,6 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // alert(`${document.getElementById("search-bar-input").value}\nsucks, find somewhere else.`)
     let coord = new google.maps.Geocoder();
     coord.geocode( {"address": this.state.address }, (results, status) => {
       let lat, lng;
@@ -46,7 +44,7 @@ class SearchBar extends React.Component {
   render() {
     let placeholder = (
       location.pathname === "#/" ? 
-      "Surfing in Los Angeles" : `Try "Hollywood"`)
+      "Surfing in Los Angeles" : `Try "San Francisco"`)
     return(
       <div className="trip-search">
         <form>

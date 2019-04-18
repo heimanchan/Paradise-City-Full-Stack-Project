@@ -2,7 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import swal from 'sweetalert';
-import { debug } from 'util';
 
 class BookingForm extends React.Component {
   constructor(props) {
